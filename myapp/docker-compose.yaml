@@ -28,6 +28,7 @@ services:
       - 5050:80 # for local browser (80 is the default port of the browsed)
     volumes:
       - ./pgadmin_data:/var/lib/pgadmin  # Persisting pgAdmin configuration and sessions
+    user: "5050:5050"
     depends_on:
       - db
 
