@@ -111,6 +111,9 @@ dmypy.json
 # pytype
 .pytype/
 
+
+*.csv
+
 # Cython debug symbols
 cython_debug/
 
@@ -130,6 +133,8 @@ cython_debug/
 Thumbs.db
 ehthumbs.db
 
+
 # Custom 
 postgres_data
 pgadmin_data
+
