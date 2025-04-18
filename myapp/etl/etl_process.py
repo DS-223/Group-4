@@ -1,13 +1,13 @@
 """
-ETL Script for Generating and Loading Real Estate Data into a Database.
+ETL Script for Generating and Loading Real Estate Data into a database.
 
 This script generates data for users, property types, locations, properties, and images,
 saves the data to CSV files, and loads the CSV data into a database.
 
 Modules:
-    - Database.models: Database models for the project.
-    - Database.database: Database engine and base class.
-    - Database.data_generate: Functions to generate data for various entities.
+    - database.models: database models for the project.
+    - database.database: database engine and base class.
+    - database.data_generate: Functions to generate data for various entities.
     - pandas: For data manipulation and storage in CSV.
     - loguru: For logging.
     - random: For random number generation.
@@ -17,17 +17,12 @@ Modules:
 import pandas as pd
 from loguru import logger
 import random
-from Database.models import *
-from Database.database import engine, Base
-from Database.data_generate import (
-    generate_users,
-    generate_property_types,
-    generate_locations,
-    generate_properties,
-    generate_images
-)
+from database.database import engine, Base
+from database.data_generate import generate_user, generate_location, generate_property, generate_image, generate_property_type
 import glob
 from os import path
+
+Base.metadata.create_all(bind=engine)
 
 # -----------------------------------------------------
 # Constants
@@ -49,21 +44,21 @@ RENOVATION_STATUSES = ["Newly Renovated", "Partially Renovated", "Not Renovated"
 # -----------------------------------------------------
 
 # Generate Users Data
-users = pd.DataFrame([generate_users(1, USER_TYPES)[0] for user_id in range(NUMBER_OF_USERS)])
+users = pd.DataFrame([generate_user(user_id, USER_TYPES) for user_id in range(NUMBER_OF_USERS)])
 logger.info("User Data Sample:")
 logger.info(users.head(1))
 users.to_csv("data/users.csv", index=False)
 logger.info(f"User data saved to CSV: {users.shape}")
 
 # Generate Property Types Data
-types = pd.DataFrame([generate_property_types(PROPERTY_TYPES)[0] for _ in range(len(PROPERTY_TYPES))])
+types = pd.DataFrame([generate_property_type(type_id, PROPERTY_TYPES) for type_id in range(len(PROPERTY_TYPES))])
 logger.info("Property Type Data Sample:")
 logger.info(types.head(1))
 types.to_csv("data/property_types.csv", index=False)
 logger.info(f"Property type data saved to CSV: {types.shape}")
 
 # Generate Locations Data
-locations = pd.DataFrame([generate_locations(1, DISTRICTS_YEREVAN)[0] for location_id in range(NUMBER_OF_LOCATIONS)])
+locations = pd.DataFrame([generate_location(location_id, DISTRICTS_YEREVAN) for location_id in range(NUMBER_OF_LOCATIONS)])
 logger.info("Location Data Sample:")
 logger.info(locations.head(1))
 locations.to_csv("data/locations.csv", index=False)
@@ -74,20 +69,16 @@ properties = []
 for property_id in range(1, NUMBER_OF_PROPERTIES + 1):
     user_id = random.randint(1, NUMBER_OF_USERS)
     location_id = random.randint(1, NUMBER_OF_LOCATIONS)
-    property_type = random.choice(PROPERTY_TYPES)
-    deal_type = random.choice(DEAL_TYPES)
-    renovation_status = random.choice(RENOVATION_STATUSES)
-    district = random.choice(DISTRICTS_YEREVAN)
-    
-    prop = generate_properties(
-        n=1,
-        user_count=1,
-        location_count=1,
-        property_types=[property_type],
-        deal_types=[deal_type],
-        renovation_statuses=[renovation_status],
-        districts=[district]
-    )[0]
+
+    prop = generate_property(
+        property_id=property_id,
+        user_id=user_id,
+        location_id=location_id,
+        property_types=PROPERTY_TYPES,
+        deal_types=DEAL_TYPES,
+        renovation_statuses=RENOVATION_STATUSES,
+        districts=DISTRICTS_YEREVAN
+    )
     properties.append(prop)
 
 properties = pd.DataFrame(properties)
@@ -96,11 +87,16 @@ logger.info(properties.head(1))
 properties.to_csv("data/properties.csv", index=False)
 logger.info(f"Property data saved to CSV: {properties.shape}")
 
+
 # Generate Images Data
 images = []
+image_id = 1
+
 for property_record in properties.to_dict(orient="records"):
-    img = generate_images([property_record])[0]
+    property_id = property_record["property_id"]
+    img = generate_image(image_id, property_id)
     images.append(img)
+    image_id += 1
 
 images = pd.DataFrame(images)
 logger.info("Image Data Sample:")
@@ -109,7 +105,7 @@ images.to_csv("data/images.csv", index=False)
 logger.info(f"Image data saved to CSV: {images.shape}")
 
 # -----------------------------------------------------
-# Utility Function to Load Data into Database
+# Utility Function to Load Data into database
 # -----------------------------------------------------
 
 def load_csv_to_table(table_name: str, csv_path: str) -> None:
@@ -129,7 +125,7 @@ def load_csv_to_table(table_name: str, csv_path: str) -> None:
     logger.info(f"Loading data into table: {table_name}")
 
 # -----------------------------------------------------
-# Load CSV Data into Database Tables
+# Load CSV Data into database Tables
 # -----------------------------------------------------
 
 # Get all CSV file paths

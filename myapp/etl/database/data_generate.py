@@ -4,7 +4,7 @@ import random
 from datetime import datetime
 from loguru import logger
 
-fake = Faker('en_US')
+fake = Faker()
 
 # Data Models
 
@@ -17,10 +17,10 @@ def generate_user(user_id, user_types):
         "user_type": random.choice(user_types)
     }
 
-def generate_property_type(type_id, name):
+def generate_property_type(type_id, property_types):
     return {
         "type_id": type_id,
-        "type_name": name
+        "type_name": random.choice(property_types)
     }
 
 def generate_location(location_id, districts):
@@ -62,7 +62,7 @@ def estimate_prices(size, rooms, year, renovation, district, deal_type):
 
     return sale_price, rent_price
 
-def generate_property(property_id, user_count, location_count, property_types, deal_types, renovation_statuses, districts):
+def generate_property(property_id, user_id, location_id, property_types, deal_types, renovation_statuses, districts):
     size = round(random.uniform(25, 200), 1)
     deal_type = random.choice(deal_types)
     renovation = random.choice(renovation_statuses)
@@ -78,8 +78,8 @@ def generate_property(property_id, user_count, location_count, property_types, d
         "type_id": random.randint(1, len(property_types)),
         "deal_type": deal_type,
         "status": "Available",
-        "user_id": random.randint(1, user_count),
-        "location_id": random.randint(1, location_count),
+        "user_id": user_id,
+        "location_id": location_id,
         "size_sqm": size,
         "floor": random.randint(1, 12),
         "rooms": rooms,
@@ -88,6 +88,7 @@ def generate_property(property_id, user_count, location_count, property_types, d
         "estimated_saleprice": sale_price,
         "estimated_rentprice": rent_price
     }
+
 
 def generate_image(image_id, property_id):
     return {
