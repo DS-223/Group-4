@@ -15,4 +15,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["python"]
+CMD ["python", "etl_process.py"]
