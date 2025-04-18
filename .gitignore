@@ -127,3 +127,7 @@ cython_debug/
 # System
 Thumbs.db
 ehthumbs.db
+
+# Custom 
+postgres_data/
+pgadmin_data/
