@@ -129,5 +129,5 @@ Thumbs.db
 ehthumbs.db
 
 # Custom 
-postgres_data/
-pgadmin_data/
+myapp/postgres_data/
+myapp/pgadmin_data/
