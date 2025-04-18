@@ -1,3 +1,5 @@
+*.csv
+
 # Ignore all markdown files in the feedback directory
 feedback/*.md  
 
@@ -129,5 +131,5 @@ Thumbs.db
 ehthumbs.db
 
 # Custom 
-myapp/postgres_data/
-myapp/pgadmin_data/
+postgres_data
+pgadmin_data
