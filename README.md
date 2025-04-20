@@ -52,7 +52,6 @@ Here’s an overview of the project’s file structure:
 ├── mkdocs_requirement.txt
 └── myapp/
     ├── api/
-    │   ├── .env
     │   ├── Dockerfile
     │   ├── main.py
     │   ├── requirements.txt
@@ -126,5 +125,3 @@ For the purpose of easy management and easy checking, the .env file is pushed to
 We will try to create below schema:
 
 ![Star Schema](./ERD_House_Price_Final.png)
-
-
