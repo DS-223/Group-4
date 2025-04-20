@@ -61,4 +61,22 @@ services:
       - 8501:8501
     environment:
       - API_URL=http://api:8000
-  
+
+  backend:
+    container_name: backend_service
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./api:/backend
+      - ./etl:/backend/etl  
+    environment:
+      - DB_URL=${DATABASE_URL}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+    depends_on:
+      db:
+        condition: service_healthy
