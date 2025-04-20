@@ -55,7 +55,7 @@ Here’s an overview of the project’s file structure:
     │   ├── Dockerfile
     │   ├── main.py
     │   ├── requirements.txt
-    │   └── Database/
+    │   └── etl/
     │       ├── database.py
     │       └── models.py
     ├── app/
@@ -63,17 +63,19 @@ Here’s an overview of the project’s file structure:
     │   ├── main.py
     │   └── reqirements.txt
     ├── etl/
-    │   ├── Database/
-    │   │   ├── csv/
-    │   │   │   ├── images.csv
-    │   │   │   ├── locations.csv
-    │   │   │   └── properties.csv
+    │   ├── database/
     │   │   ├── __init__.py
     │   │   ├── data_generate.py
     │   │   ├── database.py
     │   │   └── models.py
     │   ├── data/
     │   │   └── .gitkeep
+    │   │   │   ├── images.csv
+    │   │   │   ├── users.csv
+    │   │   │   ├── property_ml_ready.csv
+    │   │   │   ├── property_types.csv
+    │   │   │   ├── locations.csv
+    │   │   │   └── properties.csv
     │   ├── .env
     │   ├── Dockerfile
     │   ├── __init__.py
@@ -86,6 +88,8 @@ Here’s an overview of the project’s file structure:
     │   ├── property_predictions.csv
     │   ├── property_ml_ready.csv
     │   └── example.ipynb
+    │   └── requirements.txt
+    │   └── Dockerfile
     │   └── main_model.py 
     ├── .env
     └── docker-compose.yaml
