@@ -1,0 +1,1424 @@
+property_id,deal_type,user_type,district,type_name,size_sqm,status,rooms,floor,year_built,renovation_status,estimated_saleprice,estimated_rentprice
+1,Rent,Owner,Malatia-Sebastia,House,96.1,Available,1,9,1996,Newly Renovated,199007.93,796.03
+2,Sale,Agent,Nubarashen,House,89.0,Available,6,5,1967,Newly Renovated,211979.08,847.92
+5,Rent,Buyer,Nor Nork,House,124.9,Available,6,8,2009,Not Renovated,178884.09,715.54
+7,Rent,Agent,Malatia-Sebastia,House,181.6,Available,2,4,1989,Partially Renovated,201469.44,805.88
+9,Rent,Agent,Kanaker-Zeytun,House,63.0,Available,6,10,1977,Newly Renovated,147790.87,591.16
+12,Sale,Owner,Davtashen,House,162.6,Available,5,5,2006,Partially Renovated,306955.94,1227.82
+15,Sale,Owner,Davtashen,House,128.5,Available,2,8,1975,Newly Renovated,255854.5,1023.42
+16,Sale,Owner,Arabkir,House,182.9,Available,3,4,2008,Newly Renovated,504693.71,2018.77
+17,Sale,Owner,Shengavit,House,197.7,Available,4,3,1983,Newly Renovated,356509.16,1426.04
+24,Rent,Buyer,Erebuni,House,37.2,Available,5,4,1994,Not Renovated,44673.28,178.69
+28,Rent,Agent,Nubarashen,House,80.1,Available,6,3,1988,Not Renovated,131634.49,526.54
+29,Sale,Agent,Davtashen,House,46.0,Available,4,4,1966,Not Renovated,52615.38,210.46
+32,Sale,Buyer,Erebuni,House,95.3,Available,6,11,1986,Newly Renovated,261148.39,1044.59
+33,Rent,Agent,Erebuni,House,57.4,Available,2,4,2005,Not Renovated,69918.33,279.67
+34,Rent,Agent,Davtashen,House,198.6,Available,1,3,1979,Newly Renovated,380147.12,1520.59
+38,Rent,Agent,Avan,House,43.6,Available,2,7,1970,Newly Renovated,124663.57,498.65
+39,Rent,Agent,Kanaker-Zeytun,House,185.1,Available,3,2,2005,Newly Renovated,366452.77,1465.81
+40,Rent,Owner,Davtashen,House,136.9,Available,2,11,2011,Partially Renovated,176296.99,705.19
+42,Sale,Owner,Nubarashen,House,108.4,Available,1,1,1995,Partially Renovated,202989.97,811.96
+45,Sale,Agent,Arabkir,House,153.6,Available,6,2,1989,Not Renovated,249212.51,996.85
+47,Sale,Buyer,Avan,House,154.7,Available,1,10,1976,Not Renovated,178053.46,712.21
+48,Rent,Owner,Kanaker-Zeytun,House,174.3,Available,5,11,2012,Newly Renovated,260213.35,1040.85
+49,Rent,Owner,Arabkir,House,69.4,Available,2,4,1984,Partially Renovated,158196.13,632.78
+50,Sale,Agent,Kanaker-Zeytun,House,96.3,Available,3,9,1988,Not Renovated,143021.92,572.09
+52,Sale,Agent,Avan,House,168.1,Available,6,1,1986,Partially Renovated,315767.71,1263.07
+53,Rent,Owner,Nor Nork,House,176.3,Available,5,5,1967,Not Renovated,205338.01,821.35
+56,Sale,Agent,Erebuni,House,126.8,Available,3,9,1985,Newly Renovated,337617.33,1350.47
+57,Rent,Agent,Kanaker-Zeytun,House,78.6,Available,1,7,1994,Newly Renovated,192905.18,771.62
+59,Sale,Agent,Kanaker-Zeytun,House,81.7,Available,6,6,1973,Not Renovated,188968.17,755.87
+60,Rent,Owner,Avan,House,166.0,Available,6,4,1993,Partially Renovated,260302.21,1041.21
+61,Rent,Owner,Kanaker-Zeytun,House,95.1,Available,1,11,2012,Newly Renovated,167471.9,669.89
+62,Sale,Owner,Nubarashen,House,54.4,Available,1,6,2008,Not Renovated,71902.87,287.61
+65,Sale,Agent,Nor Nork,House,185.9,Available,6,11,1976,Partially Renovated,254677.71,1018.71
+66,Sale,Agent,Kanaker-Zeytun,House,69.2,Available,1,12,1987,Not Renovated,95642.99,382.57
+68,Rent,Agent,Davtashen,House,51.6,Available,3,5,1985,Partially Renovated,84977.86,339.91
+69,Rent,Agent,Avan,House,130.2,Available,1,4,1986,Not Renovated,262220.35,1048.88
+72,Rent,Buyer,Erebuni,House,156.1,Available,4,10,2020,Not Renovated,336999.0,1348.0
+74,Rent,Owner,Erebuni,House,183.8,Available,5,7,2016,Not Renovated,386227.34,1544.91
+76,Sale,Buyer,Shengavit,House,93.7,Available,2,4,2002,Newly Renovated,164509.76,658.04
+77,Rent,Owner,Kanaker-Zeytun,House,65.3,Available,3,12,1966,Not Renovated,111103.49,444.41
+82,Sale,Agent,Malatia-Sebastia,House,185.3,Available,3,1,2010,Partially Renovated,283116.81,1132.47
+85,Sale,Buyer,Kentron,House,42.6,Available,6,6,1984,Partially Renovated,90955.65,363.82
+86,Sale,Agent,Kanaker-Zeytun,House,51.2,Available,3,10,2012,Newly Renovated,87522.76,350.09
+89,Rent,Owner,Kanaker-Zeytun,House,100.4,Available,4,9,2006,Not Renovated,201530.35,806.12
+90,Rent,Buyer,Arabkir,House,159.8,Available,4,6,2015,Newly Renovated,397588.41,1590.35
+91,Rent,Buyer,Erebuni,House,54.8,Available,3,4,1974,Newly Renovated,141083.41,564.33
+92,Rent,Owner,Davtashen,House,63.8,Available,2,1,1972,Not Renovated,133833.75,535.34
+95,Rent,Agent,Nor Nork,House,165.8,Available,5,8,1996,Not Renovated,244164.72,976.66
+101,Rent,Agent,Erebuni,House,91.0,Available,2,11,2013,Newly Renovated,220448.19,881.79
+104,Sale,Agent,Erebuni,House,102.6,Available,2,3,2022,Newly Renovated,204680.53,818.72
+105,Sale,Buyer,Davtashen,House,126.9,Available,6,6,1977,Newly Renovated,340216.76,1360.87
+108,Sale,Buyer,Kanaker-Zeytun,House,32.1,Available,2,1,1990,Newly Renovated,77554.38,310.22
+110,Rent,Buyer,Arabkir,House,132.3,Available,5,7,1967,Not Renovated,203967.92,815.87
+111,Rent,Agent,Nor Nork,House,90.8,Available,4,11,1974,Partially Renovated,150883.14,603.53
+112,Rent,Agent,Shengavit,House,177.7,Available,4,9,1983,Newly Renovated,415390.68,1661.56
+113,Rent,Agent,Kanaker-Zeytun,House,48.3,Available,2,6,1971,Not Renovated,78630.98,314.52
+114,Sale,Buyer,Kanaker-Zeytun,House,69.0,Available,4,2,1996,Not Renovated,154582.53,618.33
+117,Sale,Owner,Nor Nork,House,159.3,Available,6,2,1988,Not Renovated,331940.25,1327.76
+119,Sale,Agent,Ajapnyak,House,194.3,Available,5,9,2017,Partially Renovated,339064.85,1356.26
+120,Rent,Owner,Erebuni,House,96.4,Available,5,2,1997,Newly Renovated,254942.18,1019.77
+121,Rent,Owner,Shengavit,House,145.9,Available,1,6,1988,Not Renovated,189473.78,757.9
+123,Rent,Owner,Arabkir,House,122.7,Available,1,4,2022,Newly Renovated,246954.24,987.82
+124,Sale,Agent,Malatia-Sebastia,House,113.0,Available,4,3,1984,Not Renovated,201806.83,807.23
+131,Rent,Agent,Erebuni,House,31.4,Available,3,7,2008,Partially Renovated,44989.06,179.96
+133,Sale,Buyer,Shengavit,House,100.6,Available,3,9,1975,Not Renovated,241935.68,967.74
+135,Sale,Owner,Nor Nork,House,162.6,Available,2,3,2023,Not Renovated,355031.9,1420.13
+137,Sale,Buyer,Davtashen,House,38.9,Available,5,5,2012,Newly Renovated,118730.7,474.92
+138,Rent,Buyer,Malatia-Sebastia,House,159.7,Available,1,8,2008,Not Renovated,277902.57,1111.61
+139,Sale,Owner,Arabkir,House,42.1,Available,6,12,2005,Not Renovated,66886.03,267.54
+142,Rent,Buyer,Nubarashen,House,111.3,Available,1,12,1965,Newly Renovated,162087.94,648.35
+143,Rent,Owner,Davtashen,House,49.8,Available,1,10,2010,Partially Renovated,79209.36,316.84
+148,Rent,Buyer,Kentron,House,83.6,Available,5,5,2012,Not Renovated,195935.43,783.74
+149,Rent,Buyer,Erebuni,House,68.7,Available,4,6,1990,Not Renovated,109491.2,437.96
+151,Rent,Buyer,Davtashen,House,108.9,Available,3,6,1994,Newly Renovated,202561.52,810.25
+152,Rent,Buyer,Nor Nork,House,137.0,Available,1,8,2003,Partially Renovated,275436.12,1101.74
+155,Sale,Agent,Davtashen,House,144.1,Available,6,8,1997,Newly Renovated,348098.44,1392.39
+157,Sale,Buyer,Kentron,House,183.6,Available,2,10,1979,Newly Renovated,323725.02,1294.9
+158,Sale,Owner,Avan,House,116.2,Available,4,11,2012,Newly Renovated,220355.16,881.42
+160,Rent,Agent,Davtashen,House,161.1,Available,1,3,2015,Not Renovated,268250.65,1073.0
+164,Rent,Buyer,Nubarashen,House,47.2,Available,2,6,2010,Partially Renovated,73339.67,293.36
+167,Sale,Owner,Arabkir,House,69.8,Available,5,5,1989,Partially Renovated,121597.95,486.39
+168,Sale,Owner,Arabkir,House,76.3,Available,6,3,1980,Not Renovated,112821.67,451.29
+169,Rent,Buyer,Nor Nork,House,43.1,Available,2,11,2012,Not Renovated,68692.27,274.77
+173,Sale,Owner,Davtashen,House,89.2,Available,1,10,1990,Newly Renovated,223260.81,893.04
+174,Sale,Buyer,Avan,House,26.1,Available,3,4,1996,Newly Renovated,42927.1,171.71
+176,Rent,Agent,Nor Nork,House,106.2,Available,3,5,1978,Newly Renovated,243184.35,972.74
+179,Rent,Agent,Nork-Marash,House,194.3,Available,1,11,1999,Partially Renovated,287031.38,1148.13
+180,Sale,Owner,Nor Nork,House,44.0,Available,3,4,1989,Partially Renovated,87348.45,349.39
+181,Rent,Owner,Erebuni,House,87.1,Available,5,3,2003,Partially Renovated,218428.76,873.72
+186,Rent,Owner,Erebuni,House,156.8,Available,2,9,1971,Partially Renovated,420408.62,1681.63
+189,Sale,Owner,Kanaker-Zeytun,House,154.5,Available,3,4,2019,Not Renovated,288531.91,1154.13
+190,Sale,Agent,Kentron,House,32.1,Available,3,1,1972,Partially Renovated,37673.78,150.7
+191,Rent,Agent,Erebuni,House,45.2,Available,4,4,1992,Partially Renovated,100481.98,401.93
+192,Sale,Buyer,Erebuni,House,116.7,Available,5,7,1976,Partially Renovated,295311.45,1181.25
+195,Sale,Buyer,Avan,House,47.5,Available,4,11,1968,Not Renovated,66266.64,265.07
+196,Sale,Owner,Davtashen,House,159.7,Available,6,12,2005,Partially Renovated,391043.75,1564.17
+200,Rent,Owner,Kanaker-Zeytun,House,90.4,Available,5,12,1975,Newly Renovated,199433.2,797.73
+201,Rent,Buyer,Erebuni,House,172.0,Available,1,11,1996,Partially Renovated,203601.06,814.4
+205,Sale,Buyer,Davtashen,House,102.3,Available,3,4,1974,Newly Renovated,209808.0,839.23
+206,Sale,Owner,Arabkir,House,192.4,Available,1,10,2021,Partially Renovated,424537.86,1698.15
+208,Rent,Buyer,Nor Nork,House,98.4,Available,4,2,1989,Not Renovated,231886.11,927.54
+211,Rent,Buyer,Nubarashen,House,195.2,Available,6,11,1980,Newly Renovated,356970.1,1427.88
+213,Rent,Buyer,Nor Nork,House,161.3,Available,2,9,1974,Partially Renovated,278331.29,1113.33
+214,Sale,Agent,Davtashen,House,183.0,Available,6,8,2006,Partially Renovated,245840.73,983.36
+215,Sale,Owner,Shengavit,House,129.8,Available,4,8,1983,Newly Renovated,270685.56,1082.74
+216,Rent,Agent,Shengavit,House,42.2,Available,1,5,1971,Partially Renovated,69157.1,276.63
+218,Rent,Agent,Kanaker-Zeytun,House,136.8,Available,3,1,1983,Newly Renovated,205166.9,820.67
+219,Sale,Owner,Davtashen,House,50.4,Available,6,12,1996,Newly Renovated,86705.4,346.82
+222,Rent,Owner,Nor Nork,House,129.7,Available,4,6,1966,Partially Renovated,248886.16,995.54
+224,Sale,Owner,Davtashen,House,45.4,Available,1,3,2014,Partially Renovated,59762.88,239.05
+225,Rent,Agent,Kanaker-Zeytun,House,108.0,Available,5,8,2007,Newly Renovated,239025.91,956.1
+228,Rent,Agent,Shengavit,House,182.1,Available,6,9,2000,Not Renovated,392610.82,1570.44
+229,Sale,Owner,Ajapnyak,House,105.8,Available,5,3,1999,Partially Renovated,216687.82,866.75
+231,Rent,Agent,Malatia-Sebastia,House,129.4,Available,3,7,2002,Not Renovated,172915.59,691.66
+232,Sale,Agent,Arabkir,House,172.3,Available,1,6,2000,Partially Renovated,391721.21,1566.88
+238,Sale,Owner,Avan,House,67.1,Available,6,10,1999,Not Renovated,119954.09,479.82
+239,Sale,Agent,Nor Nork,House,162.7,Available,3,9,2014,Not Renovated,218011.62,872.05
+243,Sale,Buyer,Kanaker-Zeytun,House,185.0,Available,3,10,2005,Not Renovated,379828.57,1519.31
+246,Rent,Agent,Shengavit,House,95.6,Available,6,8,1997,Not Renovated,184505.11,738.02
+247,Rent,Agent,Nor Nork,House,133.5,Available,4,6,1974,Not Renovated,235678.98,942.72
+248,Rent,Buyer,Davtashen,House,26.3,Available,3,2,2003,Not Renovated,56286.93,225.15
+249,Rent,Agent,Arabkir,House,95.7,Available,5,5,1968,Newly Renovated,255617.28,1022.47
+250,Sale,Owner,Kanaker-Zeytun,House,145.5,Available,5,6,2023,Newly Renovated,249879.8,999.52
+251,Sale,Owner,Kentron,House,48.8,Available,2,3,2020,Partially Renovated,90469.98,361.88
+252,Sale,Buyer,Avan,House,25.4,Available,4,11,1971,Not Renovated,59157.72,236.63
+255,Rent,Agent,Kentron,House,34.2,Available,6,10,2012,Newly Renovated,104272.36,417.09
+256,Rent,Owner,Davtashen,House,58.6,Available,1,1,2013,Not Renovated,74206.89,296.83
+261,Rent,Owner,Kanaker-Zeytun,House,129.2,Available,2,10,1982,Newly Renovated,195601.84,782.41
+262,Rent,Buyer,Avan,House,103.9,Available,5,9,1973,Newly Renovated,245213.72,980.85
+266,Sale,Owner,Kanaker-Zeytun,House,181.6,Available,5,3,2006,Not Renovated,302849.1,1211.4
+267,Sale,Owner,Kanaker-Zeytun,House,152.7,Available,5,12,1975,Not Renovated,202963.93,811.86
+269,Sale,Agent,Nor Nork,House,31.9,Available,5,2,1979,Newly Renovated,63536.9,254.15
+271,Rent,Owner,Ajapnyak,House,92.7,Available,6,7,1988,Newly Renovated,210985.16,843.94
+272,Rent,Owner,Shengavit,House,142.0,Available,4,10,2003,Partially Renovated,231670.59,926.68
+274,Rent,Agent,Shengavit,House,130.7,Available,3,6,1973,Partially Renovated,205609.24,822.44
+275,Rent,Agent,Kanaker-Zeytun,House,129.6,Available,3,1,1978,Not Renovated,239600.05,958.4
+277,Sale,Owner,Nork-Marash,House,189.8,Available,3,7,2013,Not Renovated,292693.42,1170.77
+278,Rent,Buyer,Nubarashen,House,26.1,Available,2,11,1972,Partially Renovated,62372.85,249.49
+279,Rent,Owner,Arabkir,House,91.3,Available,2,3,2019,Newly Renovated,132136.18,528.54
+281,Rent,Agent,Erebuni,House,185.3,Available,4,3,2014,Newly Renovated,310889.38,1243.56
+282,Rent,Agent,Shengavit,House,29.2,Available,5,5,1994,Newly Renovated,51348.02,205.39
+283,Rent,Owner,Davtashen,House,59.2,Available,2,12,1985,Partially Renovated,133480.92,533.92
+290,Rent,Buyer,Arabkir,House,150.9,Available,5,10,1998,Newly Renovated,303948.96,1215.8
+291,Rent,Owner,Kanaker-Zeytun,House,138.6,Available,4,7,1969,Partially Renovated,211378.61,845.51
+293,Sale,Owner,Ajapnyak,House,110.7,Available,3,12,1988,Newly Renovated,195438.54,781.75
+294,Sale,Owner,Malatia-Sebastia,House,101.1,Available,3,10,2023,Newly Renovated,277639.86,1110.56
+299,Rent,Owner,Davtashen,House,28.4,Available,4,3,1980,Partially Renovated,71060.43,284.24
+300,Rent,Agent,Shengavit,House,65.4,Available,5,1,1967,Partially Renovated,128598.95,514.4
+302,Sale,Agent,Avan,House,128.2,Available,6,10,1991,Partially Renovated,281738.77,1126.96
+309,Rent,Owner,Arabkir,House,72.7,Available,3,8,2011,Newly Renovated,139263.5,557.05
+313,Rent,Owner,Kentron,House,68.5,Available,1,9,2011,Partially Renovated,140799.22,563.2
+314,Sale,Owner,Kentron,House,198.0,Available,3,1,2001,Not Renovated,332529.09,1330.12
+315,Sale,Owner,Kentron,House,111.4,Available,6,10,2003,Newly Renovated,172571.92,690.29
+316,Sale,Buyer,Kanaker-Zeytun,House,80.9,Available,2,5,2019,Not Renovated,106765.58,427.06
+317,Rent,Owner,Avan,House,89.2,Available,1,4,1984,Partially Renovated,182653.8,730.62
+318,Sale,Owner,Erebuni,House,49.1,Available,4,11,2011,Not Renovated,84315.06,337.26
+319,Sale,Owner,Kanaker-Zeytun,House,183.9,Available,6,4,1995,Newly Renovated,380579.36,1522.32
+321,Sale,Agent,Davtashen,House,71.3,Available,2,9,2023,Partially Renovated,168478.5,673.91
+323,Rent,Owner,Arabkir,House,124.2,Available,4,12,1981,Partially Renovated,272261.16,1089.04
+325,Rent,Owner,Erebuni,House,90.0,Available,6,9,2000,Newly Renovated,186572.12,746.29
+328,Sale,Buyer,Arabkir,House,195.2,Available,4,5,1976,Partially Renovated,385888.92,1543.56
+331,Rent,Owner,Ajapnyak,House,121.5,Available,5,4,2015,Newly Renovated,223917.67,895.67
+332,Sale,Agent,Arabkir,House,37.3,Available,4,3,1986,Partially Renovated,101736.46,406.95
+334,Sale,Agent,Ajapnyak,House,142.8,Available,3,8,1977,Not Renovated,292256.31,1169.03
+335,Sale,Buyer,Kanaker-Zeytun,House,49.9,Available,2,8,2002,Partially Renovated,69974.53,279.9
+336,Sale,Buyer,Erebuni,House,129.4,Available,6,5,1977,Newly Renovated,212545.95,850.18
+339,Rent,Agent,Erebuni,House,161.1,Available,1,1,2006,Not Renovated,256029.95,1024.12
+340,Rent,Owner,Davtashen,House,100.7,Available,4,6,2015,Partially Renovated,170137.87,680.55
+343,Rent,Owner,Nor Nork,House,117.7,Available,4,10,1979,Partially Renovated,162592.15,650.37
+345,Sale,Agent,Arabkir,House,86.4,Available,4,12,1992,Not Renovated,191738.93,766.96
+348,Rent,Owner,Kanaker-Zeytun,House,39.5,Available,1,11,2016,Newly Renovated,104498.89,418.0
+349,Rent,Buyer,Erebuni,House,191.5,Available,3,7,2007,Partially Renovated,198232.48,792.93
+350,Sale,Owner,Davtashen,House,152.7,Available,1,3,1989,Partially Renovated,261593.23,1046.37
+353,Sale,Buyer,Erebuni,House,147.8,Available,4,8,2014,Partially Renovated,210789.13,843.16
+355,Sale,Agent,Malatia-Sebastia,House,77.9,Available,2,6,1970,Not Renovated,134224.64,536.9
+356,Rent,Owner,Malatia-Sebastia,House,116.0,Available,2,8,1978,Partially Renovated,189612.49,758.45
+357,Rent,Agent,Avan,House,108.5,Available,3,12,1987,Newly Renovated,231026.36,924.11
+358,Sale,Owner,Malatia-Sebastia,House,174.6,Available,4,2,1993,Newly Renovated,527165.83,2108.66
+359,Rent,Buyer,Davtashen,House,75.2,Available,1,5,2017,Partially Renovated,108784.95,435.14
+360,Rent,Owner,Avan,House,127.7,Available,4,12,2007,Newly Renovated,296924.08,1187.7
+365,Rent,Owner,Shengavit,House,88.2,Available,5,2,2020,Not Renovated,182348.87,729.4
+366,Sale,Buyer,Arabkir,House,142.3,Available,2,7,2002,Not Renovated,175736.65,702.95
+367,Rent,Agent,Avan,House,147.7,Available,5,6,2010,Newly Renovated,289847.96,1159.39
+369,Rent,Agent,Nor Nork,House,74.0,Available,5,11,1973,Partially Renovated,156013.92,624.06
+370,Rent,Buyer,Kanaker-Zeytun,House,152.7,Available,1,1,1993,Newly Renovated,185648.99,742.6
+375,Rent,Owner,Shengavit,House,68.1,Available,1,1,1972,Partially Renovated,104651.1,418.6
+378,Rent,Agent,Erebuni,House,119.8,Available,2,9,2001,Not Renovated,181888.17,727.55
+379,Rent,Agent,Nor Nork,House,96.0,Available,6,5,2003,Partially Renovated,192362.9,769.45
+381,Sale,Owner,Shengavit,House,180.5,Available,6,9,2000,Partially Renovated,343807.57,1375.23
+382,Sale,Buyer,Avan,House,174.5,Available,3,7,1992,Not Renovated,500014.76,2000.06
+384,Rent,Owner,Davtashen,House,59.8,Available,5,8,1999,Not Renovated,149482.53,597.93
+387,Rent,Agent,Kanaker-Zeytun,House,104.2,Available,5,4,1976,Not Renovated,132851.49,531.41
+390,Rent,Agent,Arabkir,House,161.3,Available,6,11,1997,Not Renovated,302501.84,1210.01
+391,Sale,Agent,Avan,House,41.1,Available,4,3,2009,Partially Renovated,60394.06,241.58
+394,Rent,Buyer,Shengavit,House,162.5,Available,4,7,1987,Partially Renovated,306152.0,1224.61
+396,Rent,Buyer,Kentron,House,38.6,Available,1,3,2008,Not Renovated,79269.77,317.08
+398,Sale,Agent,Nubarashen,House,153.4,Available,4,11,2022,Partially Renovated,362879.87,1451.52
+401,Sale,Buyer,Davtashen,House,35.0,Available,4,6,2008,Newly Renovated,106573.26,426.29
+403,Rent,Owner,Nork-Marash,House,181.4,Available,2,9,2002,Not Renovated,318810.22,1275.24
+405,Sale,Owner,Erebuni,House,130.4,Available,6,9,2020,Newly Renovated,338643.05,1354.57
+407,Rent,Buyer,Erebuni,House,112.8,Available,3,2,2012,Not Renovated,234227.62,936.91
+410,Rent,Owner,Erebuni,House,117.4,Available,3,2,2010,Partially Renovated,239116.3,956.47
+413,Sale,Agent,Shengavit,House,149.5,Available,6,12,1999,Partially Renovated,279532.78,1118.13
+414,Sale,Owner,Erebuni,House,100.8,Available,3,1,2016,Partially Renovated,163672.93,654.69
+415,Sale,Buyer,Erebuni,House,108.2,Available,1,10,1966,Not Renovated,119160.77,476.64
+418,Rent,Buyer,Shengavit,House,151.8,Available,5,7,2021,Newly Renovated,481354.29,1925.42
+421,Sale,Buyer,Nork-Marash,House,42.4,Available,3,7,2020,Partially Renovated,104525.41,418.1
+423,Rent,Agent,Kentron,House,155.5,Available,3,6,2009,Partially Renovated,277644.3,1110.58
+424,Rent,Agent,Kanaker-Zeytun,House,85.9,Available,2,7,1976,Partially Renovated,178577.83,714.31
+425,Sale,Buyer,Avan,House,40.2,Available,1,8,1994,Not Renovated,63680.63,254.72
+426,Sale,Owner,Davtashen,House,91.5,Available,6,2,1974,Partially Renovated,152426.98,609.71
+430,Rent,Agent,Erebuni,House,70.7,Available,3,6,2000,Not Renovated,130185.23,520.74
+433,Rent,Owner,Nor Nork,House,52.6,Available,4,5,2015,Not Renovated,68016.37,272.07
+434,Sale,Agent,Arabkir,House,27.2,Available,4,11,1971,Partially Renovated,45791.54,183.17
+435,Rent,Buyer,Davtashen,House,147.7,Available,3,9,1975,Not Renovated,313238.9,1252.96
+438,Rent,Buyer,Nubarashen,House,28.4,Available,3,8,1965,Partially Renovated,55997.5,223.99
+439,Rent,Buyer,Arabkir,House,48.6,Available,4,8,1972,Newly Renovated,81079.96,324.32
+441,Rent,Owner,Kanaker-Zeytun,House,95.1,Available,1,11,1967,Partially Renovated,126316.82,505.27
+442,Rent,Owner,Nor Nork,House,178.2,Available,2,8,1980,Not Renovated,190596.6,762.39
+443,Rent,Buyer,Kanaker-Zeytun,House,169.8,Available,2,5,1983,Partially Renovated,291531.13,1166.12
+444,Sale,Owner,Nubarashen,House,115.7,Available,3,9,2018,Newly Renovated,265522.73,1062.09
+446,Sale,Owner,Nor Nork,House,97.4,Available,2,2,2010,Not Renovated,206529.75,826.12
+449,Sale,Owner,Erebuni,House,119.4,Available,4,9,1980,Partially Renovated,211967.63,847.87
+451,Sale,Agent,Kanaker-Zeytun,House,83.1,Available,1,9,2000,Partially Renovated,110842.08,443.37
+452,Rent,Owner,Kanaker-Zeytun,House,93.8,Available,2,7,2003,Newly Renovated,151273.98,605.1
+453,Rent,Agent,Avan,House,173.9,Available,4,4,1986,Not Renovated,192999.61,772.0
+456,Rent,Agent,Erebuni,House,36.5,Available,5,4,2001,Partially Renovated,61466.65,245.87
+457,Rent,Buyer,Avan,House,154.9,Available,3,8,2010,Partially Renovated,183459.03,733.84
+458,Rent,Owner,Avan,House,49.3,Available,1,1,2006,Partially Renovated,78040.68,312.16
+459,Rent,Agent,Avan,House,117.1,Available,4,4,2015,Not Renovated,183664.08,734.66
+461,Rent,Agent,Erebuni,House,156.9,Available,2,4,1991,Not Renovated,235617.04,942.47
+465,Sale,Agent,Kentron,House,51.0,Available,5,8,2006,Partially Renovated,93780.78,375.12
+466,Sale,Owner,Ajapnyak,House,31.4,Available,6,11,1967,Partially Renovated,52548.72,210.19
+467,Rent,Buyer,Nor Nork,House,196.2,Available,2,6,2008,Not Renovated,440477.84,1761.91
+469,Sale,Owner,Kanaker-Zeytun,House,35.8,Available,2,8,1967,Partially Renovated,78631.75,314.53
+470,Sale,Owner,Kentron,House,47.2,Available,4,9,1974,Not Renovated,89530.4,358.12
+471,Rent,Agent,Davtashen,House,146.7,Available,6,10,1987,Not Renovated,352977.58,1411.91
+475,Rent,Agent,Avan,House,71.7,Available,3,3,1995,Not Renovated,118366.49,473.47
+476,Rent,Buyer,Nor Nork,House,186.7,Available,2,4,1971,Partially Renovated,335390.45,1341.56
+478,Rent,Agent,Arabkir,House,172.3,Available,6,11,2022,Newly Renovated,440109.93,1760.44
+479,Rent,Buyer,Shengavit,House,39.3,Available,6,1,2019,Not Renovated,80302.97,321.21
+482,Rent,Buyer,Avan,House,119.7,Available,1,2,1980,Not Renovated,140728.17,562.91
+484,Sale,Buyer,Avan,House,159.2,Available,6,1,2004,Not Renovated,196474.55,785.9
+485,Sale,Buyer,Davtashen,House,44.3,Available,4,1,1970,Partially Renovated,69860.85,279.44
+487,Rent,Buyer,Davtashen,House,125.8,Available,3,5,1979,Newly Renovated,201707.16,806.83
+490,Rent,Owner,Avan,House,165.0,Available,3,2,1967,Partially Renovated,220110.3,880.44
+491,Sale,Agent,Avan,House,185.8,Available,6,11,2012,Partially Renovated,220187.74,880.75
+492,Sale,Owner,Arabkir,House,30.2,Available,4,1,2007,Newly Renovated,82243.85,328.98
+493,Sale,Agent,Davtashen,House,181.0,Available,4,12,1967,Newly Renovated,320274.32,1281.1
+495,Rent,Buyer,Avan,House,47.9,Available,6,3,2002,Newly Renovated,70139.52,280.56
+499,Rent,Buyer,Avan,House,176.1,Available,2,5,2003,Not Renovated,198026.07,792.1
+500,Rent,Owner,Erebuni,House,79.5,Available,5,3,1987,Partially Renovated,206215.99,824.86
+506,Sale,Agent,Kanaker-Zeytun,House,133.3,Available,5,9,1984,Newly Renovated,343208.36,1372.83
+507,Rent,Agent,Davtashen,House,121.6,Available,2,5,1970,Newly Renovated,232152.53,928.61
+510,Rent,Buyer,Avan,House,103.1,Available,3,11,2006,Partially Renovated,160611.17,642.44
+511,Sale,Owner,Arabkir,House,194.4,Available,2,4,1968,Partially Renovated,248173.65,992.69
+513,Sale,Buyer,Shengavit,House,59.5,Available,5,5,1965,Not Renovated,69565.81,278.26
+516,Sale,Owner,Nor Nork,House,183.6,Available,5,5,2001,Not Renovated,236256.32,945.03
+517,Rent,Agent,Arabkir,House,119.1,Available,3,9,1997,Not Renovated,213236.03,852.94
+524,Sale,Agent,Malatia-Sebastia,House,149.3,Available,4,6,1980,Newly Renovated,374557.33,1498.23
+526,Sale,Owner,Shengavit,House,149.1,Available,6,12,1984,Not Renovated,194146.34,776.59
+527,Sale,Owner,Ajapnyak,House,63.3,Available,4,11,2021,Newly Renovated,190939.75,763.76
+531,Sale,Owner,Davtashen,House,62.9,Available,3,7,2018,Newly Renovated,167127.94,668.51
+533,Rent,Agent,Kanaker-Zeytun,House,48.5,Available,1,8,1979,Partially Renovated,133755.3,535.02
+534,Sale,Agent,Nork-Marash,House,76.9,Available,3,10,1987,Not Renovated,147827.7,591.31
+537,Rent,Agent,Avan,House,86.2,Available,2,9,1980,Newly Renovated,147262.99,589.05
+540,Rent,Buyer,Avan,House,31.0,Available,4,5,1982,Newly Renovated,49610.04,198.44
+541,Sale,Agent,Erebuni,House,29.6,Available,6,8,1967,Not Renovated,45085.73,180.34
+545,Rent,Buyer,Avan,House,57.4,Available,1,6,1999,Partially Renovated,92067.03,368.27
+547,Rent,Agent,Kentron,House,136.1,Available,6,5,1989,Newly Renovated,315339.99,1261.36
+549,Rent,Owner,Avan,House,75.1,Available,6,4,2021,Newly Renovated,169027.39,676.11
+555,Sale,Owner,Davtashen,House,133.9,Available,5,2,2014,Newly Renovated,258816.47,1035.27
+560,Rent,Owner,Davtashen,House,178.7,Available,3,9,1976,Partially Renovated,391640.58,1566.56
+563,Sale,Owner,Erebuni,House,149.6,Available,4,9,1986,Newly Renovated,458992.12,1835.97
+564,Rent,Agent,Kanaker-Zeytun,House,191.1,Available,1,8,1968,Partially Renovated,409520.7,1638.08
+567,Sale,Agent,Nor Nork,House,44.4,Available,5,10,2012,Partially Renovated,101930.62,407.72
+570,Sale,Agent,Nork-Marash,House,157.1,Available,6,5,2005,Not Renovated,195211.62,780.85
+572,Sale,Buyer,Arabkir,House,187.4,Available,4,7,2011,Not Renovated,288358.97,1153.44
+575,Sale,Buyer,Ajapnyak,House,49.9,Available,6,12,2000,Partially Renovated,72111.48,288.45
+577,Rent,Owner,Nor Nork,House,56.1,Available,4,11,2003,Partially Renovated,116924.78,467.7
+578,Rent,Buyer,Kanaker-Zeytun,House,140.4,Available,5,9,1970,Partially Renovated,207674.85,830.7
+580,Rent,Buyer,Ajapnyak,House,125.5,Available,2,5,1994,Partially Renovated,177882.0,711.53
+581,Rent,Buyer,Kanaker-Zeytun,House,79.7,Available,4,8,1969,Not Renovated,100943.68,403.77
+583,Rent,Buyer,Nor Nork,House,175.4,Available,5,2,2006,Partially Renovated,463489.39,1853.96
+584,Sale,Owner,Kanaker-Zeytun,House,198.7,Available,6,6,1999,Partially Renovated,263597.88,1054.39
+585,Sale,Agent,Davtashen,House,115.5,Available,2,4,2003,Not Renovated,172462.6,689.85
+586,Sale,Agent,Nor Nork,House,198.1,Available,1,4,1969,Not Renovated,260053.9,1040.22
+589,Rent,Agent,Davtashen,House,112.1,Available,2,12,2021,Not Renovated,114249.33,457.0
+592,Rent,Owner,Kanaker-Zeytun,House,141.3,Available,2,8,2002,Partially Renovated,161420.12,645.68
+595,Sale,Buyer,Arabkir,House,127.2,Available,6,8,1996,Not Renovated,173899.25,695.6
+597,Sale,Buyer,Erebuni,House,160.4,Available,6,5,1973,Partially Renovated,259383.31,1037.53
+599,Sale,Buyer,Avan,House,83.7,Available,1,12,1979,Not Renovated,89526.72,358.11
+602,Rent,Buyer,Kanaker-Zeytun,House,178.0,Available,5,10,1983,Partially Renovated,434866.14,1739.46
+605,Sale,Owner,Erebuni,House,195.0,Available,5,9,2011,Partially Renovated,382298.8,1529.2
+607,Rent,Agent,Kanaker-Zeytun,House,140.2,Available,3,9,1999,Partially Renovated,313550.17,1254.2
+609,Sale,Owner,Avan,House,169.1,Available,6,2,1995,Partially Renovated,419404.66,1677.62
+613,Rent,Agent,Nork-Marash,House,138.7,Available,5,11,1973,Newly Renovated,284153.1,1136.61
+614,Rent,Buyer,Shengavit,House,142.8,Available,3,7,1989,Partially Renovated,314986.33,1259.95
+617,Sale,Agent,Malatia-Sebastia,House,94.8,Available,6,5,1993,Newly Renovated,285126.32,1140.51
+618,Rent,Agent,Kanaker-Zeytun,House,71.1,Available,3,4,1993,Not Renovated,154782.93,619.13
+619,Sale,Owner,Erebuni,House,140.4,Available,1,3,1971,Partially Renovated,269913.99,1079.66
+620,Sale,Agent,Kentron,House,137.8,Available,1,11,2009,Partially Renovated,315847.74,1263.39
+622,Rent,Owner,Davtashen,House,47.5,Available,5,6,1986,Partially Renovated,103515.11,414.06
+628,Rent,Buyer,Kanaker-Zeytun,House,157.3,Available,2,7,2004,Not Renovated,268953.57,1075.81
+632,Sale,Owner,Avan,House,191.5,Available,3,5,1992,Newly Renovated,440396.77,1761.59
+634,Sale,Owner,Davtashen,House,64.1,Available,3,10,1984,Partially Renovated,121971.89,487.89
+635,Rent,Owner,Davtashen,House,30.2,Available,4,3,1971,Newly Renovated,56201.85,224.81
+636,Rent,Owner,Kentron,House,110.4,Available,2,6,1993,Newly Renovated,186774.58,747.1
+643,Sale,Agent,Kentron,House,162.8,Available,2,10,1982,Partially Renovated,294377.69,1177.51
+646,Sale,Owner,Avan,House,32.4,Available,1,7,2007,Partially Renovated,62107.81,248.43
+648,Sale,Buyer,Malatia-Sebastia,House,190.5,Available,2,4,2004,Partially Renovated,264174.72,1056.7
+650,Rent,Agent,Davtashen,House,199.1,Available,3,4,2019,Newly Renovated,468076.34,1872.31
+652,Sale,Owner,Davtashen,House,153.7,Available,4,8,2003,Newly Renovated,376913.29,1507.65
+653,Rent,Buyer,Avan,House,196.1,Available,3,10,2009,Partially Renovated,358381.59,1433.53
+654,Rent,Agent,Nor Nork,House,87.0,Available,2,11,1999,Partially Renovated,166009.66,664.04
+656,Rent,Agent,Erebuni,House,196.8,Available,2,6,2019,Not Renovated,434829.63,1739.32
+659,Rent,Buyer,Avan,House,195.7,Available,2,9,1970,Partially Renovated,373476.98,1493.91
+660,Sale,Agent,Erebuni,House,91.6,Available,5,6,1986,Not Renovated,162435.27,649.74
+664,Rent,Agent,Kanaker-Zeytun,House,54.8,Available,3,1,1965,Partially Renovated,87880.79,351.52
+665,Sale,Owner,Avan,House,128.7,Available,3,7,1970,Not Renovated,231943.5,927.77
+667,Rent,Owner,Davtashen,House,44.0,Available,3,9,1970,Newly Renovated,81974.92,327.9
+670,Rent,Agent,Kanaker-Zeytun,House,170.8,Available,3,10,1983,Not Renovated,229225.29,916.9
+674,Sale,Buyer,Nor Nork,House,119.3,Available,2,3,1966,Partially Renovated,139462.09,557.85
+676,Rent,Owner,Nork-Marash,House,42.8,Available,5,6,2017,Partially Renovated,67996.16,271.98
+677,Sale,Owner,Avan,House,152.8,Available,6,7,2023,Newly Renovated,304116.13,1216.46
+681,Sale,Buyer,Arabkir,House,110.1,Available,4,8,2003,Not Renovated,287748.93,1151.0
+682,Sale,Agent,Arabkir,House,183.6,Available,3,3,1976,Not Renovated,255609.97,1022.44
+683,Sale,Buyer,Erebuni,House,165.1,Available,4,5,1975,Partially Renovated,280476.47,1121.91
+686,Rent,Owner,Kanaker-Zeytun,House,119.6,Available,6,2,1982,Newly Renovated,264651.89,1058.61
+687,Rent,Buyer,Arabkir,House,181.9,Available,4,4,1966,Partially Renovated,235229.86,940.92
+691,Sale,Buyer,Arabkir,House,192.4,Available,5,5,1982,Newly Renovated,347496.12,1389.98
+692,Rent,Owner,Avan,House,31.1,Available,6,6,1982,Not Renovated,71349.39,285.4
+693,Sale,Agent,Kanaker-Zeytun,House,104.1,Available,1,6,2014,Not Renovated,177085.48,708.34
+694,Sale,Owner,Erebuni,House,130.9,Available,1,11,1978,Newly Renovated,294256.98,1177.03
+697,Sale,Owner,Kanaker-Zeytun,House,110.5,Available,5,2,2008,Not Renovated,162081.07,648.32
+698,Rent,Owner,Davtashen,House,34.2,Available,3,9,2005,Not Renovated,46751.19,187.0
+700,Rent,Buyer,Nork-Marash,House,167.4,Available,4,4,1988,Newly Renovated,409454.07,1637.82
+701,Sale,Owner,Nor Nork,House,96.8,Available,5,7,2014,Newly Renovated,192312.74,769.25
+702,Rent,Buyer,Davtashen,House,131.0,Available,4,5,2005,Not Renovated,325619.69,1302.48
+705,Sale,Buyer,Kanaker-Zeytun,House,170.6,Available,3,1,1965,Not Renovated,250889.49,1003.56
+707,Sale,Agent,Erebuni,House,75.9,Available,5,11,1990,Not Renovated,85910.39,343.64
+710,Rent,Buyer,Davtashen,House,65.5,Available,6,10,1973,Not Renovated,141895.95,567.58
+711,Sale,Buyer,Davtashen,House,168.6,Available,5,5,2022,Not Renovated,372726.73,1490.91
+712,Rent,Owner,Arabkir,House,112.2,Available,3,1,1989,Not Renovated,283769.08,1135.08
+714,Sale,Buyer,Kanaker-Zeytun,House,104.3,Available,1,9,2014,Newly Renovated,191416.94,765.67
+715,Sale,Buyer,Shengavit,House,63.0,Available,6,4,2019,Partially Renovated,177880.6,711.52
+716,Rent,Owner,Nor Nork,House,49.9,Available,3,2,1973,Partially Renovated,79396.85,317.59
+717,Rent,Owner,Erebuni,House,46.0,Available,5,4,2020,Not Renovated,96364.79,385.46
+718,Sale,Owner,Kanaker-Zeytun,House,153.9,Available,2,8,2012,Partially Renovated,288821.04,1155.28
+719,Sale,Owner,Avan,House,146.3,Available,3,10,1966,Partially Renovated,181936.35,727.75
+721,Rent,Owner,Kanaker-Zeytun,House,106.2,Available,2,12,2006,Not Renovated,204809.64,819.24
+724,Sale,Agent,Davtashen,House,63.9,Available,2,9,2003,Newly Renovated,177973.9,711.9
+726,Rent,Agent,Malatia-Sebastia,House,65.4,Available,6,6,2022,Partially Renovated,166775.85,667.1
+727,Sale,Buyer,Nor Nork,House,147.7,Available,6,5,1977,Newly Renovated,268842.95,1075.37
+729,Sale,Buyer,Davtashen,House,90.7,Available,2,1,2006,Not Renovated,122323.9,489.3
+730,Sale,Buyer,Erebuni,House,40.4,Available,1,10,1989,Newly Renovated,65038.81,260.16
+731,Rent,Owner,Avan,House,117.3,Available,2,11,1995,Newly Renovated,324487.26,1297.95
+732,Rent,Agent,Davtashen,House,152.0,Available,1,7,1994,Newly Renovated,279422.19,1117.69
+733,Rent,Owner,Avan,House,194.9,Available,1,1,2009,Newly Renovated,263514.07,1054.06
+734,Rent,Agent,Kanaker-Zeytun,House,81.5,Available,2,9,2021,Newly Renovated,244275.93,977.1
+738,Rent,Owner,Malatia-Sebastia,House,185.2,Available,1,5,1970,Partially Renovated,215499.62,862.0
+740,Rent,Owner,Kanaker-Zeytun,House,103.9,Available,5,8,2007,Partially Renovated,150580.45,602.32
+743,Rent,Owner,Davtashen,House,101.8,Available,1,11,2023,Partially Renovated,245568.47,982.27
+747,Sale,Agent,Ajapnyak,House,82.7,Available,5,6,1982,Not Renovated,128411.56,513.65
+749,Rent,Buyer,Kanaker-Zeytun,House,141.7,Available,3,11,1993,Newly Renovated,349417.23,1397.67
+750,Rent,Buyer,Erebuni,House,61.0,Available,1,1,1972,Newly Renovated,103822.04,415.29
+751,Rent,Owner,Nor Nork,House,156.3,Available,3,3,2012,Newly Renovated,437031.24,1748.12
+754,Rent,Agent,Avan,House,108.7,Available,5,9,2019,Newly Renovated,334883.42,1339.53
+759,Rent,Buyer,Kanaker-Zeytun,House,29.0,Available,5,4,2002,Not Renovated,36477.09,145.91
+760,Rent,Owner,Nor Nork,House,60.8,Available,3,8,2023,Not Renovated,91787.54,367.15
+761,Rent,Buyer,Kanaker-Zeytun,House,128.1,Available,3,9,2006,Newly Renovated,222497.46,889.99
+762,Sale,Owner,Arabkir,House,39.8,Available,5,9,2013,Not Renovated,89619.45,358.48
+765,Rent,Owner,Erebuni,House,44.6,Available,3,10,2020,Partially Renovated,75009.74,300.04
+771,Sale,Buyer,Malatia-Sebastia,House,48.7,Available,5,12,1970,Partially Renovated,63890.97,255.56
+776,Rent,Owner,Kanaker-Zeytun,House,164.7,Available,5,3,1988,Newly Renovated,381165.99,1524.66
+780,Rent,Buyer,Davtashen,House,167.2,Available,3,12,1996,Not Renovated,218377.78,873.51
+782,Rent,Owner,Shengavit,House,111.3,Available,1,8,1995,Newly Renovated,270278.28,1081.11
+785,Sale,Agent,Kanaker-Zeytun,House,43.0,Available,4,6,2013,Not Renovated,91861.67,367.45
+789,Sale,Owner,Avan,House,156.7,Available,4,2,1983,Not Renovated,192866.12,771.46
+790,Sale,Buyer,Shengavit,House,38.1,Available,3,5,1979,Not Renovated,48948.85,195.8
+791,Rent,Owner,Nor Nork,House,122.7,Available,3,3,1970,Partially Renovated,217226.03,868.9
+792,Rent,Owner,Avan,House,95.5,Available,6,6,2003,Newly Renovated,219565.52,878.26
+794,Rent,Owner,Erebuni,House,26.1,Available,5,4,2013,Not Renovated,56726.61,226.91
+797,Sale,Buyer,Shengavit,House,143.3,Available,3,8,1982,Newly Renovated,341956.88,1367.83
+801,Sale,Agent,Erebuni,House,65.3,Available,4,6,2018,Newly Renovated,167915.91,671.66
+803,Sale,Agent,Kanaker-Zeytun,House,133.1,Available,5,1,2018,Newly Renovated,389164.28,1556.66
+804,Sale,Agent,Kentron,House,125.1,Available,1,12,2017,Newly Renovated,174554.15,698.22
+805,Sale,Buyer,Erebuni,House,119.2,Available,4,4,2011,Newly Renovated,231291.29,925.17
+806,Rent,Owner,Nor Nork,House,60.3,Available,2,3,2001,Not Renovated,114710.99,458.84
+807,Sale,Agent,Kanaker-Zeytun,House,34.5,Available,3,10,1973,Partially Renovated,83542.56,334.17
+810,Sale,Agent,Davtashen,House,187.4,Available,5,6,2001,Partially Renovated,504779.27,2019.12
+813,Sale,Buyer,Davtashen,House,56.9,Available,6,5,2015,Newly Renovated,175812.19,703.25
+815,Sale,Agent,Kentron,House,101.2,Available,5,4,2017,Partially Renovated,201371.21,805.48
+818,Rent,Buyer,Shengavit,House,159.7,Available,3,4,2014,Partially Renovated,323152.42,1292.61
+819,Sale,Owner,Nor Nork,House,199.3,Available,3,6,1981,Newly Renovated,385769.76,1543.08
+821,Rent,Owner,Avan,House,80.5,Available,5,8,1975,Newly Renovated,147542.73,590.17
+827,Rent,Owner,Kanaker-Zeytun,House,99.6,Available,1,8,2012,Not Renovated,164215.35,656.86
+830,Sale,Agent,Davtashen,House,59.7,Available,5,1,1980,Not Renovated,75459.97,301.84
+832,Sale,Agent,Davtashen,House,51.8,Available,2,10,1989,Partially Renovated,109705.34,438.82
+833,Rent,Buyer,Avan,House,99.9,Available,3,3,2015,Not Renovated,205165.89,820.66
+835,Rent,Owner,Kanaker-Zeytun,House,121.3,Available,2,8,1975,Partially Renovated,280036.26,1120.15
+837,Rent,Owner,Erebuni,House,100.2,Available,6,7,1999,Not Renovated,168017.9,672.07
+839,Rent,Buyer,Kanaker-Zeytun,House,198.4,Available,3,10,1973,Not Renovated,208992.27,835.97
+840,Rent,Agent,Erebuni,House,66.5,Available,5,6,2012,Not Renovated,69343.82,277.38
+843,Rent,Owner,Erebuni,House,28.7,Available,3,4,2021,Not Renovated,85835.31,343.34
+845,Rent,Owner,Shengavit,House,170.8,Available,3,6,1993,Newly Renovated,461126.28,1844.51
+846,Rent,Owner,Nor Nork,House,167.6,Available,4,4,2005,Not Renovated,404942.4,1619.77
+848,Rent,Owner,Shengavit,House,137.0,Available,1,8,2020,Partially Renovated,249193.08,996.77
+849,Sale,Owner,Kanaker-Zeytun,House,179.3,Available,5,11,1978,Partially Renovated,274672.53,1098.69
+851,Sale,Buyer,Shengavit,House,101.0,Available,6,9,1966,Not Renovated,155108.77,620.44
+853,Sale,Buyer,Nubarashen,House,199.0,Available,6,7,2002,Newly Renovated,452749.59,1811.0
+854,Rent,Buyer,Ajapnyak,House,114.1,Available,1,11,2015,Not Renovated,139171.5,556.69
+855,Sale,Buyer,Avan,House,169.6,Available,3,6,1988,Newly Renovated,408331.8,1633.33
+858,Rent,Owner,Kanaker-Zeytun,House,109.0,Available,6,3,1993,Newly Renovated,272154.29,1088.62
+859,Rent,Buyer,Erebuni,House,100.9,Available,3,7,1977,Not Renovated,116188.74,464.75
+863,Rent,Agent,Kanaker-Zeytun,House,141.0,Available,1,6,2012,Newly Renovated,198651.77,794.61
+868,Sale,Agent,Erebuni,House,129.1,Available,3,2,1995,Partially Renovated,186308.57,745.23
+869,Sale,Buyer,Kentron,House,45.7,Available,4,2,2014,Partially Renovated,63503.37,254.01
+872,Rent,Owner,Nor Nork,House,89.5,Available,3,1,1994,Not Renovated,164450.87,657.8
+874,Sale,Agent,Arabkir,House,107.4,Available,2,11,2005,Not Renovated,122495.42,489.98
+875,Sale,Agent,Kentron,House,148.6,Available,5,6,1983,Partially Renovated,353387.46,1413.55
+879,Rent,Agent,Avan,House,166.4,Available,3,5,1968,Partially Renovated,279998.53,1119.99
+880,Rent,Agent,Nork-Marash,House,197.9,Available,5,4,2012,Partially Renovated,467339.1,1869.36
+882,Sale,Buyer,Avan,House,123.3,Available,4,12,2000,Not Renovated,170486.41,681.95
+889,Rent,Agent,Davtashen,House,177.1,Available,3,3,1991,Partially Renovated,333134.09,1332.54
+892,Sale,Agent,Shengavit,House,108.2,Available,4,2,1967,Partially Renovated,136556.26,546.23
+894,Sale,Agent,Davtashen,House,168.5,Available,6,11,2011,Partially Renovated,351668.48,1406.67
+895,Sale,Buyer,Avan,House,119.0,Available,4,12,1984,Partially Renovated,207670.76,830.68
+898,Sale,Owner,Avan,House,108.2,Available,4,5,2005,Newly Renovated,326703.85,1306.82
+899,Rent,Buyer,Kanaker-Zeytun,House,142.2,Available,3,3,1968,Partially Renovated,312512.47,1250.05
+902,Rent,Owner,Kanaker-Zeytun,House,56.7,Available,5,6,2012,Newly Renovated,203142.17,812.57
+903,Rent,Agent,Erebuni,House,131.2,Available,5,9,1967,Not Renovated,279488.25,1117.95
+905,Sale,Agent,Ajapnyak,House,139.5,Available,4,9,1990,Not Renovated,188349.34,753.4
+906,Rent,Agent,Arabkir,House,69.0,Available,6,1,2020,Partially Renovated,191248.12,764.99
+908,Sale,Owner,Avan,House,174.1,Available,2,9,2017,Partially Renovated,504585.94,2018.34
+912,Sale,Agent,Nubarashen,House,172.6,Available,6,4,1995,Partially Renovated,367082.06,1468.33
+919,Sale,Owner,Erebuni,House,196.2,Available,2,4,1979,Newly Renovated,498767.15,1995.07
+920,Rent,Buyer,Kanaker-Zeytun,House,88.9,Available,5,10,1974,Newly Renovated,130134.49,520.54
+921,Sale,Owner,Erebuni,House,45.8,Available,5,11,1994,Partially Renovated,123124.12,492.5
+922,Rent,Buyer,Arabkir,House,77.8,Available,6,10,2023,Not Renovated,125292.66,501.17
+923,Sale,Buyer,Kanaker-Zeytun,House,43.9,Available,4,12,1984,Not Renovated,55482.45,221.93
+926,Rent,Buyer,Arabkir,House,96.8,Available,5,2,2010,Partially Renovated,226838.23,907.35
+929,Rent,Agent,Kanaker-Zeytun,House,108.8,Available,4,4,1976,Partially Renovated,124077.86,496.31
+934,Rent,Buyer,Avan,House,112.8,Available,4,1,1996,Partially Renovated,152711.83,610.85
+935,Sale,Buyer,Malatia-Sebastia,House,65.4,Available,6,12,1990,Partially Renovated,111582.91,446.33
+936,Sale,Agent,Davtashen,House,148.4,Available,6,1,1997,Not Renovated,246159.94,984.64
+940,Rent,Owner,Shengavit,House,68.2,Available,3,4,1997,Not Renovated,120136.52,480.55
+944,Sale,Owner,Shengavit,House,104.0,Available,5,12,1970,Not Renovated,154177.57,616.71
+947,Sale,Owner,Ajapnyak,House,129.0,Available,6,10,1966,Not Renovated,246525.54,986.1
+948,Rent,Buyer,Erebuni,House,148.4,Available,2,10,2013,Partially Renovated,312148.67,1248.59
+953,Sale,Buyer,Avan,House,132.4,Available,5,11,1981,Not Renovated,226517.34,906.07
+954,Rent,Agent,Ajapnyak,House,181.0,Available,5,12,1990,Partially Renovated,264159.51,1056.64
+955,Rent,Buyer,Kentron,House,65.8,Available,3,6,1991,Partially Renovated,113304.08,453.22
+956,Rent,Owner,Nor Nork,House,133.6,Available,4,12,2010,Newly Renovated,355662.57,1422.65
+957,Sale,Owner,Kanaker-Zeytun,House,172.2,Available,5,8,1993,Newly Renovated,400072.78,1600.29
+965,Sale,Agent,Arabkir,House,137.7,Available,4,5,1992,Newly Renovated,249108.77,996.44
+967,Rent,Owner,Arabkir,House,104.7,Available,1,3,2007,Not Renovated,113741.76,454.97
+972,Rent,Agent,Ajapnyak,House,169.2,Available,5,9,1965,Not Renovated,471741.09,1886.96
+975,Sale,Buyer,Kanaker-Zeytun,House,175.5,Available,4,2,1975,Not Renovated,218336.38,873.35
+981,Sale,Agent,Avan,House,138.3,Available,3,9,2019,Not Renovated,229500.97,918.0
+983,Rent,Buyer,Ajapnyak,House,33.7,Available,5,7,2016,Newly Renovated,54875.71,219.5
+986,Rent,Agent,Arabkir,House,36.8,Available,3,2,1975,Partially Renovated,59983.17,239.93
+987,Rent,Owner,Nubarashen,House,122.1,Available,3,12,1978,Not Renovated,109713.19,438.85
+990,Sale,Buyer,Nor Nork,House,46.3,Available,3,6,2022,Newly Renovated,79838.67,319.35
+993,Sale,Agent,Avan,House,164.7,Available,6,12,1973,Partially Renovated,280682.04,1122.73
+995,Sale,Owner,Erebuni,House,84.4,Available,4,7,2011,Newly Renovated,154795.76,619.18
+999,Rent,Buyer,Nubarashen,House,33.9,Available,6,5,2000,Not Renovated,65439.81,261.76
+1001,Rent,Owner,Kentron,House,106.3,Available,6,4,1999,Partially Renovated,209158.71,836.63
+1004,Sale,Agent,Kanaker-Zeytun,House,104.3,Available,4,8,1975,Not Renovated,223619.61,894.48
+1007,Rent,Agent,Arabkir,House,162.9,Available,3,4,2002,Not Renovated,286336.41,1145.35
+1009,Rent,Buyer,Nork-Marash,House,73.8,Available,3,1,1980,Not Renovated,83525.5,334.1
+1011,Sale,Owner,Kanaker-Zeytun,House,96.4,Available,2,4,1968,Newly Renovated,227550.71,910.2
+1012,Rent,Agent,Kentron,House,94.4,Available,3,12,1974,Newly Renovated,132696.26,530.79
+1015,Rent,Owner,Nor Nork,House,160.3,Available,5,1,1971,Partially Renovated,216783.31,867.13
+1016,Sale,Owner,Nor Nork,House,63.6,Available,1,3,1980,Partially Renovated,85631.89,342.53
+1017,Sale,Owner,Arabkir,House,101.9,Available,2,6,1992,Newly Renovated,159242.57,636.97
+1018,Rent,Agent,Kanaker-Zeytun,House,38.7,Available,1,4,1993,Newly Renovated,62476.49,249.91
+1019,Sale,Owner,Kanaker-Zeytun,House,142.2,Available,4,3,2004,Newly Renovated,240314.38,961.26
+1020,Sale,Owner,Davtashen,House,171.4,Available,3,1,1976,Not Renovated,289266.57,1157.07
+1021,Sale,Owner,Erebuni,House,91.4,Available,5,12,2011,Newly Renovated,143860.53,575.44
+1022,Sale,Owner,Kanaker-Zeytun,House,174.8,Available,4,6,1992,Not Renovated,251863.77,1007.46
+1023,Rent,Owner,Erebuni,House,90.1,Available,2,10,1993,Not Renovated,182018.55,728.07
+1027,Rent,Buyer,Erebuni,House,122.4,Available,6,4,2022,Newly Renovated,170573.97,682.3
+1028,Sale,Agent,Ajapnyak,House,115.9,Available,2,6,1975,Partially Renovated,241250.13,965.0
+1030,Sale,Owner,Arabkir,House,146.7,Available,1,3,1983,Newly Renovated,267515.79,1070.06
+1032,Sale,Buyer,Arabkir,House,146.7,Available,2,1,2002,Partially Renovated,337790.65,1351.16
+1033,Sale,Owner,Nor Nork,House,149.0,Available,2,2,2015,Partially Renovated,364734.49,1458.94
+1038,Rent,Owner,Shengavit,House,141.7,Available,2,9,1990,Newly Renovated,360384.25,1441.54
+1040,Sale,Owner,Arabkir,House,134.7,Available,1,11,2008,Newly Renovated,209956.77,839.83
+1043,Rent,Buyer,Davtashen,House,127.0,Available,3,11,2014,Newly Renovated,271812.49,1087.25
+1046,Rent,Owner,Erebuni,House,30.5,Available,6,11,2013,Newly Renovated,59485.01,237.94
+1047,Rent,Agent,Arabkir,House,177.5,Available,6,5,1980,Partially Renovated,391404.26,1565.62
+1049,Rent,Agent,Malatia-Sebastia,House,67.0,Available,6,2,2012,Not Renovated,90817.47,363.27
+1053,Rent,Owner,Kanaker-Zeytun,House,180.0,Available,2,4,2019,Newly Renovated,341758.17,1367.03
+1054,Sale,Owner,Nor Nork,House,196.6,Available,2,6,1971,Not Renovated,324644.68,1298.58
+1055,Sale,Buyer,Nor Nork,House,93.0,Available,3,5,1978,Newly Renovated,198840.11,795.36
+1058,Sale,Buyer,Avan,House,60.1,Available,2,6,1995,Not Renovated,79502.68,318.01
+1061,Rent,Agent,Avan,House,36.5,Available,3,12,2008,Partially Renovated,47987.84,191.95
+1062,Rent,Buyer,Kanaker-Zeytun,House,162.7,Available,1,12,2013,Newly Renovated,356315.19,1425.26
+1063,Rent,Agent,Malatia-Sebastia,House,176.3,Available,1,7,1968,Not Renovated,203315.89,813.26
+1067,Rent,Agent,Nor Nork,House,135.4,Available,5,6,2006,Newly Renovated,243304.42,973.22
+1069,Sale,Buyer,Nor Nork,House,119.9,Available,4,8,1989,Newly Renovated,353286.78,1413.15
+1071,Rent,Owner,Kentron,House,47.3,Available,1,5,2020,Not Renovated,66105.21,264.42
+1075,Rent,Agent,Shengavit,House,159.1,Available,4,10,2017,Partially Renovated,390101.73,1560.41
+1078,Rent,Agent,Avan,House,37.4,Available,3,1,1979,Not Renovated,82399.42,329.6
+1079,Sale,Owner,Erebuni,House,131.7,Available,2,10,2016,Not Renovated,211665.36,846.66
+1080,Sale,Buyer,Nork-Marash,House,90.4,Available,1,6,2006,Newly Renovated,244732.73,978.93
+1081,Rent,Buyer,Erebuni,House,148.5,Available,2,7,2010,Not Renovated,160950.52,643.8
+1082,Rent,Agent,Arabkir,House,35.6,Available,2,7,1989,Newly Renovated,56446.56,225.79
+1085,Rent,Buyer,Ajapnyak,House,153.6,Available,5,5,2003,Partially Renovated,290799.59,1163.2
+1088,Rent,Buyer,Davtashen,House,194.6,Available,5,11,2022,Not Renovated,318103.0,1272.41
+1089,Rent,Agent,Erebuni,House,67.2,Available,5,7,2019,Newly Renovated,192728.57,770.91
+1091,Sale,Agent,Shengavit,House,93.8,Available,6,12,1984,Newly Renovated,216622.47,866.49
+1095,Sale,Agent,Kentron,House,77.5,Available,2,6,1991,Not Renovated,94228.91,376.92
+1097,Rent,Agent,Davtashen,House,93.0,Available,6,1,2012,Not Renovated,179040.26,716.16
+1102,Rent,Agent,Nubarashen,House,186.7,Available,6,8,2020,Not Renovated,353427.81,1413.71
+1103,Rent,Owner,Ajapnyak,House,141.9,Available,2,2,1974,Newly Renovated,389002.78,1556.01
+1104,Rent,Owner,Avan,House,173.3,Available,5,4,1965,Newly Renovated,382239.08,1528.96
+1107,Sale,Agent,Nor Nork,House,100.3,Available,3,9,2014,Partially Renovated,181344.01,725.38
+1109,Sale,Buyer,Nor Nork,House,52.6,Available,3,7,1974,Newly Renovated,121144.22,484.58
+1112,Sale,Owner,Kanaker-Zeytun,House,107.4,Available,2,12,1977,Newly Renovated,211282.44,845.13
+1113,Rent,Owner,Arabkir,House,152.7,Available,2,3,1974,Newly Renovated,223719.13,894.88
+1116,Rent,Agent,Kanaker-Zeytun,House,170.9,Available,5,4,1979,Not Renovated,338324.79,1353.3
+1117,Rent,Owner,Erebuni,House,149.1,Available,1,2,2023,Newly Renovated,392653.83,1570.62
+1120,Sale,Owner,Nor Nork,House,57.9,Available,5,12,1986,Not Renovated,113180.21,452.72
+1122,Sale,Owner,Nor Nork,House,151.4,Available,1,2,1967,Newly Renovated,199172.04,796.69
+1123,Rent,Owner,Kentron,House,160.4,Available,3,6,1970,Partially Renovated,278535.02,1114.14
+1124,Sale,Buyer,Erebuni,House,113.5,Available,4,8,1979,Partially Renovated,186376.09,745.5
+1125,Sale,Owner,Nubarashen,House,182.6,Available,4,3,1980,Newly Renovated,520287.06,2081.15
+1126,Rent,Owner,Davtashen,House,87.8,Available,2,10,1981,Partially Renovated,141162.06,564.65
+1127,Rent,Buyer,Erebuni,House,25.0,Available,3,1,2013,Partially Renovated,57177.52,228.71
+1128,Sale,Buyer,Kanaker-Zeytun,House,145.1,Available,6,5,1985,Newly Renovated,233034.45,932.14
+1129,Sale,Agent,Kentron,House,196.2,Available,6,7,2015,Newly Renovated,426687.07,1706.75
+1130,Rent,Owner,Shengavit,House,56.3,Available,5,6,1971,Newly Renovated,113905.26,455.62
+1131,Rent,Owner,Nor Nork,House,123.2,Available,5,1,2015,Not Renovated,285342.58,1141.37
+1132,Sale,Agent,Avan,House,117.1,Available,4,7,1966,Partially Renovated,220181.63,880.73
+1134,Rent,Owner,Nor Nork,House,200.0,Available,6,1,1997,Not Renovated,362425.25,1449.7
+1136,Rent,Agent,Ajapnyak,House,173.5,Available,1,1,1994,Partially Renovated,202988.86,811.96
+1137,Sale,Agent,Malatia-Sebastia,House,182.8,Available,2,5,2009,Newly Renovated,268788.9,1075.16
+1140,Sale,Owner,Erebuni,House,113.8,Available,2,3,2022,Newly Renovated,250946.37,1003.79
+1144,Rent,Agent,Arabkir,House,164.3,Available,5,10,2012,Newly Renovated,392549.18,1570.2
+1148,Sale,Buyer,Nor Nork,House,192.8,Available,3,2,2019,Partially Renovated,276305.42,1105.22
+1153,Rent,Buyer,Nubarashen,House,127.7,Available,1,8,2010,Not Renovated,159685.64,638.74
+1154,Sale,Owner,Avan,House,116.9,Available,3,12,2009,Partially Renovated,230444.66,921.78
+1155,Sale,Agent,Kanaker-Zeytun,House,57.8,Available,1,7,1969,Partially Renovated,154699.15,618.8
+1156,Rent,Agent,Avan,House,159.5,Available,6,8,1967,Not Renovated,324225.06,1296.9
+1158,Sale,Agent,Davtashen,House,139.7,Available,6,1,2015,Partially Renovated,244265.32,977.06
+1160,Sale,Owner,Davtashen,House,26.2,Available,4,2,1973,Partially Renovated,54769.12,219.08
+1165,Sale,Owner,Nubarashen,House,97.9,Available,2,8,1994,Newly Renovated,238342.85,953.37
+1166,Sale,Buyer,Shengavit,House,166.2,Available,5,10,2020,Not Renovated,420226.43,1680.91
+1167,Rent,Agent,Kanaker-Zeytun,House,143.0,Available,1,5,1991,Not Renovated,189964.2,759.86
+1168,Sale,Agent,Nor Nork,House,38.8,Available,3,9,1969,Newly Renovated,75808.27,303.23
+1169,Sale,Buyer,Kentron,House,160.4,Available,6,2,1965,Partially Renovated,191788.73,767.15
+1170,Sale,Agent,Erebuni,House,52.2,Available,1,2,2002,Newly Renovated,80151.76,320.61
+1172,Rent,Buyer,Avan,House,166.0,Available,6,8,1981,Partially Renovated,307688.4,1230.75
+1176,Sale,Agent,Nork-Marash,House,166.7,Available,3,9,1985,Newly Renovated,287176.36,1148.71
+1177,Rent,Buyer,Avan,House,114.2,Available,4,6,1977,Newly Renovated,249518.06,998.07
+1180,Rent,Buyer,Avan,House,198.3,Available,3,3,1983,Newly Renovated,382114.71,1528.46
+1182,Rent,Owner,Avan,House,77.7,Available,6,10,1994,Newly Renovated,207471.0,829.88
+1184,Sale,Agent,Davtashen,House,102.5,Available,2,4,1975,Partially Renovated,192959.42,771.84
+1185,Sale,Owner,Kanaker-Zeytun,House,40.5,Available,2,1,2005,Newly Renovated,115577.1,462.31
+1191,Sale,Buyer,Arabkir,House,145.9,Available,1,11,1990,Not Renovated,152764.7,611.06
+1193,Rent,Owner,Nor Nork,House,139.2,Available,3,1,1970,Newly Renovated,349513.43,1398.05
+1195,Sale,Buyer,Nubarashen,House,147.1,Available,5,5,2000,Not Renovated,353120.96,1412.48
+1198,Rent,Owner,Erebuni,House,163.5,Available,2,6,1996,Not Renovated,352563.5,1410.25
+1199,Sale,Agent,Nor Nork,House,41.5,Available,2,2,2010,Newly Renovated,57995.84,231.98
+1204,Sale,Agent,Kanaker-Zeytun,House,111.9,Available,5,3,2005,Partially Renovated,286177.27,1144.71
+1208,Sale,Agent,Avan,House,99.1,Available,4,8,2002,Partially Renovated,223958.95,895.84
+1209,Sale,Agent,Avan,House,84.4,Available,2,6,1993,Not Renovated,135705.38,542.82
+1210,Rent,Agent,Davtashen,House,65.7,Available,3,4,1968,Newly Renovated,121209.42,484.84
+1211,Sale,Owner,Kanaker-Zeytun,House,79.6,Available,2,10,2021,Partially Renovated,169278.83,677.12
+1213,Sale,Agent,Nor Nork,House,149.5,Available,6,5,2005,Not Renovated,315363.11,1261.45
+1214,Rent,Owner,Davtashen,House,186.0,Available,3,4,2015,Partially Renovated,424058.91,1696.24
+1215,Rent,Owner,Avan,House,79.1,Available,4,1,1998,Not Renovated,114213.45,456.85
+1216,Rent,Agent,Avan,House,143.5,Available,1,2,2006,Newly Renovated,373941.26,1495.77
+1217,Sale,Owner,Kanaker-Zeytun,House,121.5,Available,3,2,1997,Not Renovated,271054.84,1084.22
+1220,Rent,Buyer,Shengavit,House,123.8,Available,5,2,1969,Newly Renovated,267126.76,1068.51
+1221,Rent,Agent,Davtashen,House,25.8,Available,1,8,1999,Partially Renovated,57501.65,230.01
+1222,Sale,Owner,Nubarashen,House,54.7,Available,3,3,2023,Partially Renovated,118696.06,474.78
+1223,Rent,Owner,Kanaker-Zeytun,House,142.3,Available,5,8,1996,Not Renovated,209735.89,838.94
+1224,Rent,Owner,Avan,House,29.0,Available,4,9,1981,Not Renovated,35306.63,141.23
+1225,Rent,Agent,Kentron,House,128.6,Available,4,11,1987,Partially Renovated,274440.99,1097.76
+1226,Sale,Owner,Nor Nork,House,87.3,Available,5,7,1999,Partially Renovated,180089.04,720.36
+1229,Sale,Agent,Avan,House,139.1,Available,3,8,1968,Newly Renovated,297504.4,1190.02
+1232,Sale,Owner,Shengavit,House,67.9,Available,3,6,1991,Partially Renovated,140122.29,560.49
+1234,Rent,Owner,Nork-Marash,House,159.3,Available,4,8,1979,Newly Renovated,446712.2,1786.85
+1238,Sale,Owner,Nor Nork,House,94.1,Available,4,10,1989,Newly Renovated,201933.92,807.74
+1239,Sale,Owner,Erebuni,House,55.5,Available,4,12,1974,Not Renovated,119121.32,476.49
+1241,Rent,Buyer,Avan,House,164.5,Available,5,3,1971,Partially Renovated,355542.29,1422.17
+1244,Rent,Agent,Nor Nork,House,119.5,Available,4,12,1992,Partially Renovated,142670.65,570.68
+1246,Rent,Agent,Erebuni,House,193.3,Available,5,2,2000,Not Renovated,297484.8,1189.94
+1250,Sale,Owner,Kanaker-Zeytun,House,173.4,Available,5,12,1981,Newly Renovated,385326.22,1541.3
+1251,Rent,Buyer,Erebuni,House,88.6,Available,2,8,1986,Newly Renovated,151224.99,604.9
+1252,Rent,Owner,Davtashen,House,74.0,Available,2,1,1988,Partially Renovated,166354.68,665.42
+1256,Sale,Agent,Avan,House,41.5,Available,2,6,1991,Not Renovated,67654.5,270.62
+1257,Sale,Owner,Arabkir,House,42.6,Available,2,10,1996,Newly Renovated,56635.09,226.54
+1259,Sale,Owner,Erebuni,House,163.6,Available,1,5,2015,Not Renovated,183204.35,732.82
+1263,Sale,Owner,Nor Nork,House,56.7,Available,5,6,2015,Newly Renovated,158729.48,634.92
+1264,Sale,Owner,Kentron,House,159.5,Available,4,7,2019,Partially Renovated,366283.53,1465.13
+1265,Sale,Owner,Kanaker-Zeytun,House,142.6,Available,3,9,2018,Newly Renovated,373458.13,1493.83
+1267,Rent,Agent,Kanaker-Zeytun,House,50.8,Available,2,4,1993,Not Renovated,82893.48,331.57
+1268,Sale,Buyer,Malatia-Sebastia,House,147.9,Available,6,1,1991,Newly Renovated,429447.82,1717.79
+1273,Sale,Owner,Kanaker-Zeytun,House,189.9,Available,4,8,1966,Newly Renovated,496278.56,1985.11
+1274,Rent,Agent,Kanaker-Zeytun,House,49.6,Available,3,1,2002,Partially Renovated,99811.61,399.25
+1276,Rent,Buyer,Erebuni,House,117.6,Available,3,11,2010,Not Renovated,252709.58,1010.84
+1277,Sale,Owner,Davtashen,House,91.5,Available,5,2,2002,Partially Renovated,183565.71,734.26
+1278,Rent,Owner,Davtashen,House,166.7,Available,6,4,1990,Newly Renovated,272799.3,1091.2
+1281,Rent,Buyer,Arabkir,House,100.8,Available,5,1,2017,Partially Renovated,196638.89,786.56
+1284,Sale,Owner,Shengavit,House,53.5,Available,4,6,1988,Not Renovated,124565.3,498.26
+1285,Rent,Agent,Davtashen,House,179.5,Available,3,12,1980,Not Renovated,267630.31,1070.52
+1288,Sale,Owner,Nor Nork,House,173.3,Available,1,11,2003,Newly Renovated,390583.01,1562.33
+1290,Sale,Owner,Arabkir,House,176.3,Available,4,5,2023,Partially Renovated,352062.99,1408.25
+1301,Rent,Owner,Kanaker-Zeytun,House,66.2,Available,2,9,2001,Partially Renovated,129048.31,516.19
+1303,Rent,Buyer,Nubarashen,House,165.7,Available,2,12,1982,Newly Renovated,495164.35,1980.66
+1305,Sale,Owner,Nor Nork,House,157.1,Available,3,5,1976,Partially Renovated,224980.5,899.92
+1306,Rent,Buyer,Nork-Marash,House,190.0,Available,2,10,1984,Partially Renovated,288332.55,1153.33
+1309,Rent,Owner,Malatia-Sebastia,House,158.0,Available,6,5,1972,Partially Renovated,269941.5,1079.77
+1310,Rent,Agent,Nork-Marash,House,194.9,Available,2,12,2017,Newly Renovated,683244.03,2732.98
+1312,Rent,Owner,Nork-Marash,House,166.6,Available,5,10,1999,Newly Renovated,463740.18,1854.96
+1314,Sale,Buyer,Erebuni,House,118.1,Available,2,6,1973,Not Renovated,204139.36,816.56
+1316,Rent,Owner,Ajapnyak,House,153.5,Available,6,4,2011,Newly Renovated,355113.79,1420.46
+1317,Sale,Agent,Arabkir,House,197.1,Available,4,6,2023,Newly Renovated,578743.61,2314.97
+1318,Rent,Agent,Davtashen,House,127.0,Available,4,4,2013,Not Renovated,188402.36,753.61
+1320,Rent,Agent,Kentron,House,128.1,Available,6,9,2014,Not Renovated,301432.05,1205.73
+1321,Rent,Agent,Davtashen,House,168.6,Available,1,2,1995,Newly Renovated,263059.21,1052.24
+1323,Sale,Agent,Kanaker-Zeytun,House,117.7,Available,2,10,2020,Not Renovated,183395.11,733.58
+1324,Rent,Agent,Avan,House,76.6,Available,4,3,2002,Newly Renovated,272682.68,1090.73
+1325,Rent,Agent,Erebuni,House,149.3,Available,6,12,1967,Not Renovated,222406.67,889.63
+1328,Sale,Owner,Nork-Marash,House,142.7,Available,3,10,1994,Not Renovated,250211.84,1000.85
+1330,Rent,Buyer,Nor Nork,House,174.9,Available,5,9,2015,Not Renovated,424050.83,1696.2
+1331,Sale,Agent,Avan,House,199.4,Available,6,6,1969,Newly Renovated,527761.75,2111.05
+1333,Rent,Buyer,Kentron,House,167.9,Available,2,9,2019,Newly Renovated,367509.55,1470.04
+1336,Rent,Agent,Avan,House,186.8,Available,5,3,2003,Newly Renovated,301524.62,1206.1
+1337,Sale,Agent,Nubarashen,House,116.8,Available,6,3,2001,Partially Renovated,315313.87,1261.26
+1338,Sale,Owner,Kanaker-Zeytun,House,153.4,Available,5,12,1973,Partially Renovated,298851.33,1195.41
+1340,Sale,Owner,Shengavit,House,28.7,Available,3,11,2006,Newly Renovated,47156.41,188.63
+1342,Sale,Buyer,Malatia-Sebastia,House,142.2,Available,6,7,2013,Not Renovated,441625.68,1766.5
+1345,Sale,Buyer,Kanaker-Zeytun,House,85.0,Available,4,3,1995,Partially Renovated,141369.96,565.48
+1347,Sale,Buyer,Davtashen,House,141.3,Available,1,9,1984,Newly Renovated,236687.31,946.75
+1350,Sale,Agent,Avan,House,65.7,Available,3,3,1986,Partially Renovated,137620.1,550.48
+1351,Rent,Agent,Kanaker-Zeytun,House,43.9,Available,3,1,2002,Not Renovated,58812.56,235.25
+1352,Rent,Owner,Nor Nork,House,89.8,Available,1,4,1993,Newly Renovated,136586.64,546.35
+1361,Rent,Owner,Davtashen,House,95.6,Available,2,9,2000,Newly Renovated,194413.77,777.66
+1362,Sale,Owner,Ajapnyak,House,79.8,Available,5,11,2002,Partially Renovated,147643.05,590.57
+1366,Sale,Owner,Davtashen,House,50.2,Available,2,5,2014,Partially Renovated,115740.67,462.96
+1367,Sale,Agent,Kanaker-Zeytun,House,140.3,Available,2,6,1974,Newly Renovated,221672.61,886.69
+1369,Rent,Buyer,Avan,House,188.4,Available,2,3,1980,Newly Renovated,335703.88,1342.82
+1370,Rent,Owner,Ajapnyak,House,180.3,Available,3,10,1981,Newly Renovated,485360.12,1941.44
+1373,Rent,Owner,Davtashen,House,46.2,Available,1,3,1971,Partially Renovated,57338.93,229.36
+1375,Rent,Owner,Arabkir,House,194.6,Available,1,4,2015,Partially Renovated,376013.13,1504.05
+1376,Sale,Buyer,Kentron,House,27.2,Available,1,8,2001,Not Renovated,28081.37,112.33
+1379,Sale,Owner,Kanaker-Zeytun,House,168.4,Available,6,11,2021,Not Renovated,414361.7,1657.45
+1381,Sale,Buyer,Kanaker-Zeytun,House,142.1,Available,2,3,1986,Not Renovated,227229.23,908.92
+1383,Sale,Agent,Kanaker-Zeytun,House,140.7,Available,3,8,1979,Partially Renovated,179050.52,716.2
+1384,Sale,Agent,Avan,House,150.8,Available,4,10,1978,Partially Renovated,355817.32,1423.27
+1385,Sale,Buyer,Davtashen,House,71.5,Available,1,4,1973,Newly Renovated,143040.02,572.16
+1386,Sale,Owner,Avan,House,184.0,Available,3,11,1975,Newly Renovated,363944.22,1455.78
+1388,Rent,Agent,Shengavit,House,73.7,Available,5,4,2006,Partially Renovated,143674.52,574.7
+1390,Sale,Buyer,Erebuni,House,61.2,Available,1,2,1993,Newly Renovated,127029.36,508.12
+1392,Sale,Agent,Nor Nork,House,103.5,Available,5,4,2006,Not Renovated,254522.67,1018.09
+1393,Rent,Buyer,Kentron,House,146.4,Available,3,8,2001,Newly Renovated,317238.2,1268.95
+1394,Sale,Owner,Avan,House,31.8,Available,6,6,1974,Partially Renovated,71114.13,284.46
+1396,Rent,Buyer,Nubarashen,House,198.3,Available,5,3,1993,Newly Renovated,492238.88,1968.96
+1399,Rent,Agent,Davtashen,House,189.2,Available,5,8,2007,Partially Renovated,612767.1,2451.07
+1402,Rent,Owner,Kentron,House,58.2,Available,3,3,1973,Partially Renovated,123009.58,492.04
+1403,Sale,Owner,Kanaker-Zeytun,House,139.8,Available,4,9,2015,Partially Renovated,372069.45,1488.28
+1407,Rent,Agent,Davtashen,House,129.8,Available,5,5,2013,Newly Renovated,294943.16,1179.77
+1408,Sale,Owner,Avan,House,109.0,Available,3,11,2002,Partially Renovated,163367.82,653.47
+1409,Rent,Owner,Avan,House,134.2,Available,5,7,2009,Not Renovated,209883.64,839.53
+1410,Sale,Agent,Avan,House,108.8,Available,4,5,2018,Newly Renovated,247749.54,991.0
+1411,Rent,Agent,Kentron,House,92.9,Available,2,1,1996,Newly Renovated,256427.5,1025.71
+1414,Rent,Owner,Kanaker-Zeytun,House,131.8,Available,1,4,2015,Not Renovated,235171.46,940.69
+1415,Sale,Buyer,Kentron,House,145.9,Available,4,2,2014,Partially Renovated,244785.79,979.14
+1416,Sale,Agent,Kanaker-Zeytun,House,161.0,Available,6,7,1984,Newly Renovated,314662.1,1258.65
+1417,Sale,Owner,Kanaker-Zeytun,House,94.7,Available,6,6,1965,Not Renovated,149244.61,596.98
+1418,Rent,Agent,Erebuni,House,57.9,Available,5,10,2008,Newly Renovated,96501.49,386.01
+1421,Sale,Agent,Malatia-Sebastia,House,117.8,Available,6,4,2013,Not Renovated,230574.0,922.3
+1422,Rent,Buyer,Davtashen,House,70.4,Available,5,2,1999,Partially Renovated,184740.09,738.96
+1423,Rent,Agent,Avan,House,77.2,Available,1,4,1986,Newly Renovated,99682.36,398.73
+1424,Rent,Buyer,Davtashen,House,171.0,Available,4,7,2015,Newly Renovated,334431.26,1337.73
+1425,Sale,Buyer,Avan,House,135.4,Available,5,4,2009,Not Renovated,287308.5,1149.23
+1428,Sale,Buyer,Kanaker-Zeytun,House,169.1,Available,6,2,2008,Partially Renovated,242586.54,970.35
+1430,Rent,Owner,Avan,House,141.0,Available,6,4,2011,Not Renovated,184419.35,737.68
+1431,Rent,Agent,Avan,House,62.1,Available,3,8,1986,Newly Renovated,133476.57,533.91
+1432,Rent,Owner,Erebuni,House,106.4,Available,6,4,1982,Not Renovated,140448.34,561.79
+1434,Sale,Agent,Kanaker-Zeytun,House,167.1,Available,6,8,2002,Newly Renovated,353583.64,1414.33
+1436,Rent,Owner,Nor Nork,House,136.3,Available,5,8,1975,Not Renovated,282397.75,1129.59
+1438,Rent,Agent,Arabkir,House,88.6,Available,2,4,2011,Partially Renovated,185503.48,742.01
+1440,Rent,Owner,Malatia-Sebastia,House,186.7,Available,3,1,1994,Newly Renovated,319439.69,1277.76
+1445,Sale,Buyer,Erebuni,House,178.3,Available,5,4,2013,Not Renovated,336347.72,1345.39
+1447,Rent,Buyer,Malatia-Sebastia,House,84.1,Available,5,9,2008,Not Renovated,108738.47,434.95
+1449,Sale,Owner,Nor Nork,House,69.1,Available,6,8,2019,Not Renovated,171950.77,687.8
+1451,Rent,Buyer,Avan,House,142.7,Available,6,8,1985,Not Renovated,215311.73,861.25
+1452,Sale,Agent,Avan,House,49.4,Available,4,5,1977,Newly Renovated,105113.95,420.46
+1453,Rent,Agent,Nor Nork,House,179.4,Available,5,7,1978,Not Renovated,407068.01,1628.27
+1454,Rent,Agent,Nubarashen,House,58.7,Available,5,8,1968,Newly Renovated,130371.49,521.49
+1456,Sale,Owner,Malatia-Sebastia,House,62.9,Available,3,11,1988,Partially Renovated,131008.37,524.03
+1458,Rent,Owner,Nor Nork,House,95.0,Available,6,8,1986,Newly Renovated,226405.6,905.62
+1459,Sale,Owner,Arabkir,House,143.3,Available,5,2,1968,Newly Renovated,375582.45,1502.33
+1460,Rent,Owner,Kanaker-Zeytun,House,87.5,Available,1,10,2007,Partially Renovated,137969.72,551.88
+1463,Rent,Agent,Erebuni,House,127.3,Available,3,3,1978,Not Renovated,168787.52,675.15
+1464,Rent,Agent,Avan,House,126.6,Available,3,2,1972,Not Renovated,131468.77,525.88
+1465,Rent,Buyer,Avan,House,61.0,Available,1,9,2017,Not Renovated,66582.93,266.33
+1466,Rent,Agent,Erebuni,House,165.3,Available,3,8,2009,Partially Renovated,243865.54,975.46
+1467,Sale,Agent,Kanaker-Zeytun,House,162.3,Available,3,7,2014,Newly Renovated,274885.55,1099.54
+1472,Sale,Owner,Kanaker-Zeytun,House,43.7,Available,5,7,1992,Not Renovated,80266.97,321.07
+1474,Sale,Buyer,Kentron,House,49.7,Available,4,9,2014,Partially Renovated,76847.11,307.39
+1475,Sale,Owner,Kanaker-Zeytun,House,109.8,Available,3,12,1979,Newly Renovated,228602.93,914.41
+1476,Rent,Owner,Ajapnyak,House,160.5,Available,6,6,2000,Newly Renovated,334996.94,1339.99
+1479,Rent,Buyer,Nor Nork,House,99.0,Available,4,3,1977,Newly Renovated,155748.98,623.0
+1480,Rent,Owner,Kentron,House,137.9,Available,3,8,2016,Not Renovated,274470.65,1097.88
+1481,Rent,Owner,Avan,House,178.8,Available,4,8,2001,Newly Renovated,279150.87,1116.6
+1485,Sale,Owner,Nor Nork,House,143.7,Available,4,2,2014,Newly Renovated,260745.49,1042.98
+1486,Sale,Agent,Kentron,House,40.0,Available,1,10,1978,Partially Renovated,88192.33,352.77
+1492,Rent,Agent,Nor Nork,House,70.4,Available,1,5,2012,Partially Renovated,110946.39,443.79
+1493,Rent,Buyer,Erebuni,House,101.2,Available,1,5,1971,Partially Renovated,203526.37,814.11
+1494,Sale,Buyer,Kanaker-Zeytun,House,130.9,Available,4,1,1982,Partially Renovated,284023.58,1136.09
+1497,Rent,Owner,Davtashen,House,197.1,Available,4,2,1980,Not Renovated,547641.96,2190.57
+1498,Rent,Buyer,Erebuni,House,39.6,Available,1,3,1989,Not Renovated,65207.89,260.83
+1499,Rent,Buyer,Kanaker-Zeytun,House,78.5,Available,5,7,1986,Not Renovated,184860.63,739.44
+1500,Sale,Buyer,Nor Nork,House,118.8,Available,6,11,2023,Partially Renovated,302366.67,1209.47
+1501,Sale,Owner,Kanaker-Zeytun,House,187.7,Available,3,9,1999,Newly Renovated,523546.05,2094.18
+1503,Sale,Agent,Nor Nork,House,28.7,Available,5,1,1982,Partially Renovated,37952.16,151.81
+1504,Rent,Buyer,Malatia-Sebastia,House,87.9,Available,2,5,1976,Newly Renovated,105498.64,421.99
+1505,Sale,Owner,Davtashen,House,187.7,Available,6,8,1989,Not Renovated,323694.05,1294.78
+1506,Sale,Agent,Nor Nork,House,149.9,Available,2,9,1970,Newly Renovated,264203.67,1056.81
+1508,Sale,Owner,Davtashen,House,179.3,Available,5,5,2010,Partially Renovated,274265.95,1097.06
+1509,Sale,Buyer,Erebuni,House,88.2,Available,3,2,1973,Partially Renovated,102213.69,408.85
+1510,Rent,Agent,Davtashen,House,107.6,Available,3,3,2023,Newly Renovated,307365.52,1229.46
+1512,Rent,Agent,Kanaker-Zeytun,House,140.9,Available,4,1,2013,Newly Renovated,214472.34,857.89
+1513,Sale,Owner,Davtashen,House,108.9,Available,4,10,1972,Newly Renovated,348150.71,1392.6
+1518,Sale,Buyer,Ajapnyak,House,91.4,Available,1,1,1997,Not Renovated,133999.59,536.0
+1519,Rent,Agent,Davtashen,House,144.2,Available,3,8,2002,Not Renovated,172288.6,689.15
+1521,Sale,Owner,Shengavit,House,191.1,Available,1,2,2010,Not Renovated,226940.65,907.76
+1522,Sale,Owner,Arabkir,House,34.7,Available,1,9,1997,Not Renovated,42222.22,168.89
+1525,Rent,Agent,Erebuni,House,91.7,Available,6,3,1970,Partially Renovated,208531.91,834.13
+1527,Sale,Owner,Kentron,House,106.9,Available,4,1,1988,Partially Renovated,236771.94,947.09
+1530,Rent,Agent,Arabkir,House,68.8,Available,2,4,2013,Not Renovated,115398.7,461.59
+1535,Rent,Agent,Nork-Marash,House,142.5,Available,1,2,1972,Not Renovated,118798.93,475.2
+1541,Rent,Agent,Kentron,House,187.7,Available,6,3,1983,Not Renovated,315372.91,1261.49
+1542,Rent,Buyer,Avan,House,174.9,Available,6,6,1988,Not Renovated,251414.42,1005.66
+1544,Sale,Owner,Erebuni,House,111.7,Available,6,12,1986,Partially Renovated,269307.76,1077.23
+1545,Rent,Agent,Erebuni,House,161.8,Available,4,12,2008,Partially Renovated,246744.92,986.98
+1546,Sale,Owner,Kanaker-Zeytun,House,82.1,Available,2,7,1973,Not Renovated,139120.13,556.48
+1547,Sale,Owner,Erebuni,House,56.7,Available,1,10,1999,Not Renovated,71946.42,287.79
+1548,Sale,Buyer,Nor Nork,House,54.5,Available,3,5,1992,Not Renovated,73837.51,295.35
+1549,Rent,Agent,Avan,House,93.7,Available,2,11,1966,Newly Renovated,181644.17,726.58
+1550,Sale,Buyer,Kanaker-Zeytun,House,59.1,Available,4,12,1979,Newly Renovated,132653.82,530.62
+1553,Sale,Buyer,Kanaker-Zeytun,House,147.7,Available,4,4,1981,Newly Renovated,250786.86,1003.15
+1557,Sale,Owner,Erebuni,House,111.5,Available,6,2,2019,Partially Renovated,230114.43,920.46
+1561,Rent,Agent,Kanaker-Zeytun,House,88.0,Available,3,4,1987,Not Renovated,96610.91,386.44
+1565,Sale,Owner,Davtashen,House,138.1,Available,4,9,2005,Not Renovated,172209.31,688.84
+1566,Rent,Owner,Kentron,House,149.3,Available,5,4,1987,Partially Renovated,385726.39,1542.91
+1569,Rent,Owner,Nor Nork,House,197.6,Available,5,3,2011,Newly Renovated,519647.97,2078.59
+1570,Rent,Owner,Shengavit,House,137.9,Available,5,9,2002,Not Renovated,253326.54,1013.31
+1573,Sale,Owner,Arabkir,House,125.3,Available,1,6,2000,Newly Renovated,293597.23,1174.39
+1574,Sale,Agent,Erebuni,House,117.8,Available,6,7,1968,Newly Renovated,241653.15,966.61
+1576,Rent,Agent,Nork-Marash,House,109.6,Available,1,1,1985,Partially Renovated,234710.12,938.84
+1577,Rent,Buyer,Davtashen,House,144.0,Available,3,6,1993,Not Renovated,200554.99,802.22
+1580,Rent,Agent,Kanaker-Zeytun,House,89.2,Available,3,6,2023,Partially Renovated,172589.02,690.36
+1586,Rent,Owner,Avan,House,127.3,Available,6,10,2018,Partially Renovated,355199.77,1420.8
+1588,Rent,Buyer,Erebuni,House,146.4,Available,2,5,1980,Newly Renovated,205025.43,820.1
+1589,Rent,Agent,Davtashen,House,37.7,Available,6,12,2005,Newly Renovated,80185.21,320.74
+1592,Sale,Owner,Kanaker-Zeytun,House,55.0,Available,4,10,1969,Newly Renovated,137771.04,551.08
+1593,Rent,Agent,Avan,House,198.7,Available,5,1,2011,Newly Renovated,474718.71,1898.87
+1595,Rent,Buyer,Nor Nork,House,100.6,Available,6,4,1984,Newly Renovated,191041.97,764.17
+1602,Rent,Owner,Shengavit,House,153.2,Available,2,5,1989,Newly Renovated,317364.94,1269.46
+1603,Rent,Owner,Avan,House,75.3,Available,6,2,1979,Newly Renovated,175831.54,703.33
+1604,Rent,Agent,Malatia-Sebastia,House,127.0,Available,5,11,1993,Newly Renovated,327666.93,1310.67
+1609,Sale,Buyer,Avan,House,88.8,Available,1,12,1988,Newly Renovated,169083.58,676.33
+1613,Rent,Owner,Ajapnyak,House,164.3,Available,5,2,2012,Newly Renovated,318035.86,1272.14
+1614,Rent,Agent,Malatia-Sebastia,House,66.3,Available,2,2,2021,Newly Renovated,135176.29,540.71
+1615,Rent,Owner,Avan,House,51.8,Available,2,5,2000,Partially Renovated,80779.82,323.12
+1618,Sale,Buyer,Shengavit,House,189.4,Available,4,12,1977,Not Renovated,443134.75,1772.54
+1623,Rent,Owner,Kanaker-Zeytun,House,173.2,Available,6,8,1968,Not Renovated,224290.93,897.16
+1624,Rent,Owner,Shengavit,House,108.3,Available,6,11,1966,Newly Renovated,240686.86,962.75
+1625,Sale,Owner,Erebuni,House,172.3,Available,2,12,1997,Not Renovated,382830.5,1531.32
+1626,Sale,Buyer,Kanaker-Zeytun,House,175.5,Available,5,1,1992,Partially Renovated,432819.7,1731.28
+1629,Sale,Owner,Kanaker-Zeytun,House,115.9,Available,1,4,1987,Newly Renovated,296448.76,1185.8
+1630,Sale,Owner,Kentron,House,130.5,Available,5,11,1991,Partially Renovated,315122.2,1260.49
+1633,Rent,Owner,Shengavit,House,145.9,Available,1,10,2010,Partially Renovated,287315.47,1149.26
+1634,Sale,Agent,Kanaker-Zeytun,House,52.2,Available,2,4,1974,Not Renovated,108498.06,433.99
+1635,Sale,Agent,Erebuni,House,96.7,Available,6,10,2001,Newly Renovated,222344.0,889.38
+1637,Rent,Agent,Kanaker-Zeytun,House,142.5,Available,4,11,1982,Not Renovated,137554.66,550.22
+1639,Sale,Owner,Kanaker-Zeytun,House,91.5,Available,5,6,2022,Newly Renovated,292801.98,1171.21
+1641,Sale,Owner,Kanaker-Zeytun,House,142.7,Available,5,5,1974,Partially Renovated,258912.16,1035.65
+1642,Sale,Owner,Nubarashen,House,110.8,Available,4,10,2021,Newly Renovated,222704.39,890.82
+1644,Rent,Owner,Ajapnyak,House,47.9,Available,2,10,1993,Not Renovated,89600.22,358.4
+1646,Sale,Agent,Erebuni,House,38.2,Available,6,2,1989,Newly Renovated,99210.95,396.84
+1648,Sale,Buyer,Kanaker-Zeytun,House,132.2,Available,1,3,1970,Partially Renovated,275334.37,1101.34
+1649,Rent,Owner,Avan,House,64.2,Available,2,5,1981,Partially Renovated,77361.63,309.45
+1651,Rent,Owner,Avan,House,187.2,Available,1,11,1984,Partially Renovated,250227.34,1000.91
+1653,Sale,Owner,Malatia-Sebastia,House,140.0,Available,5,9,1984,Not Renovated,402812.06,1611.25
+1654,Rent,Owner,Erebuni,House,148.1,Available,6,2,1999,Partially Renovated,332137.56,1328.55
+1655,Sale,Agent,Davtashen,House,163.4,Available,4,9,2004,Newly Renovated,255470.74,1021.88
+1657,Rent,Owner,Avan,House,99.8,Available,5,8,1993,Partially Renovated,323276.2,1293.1
+1658,Sale,Buyer,Malatia-Sebastia,House,46.9,Available,5,7,2018,Not Renovated,108326.16,433.3
+1663,Rent,Agent,Avan,House,80.1,Available,5,6,2014,Newly Renovated,201653.05,806.61
+1671,Sale,Buyer,Kanaker-Zeytun,House,126.9,Available,3,10,1997,Not Renovated,229410.34,917.64
+1672,Sale,Buyer,Avan,House,83.2,Available,2,7,1985,Newly Renovated,149486.6,597.95
+1681,Rent,Agent,Avan,House,94.2,Available,3,12,1990,Not Renovated,133029.12,532.12
+1682,Rent,Agent,Shengavit,House,194.7,Available,5,1,1984,Newly Renovated,491730.55,1966.92
+1683,Rent,Owner,Kentron,House,146.3,Available,1,9,1975,Partially Renovated,254347.11,1017.39
+1685,Sale,Agent,Avan,House,68.1,Available,5,6,1984,Partially Renovated,169865.88,679.46
+1687,Sale,Buyer,Shengavit,House,74.3,Available,6,4,2003,Partially Renovated,132772.84,531.09
+1688,Sale,Buyer,Avan,House,62.0,Available,3,2,2002,Partially Renovated,125877.14,503.51
+1689,Rent,Agent,Ajapnyak,House,113.3,Available,4,11,1990,Partially Renovated,252433.0,1009.73
+1690,Sale,Agent,Malatia-Sebastia,House,138.6,Available,2,11,1976,Partially Renovated,260605.43,1042.42
+1691,Rent,Agent,Erebuni,House,119.7,Available,5,2,2022,Newly Renovated,339977.6,1359.91
+1699,Sale,Buyer,Kanaker-Zeytun,House,107.5,Available,1,11,1980,Not Renovated,136103.54,544.41
+1704,Rent,Buyer,Kanaker-Zeytun,House,58.6,Available,2,2,2023,Newly Renovated,94769.28,379.08
+1705,Sale,Buyer,Avan,House,73.3,Available,4,3,2015,Partially Renovated,155041.45,620.17
+1707,Sale,Owner,Avan,House,169.2,Available,6,1,2000,Not Renovated,262284.76,1049.14
+1708,Rent,Owner,Nubarashen,House,152.3,Available,2,1,1976,Newly Renovated,281708.05,1126.83
+1712,Rent,Agent,Davtashen,House,127.1,Available,2,8,1965,Partially Renovated,239483.69,957.93
+1714,Rent,Buyer,Kanaker-Zeytun,House,185.4,Available,6,6,2002,Not Renovated,462350.64,1849.4
+1716,Sale,Agent,Arabkir,House,66.6,Available,3,8,1996,Partially Renovated,140832.3,563.33
+1718,Rent,Agent,Avan,House,173.1,Available,5,6,2006,Newly Renovated,529838.88,2119.36
+1722,Sale,Owner,Erebuni,House,80.1,Available,6,10,2013,Newly Renovated,142960.34,571.84
+1724,Rent,Agent,Erebuni,House,81.8,Available,1,1,1989,Partially Renovated,148865.84,595.46
+1728,Rent,Owner,Kanaker-Zeytun,House,150.5,Available,4,9,2012,Not Renovated,187396.52,749.59
+1729,Sale,Owner,Kanaker-Zeytun,House,172.4,Available,6,12,1996,Newly Renovated,355377.04,1421.51
+1733,Rent,Agent,Nork-Marash,House,190.5,Available,3,9,2004,Newly Renovated,277401.93,1109.61
+1737,Sale,Owner,Nor Nork,House,66.3,Available,6,3,2015,Partially Renovated,130773.13,523.09
+1739,Sale,Owner,Nor Nork,House,128.8,Available,3,2,1965,Newly Renovated,188212.32,752.85
+1744,Sale,Agent,Nor Nork,House,61.2,Available,1,2,2017,Newly Renovated,148650.32,594.6
+1745,Sale,Agent,Nor Nork,House,136.7,Available,4,3,1970,Partially Renovated,274569.34,1098.28
+1747,Rent,Agent,Kanaker-Zeytun,House,80.9,Available,3,9,2023,Partially Renovated,193143.48,772.57
+1748,Rent,Buyer,Avan,House,154.3,Available,6,10,2015,Newly Renovated,302649.38,1210.6
+1749,Sale,Owner,Erebuni,House,33.5,Available,4,5,1993,Partially Renovated,74288.42,297.15
+1751,Sale,Agent,Davtashen,House,42.0,Available,5,9,2012,Newly Renovated,67508.85,270.04
+1752,Rent,Buyer,Davtashen,House,158.4,Available,2,1,2020,Newly Renovated,464729.24,1858.92
+1754,Rent,Buyer,Erebuni,House,28.5,Available,1,11,1990,Newly Renovated,47968.99,191.88
+1760,Sale,Agent,Nor Nork,House,189.0,Available,5,8,1998,Partially Renovated,361259.01,1445.04
+1761,Rent,Owner,Nork-Marash,House,126.8,Available,1,6,1998,Not Renovated,133594.04,534.38
+1767,Sale,Owner,Arabkir,House,108.9,Available,3,5,2016,Newly Renovated,171326.84,685.31
+1771,Rent,Owner,Kentron,House,173.0,Available,1,8,1971,Newly Renovated,255225.83,1020.9
+1772,Sale,Agent,Avan,House,145.0,Available,3,1,1991,Not Renovated,242006.1,968.02
+1774,Rent,Agent,Davtashen,House,184.4,Available,2,7,1987,Not Renovated,326728.68,1306.91
+1775,Sale,Owner,Ajapnyak,House,87.1,Available,5,2,1999,Newly Renovated,214326.27,857.31
+1776,Rent,Owner,Avan,House,40.7,Available,2,11,2012,Partially Renovated,58657.33,234.63
+1780,Rent,Agent,Nor Nork,House,165.3,Available,6,9,2008,Newly Renovated,484599.58,1938.4
+1781,Sale,Agent,Kentron,House,152.6,Available,1,4,1990,Not Renovated,295869.04,1183.48
+1782,Sale,Agent,Nork-Marash,House,141.9,Available,1,4,2014,Not Renovated,254847.63,1019.39
+1788,Sale,Buyer,Nor Nork,House,102.1,Available,4,2,1974,Not Renovated,200551.58,802.21
+1789,Rent,Owner,Shengavit,House,68.2,Available,4,9,1980,Newly Renovated,164823.72,659.29
+1790,Rent,Owner,Nor Nork,House,129.8,Available,4,6,2002,Newly Renovated,381798.79,1527.2
+1791,Sale,Buyer,Nor Nork,House,92.2,Available,2,11,1967,Newly Renovated,169995.97,679.98
+1793,Sale,Buyer,Avan,House,80.4,Available,3,5,1971,Partially Renovated,130737.13,522.95
+1796,Rent,Owner,Nor Nork,House,131.7,Available,4,8,1995,Partially Renovated,185703.39,742.81
+1800,Sale,Buyer,Erebuni,House,150.0,Available,6,9,1977,Newly Renovated,343375.71,1373.5
+1801,Sale,Owner,Kanaker-Zeytun,House,114.3,Available,3,9,2022,Not Renovated,137980.49,551.92
+1802,Sale,Buyer,Avan,House,81.3,Available,2,8,2020,Not Renovated,101974.05,407.9
+1804,Rent,Owner,Shengavit,House,158.4,Available,4,12,1994,Partially Renovated,318824.03,1275.3
+1806,Sale,Buyer,Kentron,House,48.5,Available,5,9,1983,Newly Renovated,104866.81,419.47
+1807,Rent,Buyer,Avan,House,35.2,Available,3,11,2002,Newly Renovated,54346.95,217.39
+1808,Sale,Owner,Avan,House,159.3,Available,5,4,1973,Partially Renovated,358831.77,1435.33
+1809,Rent,Agent,Davtashen,House,110.6,Available,1,9,1996,Newly Renovated,270235.5,1080.94
+1811,Sale,Buyer,Ajapnyak,House,165.3,Available,4,11,1965,Newly Renovated,361107.03,1444.43
+1812,Sale,Owner,Nor Nork,House,28.8,Available,1,3,1973,Partially Renovated,37203.5,148.81
+1813,Sale,Owner,Shengavit,House,51.0,Available,3,8,2021,Newly Renovated,140716.33,562.87
+1816,Sale,Buyer,Ajapnyak,House,109.0,Available,4,1,1982,Not Renovated,179419.93,717.68
+1819,Sale,Buyer,Erebuni,House,179.2,Available,4,10,1994,Newly Renovated,584632.85,2338.53
+1822,Rent,Owner,Shengavit,House,169.7,Available,5,6,1988,Partially Renovated,362632.41,1450.53
+1824,Sale,Buyer,Kentron,House,67.8,Available,5,7,1983,Partially Renovated,121978.59,487.91
+1825,Sale,Agent,Arabkir,House,148.8,Available,5,10,1988,Not Renovated,256936.83,1027.75
+1827,Sale,Buyer,Arabkir,House,190.6,Available,3,6,2000,Newly Renovated,409223.37,1636.89
+1830,Rent,Agent,Kanaker-Zeytun,House,95.4,Available,5,2,2009,Partially Renovated,239802.37,959.21
+1831,Sale,Agent,Avan,House,27.8,Available,5,8,1988,Not Renovated,31673.11,126.69
+1834,Sale,Agent,Nor Nork,House,115.6,Available,4,2,1988,Newly Renovated,270633.26,1082.53
+1835,Rent,Buyer,Ajapnyak,House,144.3,Available,1,8,1993,Partially Renovated,286578.11,1146.31
+1846,Sale,Agent,Shengavit,House,44.9,Available,3,6,1967,Newly Renovated,94065.28,376.26
+1849,Rent,Agent,Nor Nork,House,68.4,Available,4,1,2010,Partially Renovated,118215.53,472.86
+1850,Rent,Buyer,Arabkir,House,136.8,Available,3,8,2003,Newly Renovated,197581.46,790.33
+1859,Sale,Owner,Kanaker-Zeytun,House,64.9,Available,3,4,2004,Partially Renovated,111067.07,444.27
+1860,Sale,Buyer,Ajapnyak,House,54.2,Available,5,8,1971,Not Renovated,78638.5,314.55
+1862,Rent,Buyer,Erebuni,House,120.5,Available,1,8,1969,Partially Renovated,225848.33,903.39
+1866,Sale,Agent,Shengavit,House,140.5,Available,1,7,2012,Newly Renovated,284239.02,1136.96
+1868,Sale,Owner,Malatia-Sebastia,House,160.2,Available,2,2,2003,Newly Renovated,393733.44,1574.93
+1870,Rent,Owner,Avan,House,163.1,Available,6,7,1990,Partially Renovated,256112.5,1024.45
+1871,Rent,Agent,Erebuni,House,83.2,Available,3,7,1985,Newly Renovated,196136.07,784.54
+1874,Sale,Buyer,Avan,House,174.7,Available,4,11,2011,Not Renovated,332427.78,1329.71
+1878,Rent,Buyer,Nor Nork,House,147.8,Available,5,10,2016,Partially Renovated,246354.38,985.42
+1879,Rent,Owner,Avan,House,71.3,Available,5,1,2004,Partially Renovated,101057.36,404.23
+1880,Sale,Owner,Erebuni,House,80.4,Available,3,1,1971,Not Renovated,120001.0,480.0
+1881,Rent,Owner,Erebuni,House,186.1,Available,2,7,2011,Partially Renovated,367654.0,1470.62
+1882,Rent,Owner,Avan,House,155.2,Available,6,4,1995,Partially Renovated,248312.96,993.25
+1885,Sale,Owner,Nor Nork,House,64.1,Available,4,3,2023,Newly Renovated,190818.11,763.27
+1887,Sale,Buyer,Arabkir,House,158.2,Available,5,8,1982,Partially Renovated,223643.48,894.57
+1888,Sale,Agent,Kanaker-Zeytun,House,28.6,Available,3,9,1988,Not Renovated,55396.49,221.59
+1889,Rent,Owner,Davtashen,House,30.4,Available,1,6,1992,Newly Renovated,66910.57,267.64
+1890,Sale,Owner,Nor Nork,House,150.9,Available,6,1,1974,Newly Renovated,366547.04,1466.19
+1893,Rent,Buyer,Davtashen,House,142.5,Available,4,6,1999,Not Renovated,253667.03,1014.67
+1894,Sale,Owner,Nor Nork,House,145.4,Available,2,7,2023,Partially Renovated,230162.34,920.65
+1895,Rent,Owner,Davtashen,House,123.7,Available,2,5,1995,Newly Renovated,279988.47,1119.95
+1899,Sale,Buyer,Arabkir,House,32.7,Available,4,11,1988,Partially Renovated,44448.48,177.79
+1900,Sale,Agent,Kanaker-Zeytun,House,199.3,Available,1,6,2007,Not Renovated,362284.94,1449.14
+1902,Rent,Owner,Erebuni,House,167.0,Available,1,5,2018,Partially Renovated,348696.41,1394.79
+1903,Rent,Buyer,Avan,House,124.9,Available,5,12,2021,Not Renovated,228702.04,914.81
+1911,Rent,Agent,Ajapnyak,House,185.5,Available,4,9,1966,Not Renovated,392177.46,1568.71
+1917,Rent,Buyer,Nor Nork,House,70.8,Available,5,8,1972,Not Renovated,120003.46,480.01
+1919,Rent,Buyer,Erebuni,House,123.1,Available,4,11,1995,Newly Renovated,324318.06,1297.27
+1920,Rent,Buyer,Kanaker-Zeytun,House,140.5,Available,1,7,2001,Not Renovated,130234.11,520.94
+1922,Rent,Buyer,Avan,House,113.1,Available,6,2,1999,Newly Renovated,287687.51,1150.75
+1923,Sale,Owner,Arabkir,House,37.3,Available,6,1,1986,Partially Renovated,59901.76,239.61
+1925,Rent,Agent,Davtashen,House,116.5,Available,3,7,1975,Partially Renovated,187822.91,751.29
+1926,Rent,Owner,Erebuni,House,178.0,Available,5,5,1987,Partially Renovated,219936.59,879.75
+1929,Rent,Buyer,Erebuni,House,81.6,Available,1,12,1997,Not Renovated,94546.67,378.19
+1930,Sale,Agent,Kanaker-Zeytun,House,110.7,Available,3,5,2002,Not Renovated,246117.55,984.47
+1932,Rent,Agent,Avan,House,87.9,Available,6,5,1967,Newly Renovated,249186.97,996.75
+1933,Sale,Buyer,Davtashen,House,107.1,Available,5,4,2004,Not Renovated,195946.32,783.79
+1934,Sale,Agent,Avan,House,67.5,Available,6,4,2010,Newly Renovated,191558.23,766.23
+1936,Sale,Buyer,Nor Nork,House,174.4,Available,1,3,2012,Partially Renovated,200578.91,802.32
+1938,Rent,Agent,Avan,House,25.9,Available,5,9,1965,Newly Renovated,46035.58,184.14
+1939,Sale,Owner,Ajapnyak,House,94.3,Available,3,2,1992,Partially Renovated,234204.08,936.82
+1942,Rent,Buyer,Nor Nork,House,178.8,Available,3,10,2016,Partially Renovated,520174.71,2080.7
+1943,Rent,Agent,Nor Nork,House,157.5,Available,5,10,2005,Newly Renovated,462172.68,1848.69
+1945,Rent,Buyer,Davtashen,House,135.4,Available,3,1,2007,Newly Renovated,354750.65,1419.0
+1952,Rent,Owner,Kanaker-Zeytun,House,66.2,Available,2,1,2007,Newly Renovated,126285.56,505.14
+1953,Sale,Agent,Davtashen,House,61.2,Available,6,10,1970,Newly Renovated,118695.0,474.78
+1955,Rent,Buyer,Avan,House,128.8,Available,6,8,1971,Not Renovated,174680.05,698.72
+1956,Rent,Agent,Ajapnyak,House,170.1,Available,3,8,1989,Not Renovated,273719.11,1094.88
+1961,Sale,Owner,Erebuni,House,100.0,Available,6,8,1992,Partially Renovated,164742.57,658.97
+1964,Rent,Owner,Nor Nork,House,52.7,Available,6,7,1994,Not Renovated,70709.94,282.84
+1965,Sale,Agent,Erebuni,House,98.0,Available,6,8,1981,Newly Renovated,210158.21,840.63
+1966,Sale,Agent,Ajapnyak,House,83.6,Available,1,4,1982,Not Renovated,141011.11,564.04
+1969,Sale,Owner,Arabkir,House,80.1,Available,1,2,2015,Not Renovated,113109.4,452.44
+1973,Sale,Owner,Ajapnyak,House,152.9,Available,3,11,1966,Newly Renovated,279063.97,1116.26
+1978,Rent,Agent,Davtashen,House,44.6,Available,1,3,1985,Not Renovated,53724.37,214.9
+1982,Rent,Owner,Nor Nork,House,172.5,Available,4,6,1985,Newly Renovated,267058.72,1068.23
+1984,Rent,Owner,Nork-Marash,House,194.9,Available,3,12,2014,Not Renovated,471287.93,1885.15
+1985,Sale,Agent,Shengavit,House,113.8,Available,2,7,1998,Newly Renovated,239170.04,956.68
+1986,Rent,Buyer,Davtashen,House,113.1,Available,3,7,1965,Newly Renovated,250293.13,1001.17
+1989,Rent,Buyer,Shengavit,House,177.9,Available,6,11,1967,Partially Renovated,407745.78,1630.98
+1991,Rent,Agent,Ajapnyak,House,149.0,Available,6,9,1974,Not Renovated,305299.91,1221.2
+1992,Sale,Owner,Kanaker-Zeytun,House,181.3,Available,3,5,1982,Not Renovated,255246.12,1020.98
+1994,Rent,Owner,Kanaker-Zeytun,House,179.3,Available,5,5,1994,Newly Renovated,349723.29,1398.89
+1995,Rent,Buyer,Avan,House,191.0,Available,1,11,2023,Partially Renovated,421113.11,1684.45
+1997,Sale,Agent,Shengavit,House,77.6,Available,5,10,1981,Partially Renovated,183922.64,735.69
+2002,Sale,Owner,Kanaker-Zeytun,House,122.4,Available,2,2,1990,Newly Renovated,407243.81,1628.98
+2003,Sale,Agent,Davtashen,House,41.3,Available,1,5,2012,Partially Renovated,59691.71,238.77
+2005,Rent,Owner,Erebuni,House,136.6,Available,6,4,1979,Not Renovated,170623.75,682.5
+2010,Rent,Owner,Erebuni,House,54.4,Available,5,2,2001,Newly Renovated,146920.59,587.68
+2011,Sale,Agent,Avan,House,118.7,Available,2,10,1975,Newly Renovated,141178.83,564.72
+2012,Sale,Owner,Avan,House,134.4,Available,1,4,1975,Not Renovated,216113.85,864.46
+2015,Rent,Buyer,Erebuni,House,55.4,Available,1,1,2017,Not Renovated,101395.72,405.58
+2016,Rent,Agent,Erebuni,House,170.7,Available,5,12,1980,Partially Renovated,212806.93,851.23
+2018,Sale,Owner,Kentron,House,102.0,Available,2,1,2009,Partially Renovated,153612.6,614.45
+2022,Rent,Owner,Shengavit,House,27.0,Available,3,5,1980,Partially Renovated,32702.09,130.81
+2025,Sale,Agent,Erebuni,House,152.7,Available,6,1,1979,Partially Renovated,242172.49,968.69
+2029,Rent,Owner,Davtashen,House,188.0,Available,2,10,2008,Not Renovated,210659.03,842.64
+2031,Rent,Buyer,Nor Nork,House,154.1,Available,6,10,1997,Not Renovated,283893.05,1135.57
+2033,Sale,Owner,Ajapnyak,House,32.7,Available,6,8,2010,Not Renovated,66960.46,267.84
+2034,Rent,Agent,Kanaker-Zeytun,House,80.3,Available,6,5,1966,Newly Renovated,150780.73,603.12
+2035,Sale,Buyer,Davtashen,House,73.7,Available,4,11,1978,Not Renovated,112168.03,448.67
+2037,Sale,Owner,Nor Nork,House,100.3,Available,4,2,1999,Not Renovated,161857.08,647.43
+2038,Sale,Buyer,Avan,House,97.7,Available,2,9,1992,Not Renovated,214149.85,856.6
+2039,Rent,Owner,Arabkir,House,128.2,Available,4,12,1988,Not Renovated,296764.87,1187.06
+2040,Sale,Agent,Ajapnyak,House,148.6,Available,4,9,1975,Partially Renovated,304066.13,1216.26
+2042,Rent,Owner,Nor Nork,House,41.2,Available,5,5,2015,Partially Renovated,80446.07,321.78
+2043,Sale,Agent,Erebuni,House,78.7,Available,2,6,1970,Partially Renovated,181912.15,727.65
+2046,Sale,Buyer,Kanaker-Zeytun,House,169.8,Available,5,9,1969,Not Renovated,375494.73,1501.98
+2047,Sale,Owner,Nor Nork,House,139.3,Available,1,6,1991,Partially Renovated,170516.95,682.07
+2051,Sale,Buyer,Nor Nork,House,156.3,Available,1,9,2016,Newly Renovated,324057.12,1296.23
+2052,Rent,Owner,Kentron,House,139.4,Available,1,12,1991,Newly Renovated,347068.66,1388.27
+2054,Sale,Owner,Nor Nork,House,87.6,Available,6,12,1970,Not Renovated,143595.04,574.38
+2056,Sale,Buyer,Avan,House,185.0,Available,1,7,2000,Not Renovated,257909.74,1031.64
+2058,Rent,Agent,Arabkir,House,46.5,Available,3,7,1984,Newly Renovated,108849.18,435.4
+2059,Sale,Agent,Kanaker-Zeytun,House,91.7,Available,6,11,2013,Not Renovated,196083.98,784.34
+2060,Sale,Agent,Davtashen,House,112.2,Available,1,6,1974,Partially Renovated,197063.74,788.25
+2065,Rent,Owner,Erebuni,House,121.7,Available,1,1,2007,Newly Renovated,289682.66,1158.73
+2066,Sale,Agent,Malatia-Sebastia,House,161.3,Available,3,8,2020,Newly Renovated,514204.91,2056.82
+2067,Sale,Owner,Nor Nork,House,64.7,Available,4,1,2021,Newly Renovated,151707.78,606.83
+2074,Sale,Agent,Erebuni,House,86.1,Available,2,2,2014,Partially Renovated,111846.37,447.39
+2076,Sale,Owner,Nubarashen,House,56.7,Available,5,8,1969,Partially Renovated,83992.98,335.97
+2077,Sale,Owner,Avan,House,166.0,Available,2,10,1981,Partially Renovated,209127.49,836.51
+2079,Rent,Agent,Kanaker-Zeytun,House,177.1,Available,3,1,2008,Partially Renovated,321900.04,1287.6
+2083,Rent,Owner,Davtashen,House,148.8,Available,2,9,1973,Newly Renovated,329052.17,1316.21
+2086,Rent,Agent,Ajapnyak,House,98.7,Available,1,5,2008,Partially Renovated,138037.39,552.15
+2087,Rent,Owner,Erebuni,House,131.2,Available,3,7,1971,Not Renovated,228354.32,913.42
+2090,Rent,Owner,Avan,House,198.4,Available,6,9,1968,Not Renovated,360134.34,1440.54
+2092,Rent,Agent,Nor Nork,House,53.8,Available,2,7,1987,Not Renovated,58283.48,233.13
+2093,Rent,Agent,Davtashen,House,56.8,Available,4,12,2021,Not Renovated,109399.41,437.6
+2094,Rent,Buyer,Kanaker-Zeytun,House,82.9,Available,1,12,2006,Newly Renovated,142118.6,568.47
+2098,Rent,Buyer,Nubarashen,House,138.6,Available,6,8,1988,Newly Renovated,278469.93,1113.88
+2105,Sale,Owner,Erebuni,House,180.0,Available,5,4,1999,Not Renovated,236559.21,946.24
+2107,Rent,Agent,Erebuni,House,147.4,Available,1,7,2015,Not Renovated,169735.2,678.94
+2109,Sale,Agent,Malatia-Sebastia,House,34.7,Available,1,11,1994,Partially Renovated,56546.05,226.18
+2112,Rent,Agent,Nor Nork,House,160.7,Available,4,3,1968,Not Renovated,208736.18,834.94
+2116,Rent,Agent,Malatia-Sebastia,House,124.3,Available,2,3,2014,Partially Renovated,271617.01,1086.47
+2117,Rent,Owner,Ajapnyak,House,34.1,Available,3,7,1997,Partially Renovated,78456.34,313.83
+2118,Sale,Buyer,Erebuni,House,48.8,Available,1,10,1966,Newly Renovated,94213.54,376.85
+2122,Rent,Buyer,Davtashen,House,190.7,Available,4,1,1978,Not Renovated,189592.97,758.37
+2123,Rent,Agent,Arabkir,House,96.8,Available,2,9,2019,Partially Renovated,128201.11,512.8
+2127,Rent,Owner,Shengavit,House,155.1,Available,1,2,1978,Newly Renovated,221057.54,884.23
+2128,Rent,Owner,Davtashen,House,133.2,Available,3,7,1972,Newly Renovated,230493.42,921.97
+2129,Rent,Agent,Davtashen,House,171.6,Available,3,7,2001,Newly Renovated,455103.82,1820.42
+2134,Sale,Buyer,Arabkir,House,164.0,Available,4,5,1966,Partially Renovated,320382.52,1281.53
+2135,Rent,Owner,Nor Nork,House,173.8,Available,5,5,1967,Partially Renovated,275804.02,1103.22
+2138,Sale,Owner,Nubarashen,House,141.4,Available,1,10,1986,Newly Renovated,195401.04,781.6
+2140,Sale,Agent,Nor Nork,House,177.9,Available,2,3,2015,Partially Renovated,230948.69,923.79
+2141,Rent,Buyer,Arabkir,House,170.3,Available,1,12,1965,Not Renovated,246982.8,987.93
+2142,Rent,Owner,Erebuni,House,133.8,Available,4,4,2015,Newly Renovated,398977.52,1595.91
+2146,Rent,Agent,Malatia-Sebastia,House,164.3,Available,5,10,2004,Newly Renovated,431146.52,1724.59
+2150,Sale,Buyer,Kanaker-Zeytun,House,169.1,Available,5,9,2019,Partially Renovated,306176.74,1224.71
+2151,Rent,Agent,Erebuni,House,72.2,Available,1,5,2009,Not Renovated,89446.37,357.79
+2156,Rent,Agent,Ajapnyak,House,48.9,Available,4,11,2009,Newly Renovated,102584.56,410.34
+2157,Sale,Owner,Malatia-Sebastia,House,98.3,Available,5,11,1971,Not Renovated,223505.06,894.02
+2159,Rent,Owner,Kanaker-Zeytun,House,60.9,Available,1,11,1996,Partially Renovated,89097.62,356.39
+2160,Rent,Owner,Kanaker-Zeytun,House,52.2,Available,1,7,1991,Not Renovated,102676.11,410.7
+2162,Rent,Owner,Erebuni,House,164.6,Available,2,1,1976,Partially Renovated,345470.6,1381.88
+2164,Rent,Owner,Avan,House,174.1,Available,5,7,1999,Newly Renovated,481948.08,1927.79
+2165,Rent,Owner,Erebuni,House,52.2,Available,6,4,1978,Not Renovated,70978.56,283.91
+2166,Rent,Owner,Shengavit,House,149.3,Available,4,4,1965,Partially Renovated,290813.8,1163.26
+2169,Rent,Owner,Nor Nork,House,69.4,Available,4,5,2000,Not Renovated,156403.31,625.61
+2170,Rent,Owner,Kanaker-Zeytun,House,75.1,Available,1,5,1971,Not Renovated,79207.78,316.83
+2171,Sale,Buyer,Erebuni,House,85.9,Available,4,12,2009,Partially Renovated,216571.91,866.29
+2172,Rent,Agent,Nor Nork,House,185.5,Available,5,2,1969,Not Renovated,314288.59,1257.15
+2173,Rent,Owner,Kanaker-Zeytun,House,191.5,Available,2,2,1982,Not Renovated,376074.75,1504.3
+2175,Rent,Agent,Nor Nork,House,96.2,Available,3,5,1975,Newly Renovated,182189.91,728.76
+2177,Sale,Buyer,Avan,House,152.2,Available,2,3,1968,Partially Renovated,213300.87,853.2
+2179,Sale,Agent,Kentron,House,112.7,Available,5,9,2021,Not Renovated,144666.74,578.67
+2182,Rent,Buyer,Arabkir,House,124.9,Available,5,3,2011,Not Renovated,239815.35,959.26
+2183,Sale,Agent,Shengavit,House,97.3,Available,1,5,1993,Not Renovated,175862.94,703.45
+2185,Sale,Owner,Kanaker-Zeytun,House,43.2,Available,1,7,1985,Not Renovated,53054.69,212.22
+2186,Sale,Owner,Kanaker-Zeytun,House,131.5,Available,6,7,2004,Not Renovated,194048.7,776.19
+2190,Rent,Owner,Davtashen,House,190.0,Available,5,5,1975,Newly Renovated,340518.23,1362.07
+2191,Sale,Buyer,Avan,House,78.2,Available,4,9,1975,Not Renovated,163100.15,652.4
+2195,Rent,Buyer,Ajapnyak,House,72.8,Available,5,5,1998,Newly Renovated,159089.28,636.36
+2196,Rent,Agent,Shengavit,House,37.0,Available,3,6,2002,Partially Renovated,94028.62,376.11
+2197,Rent,Agent,Kanaker-Zeytun,House,148.1,Available,4,8,1992,Newly Renovated,249440.26,997.76
+2198,Rent,Owner,Nor Nork,House,58.5,Available,5,3,2004,Not Renovated,122879.16,491.52
+2200,Rent,Owner,Erebuni,House,109.1,Available,1,3,1966,Newly Renovated,210960.28,843.84
+2204,Rent,Buyer,Malatia-Sebastia,House,66.8,Available,2,11,2010,Not Renovated,140021.93,560.09
+2205,Sale,Buyer,Avan,House,192.6,Available,3,10,1971,Newly Renovated,412681.52,1650.73
+2208,Sale,Agent,Erebuni,House,64.0,Available,4,7,2022,Not Renovated,81854.61,327.42
+2209,Sale,Buyer,Kanaker-Zeytun,House,109.0,Available,5,6,2005,Newly Renovated,215341.07,861.36
+2210,Rent,Owner,Kanaker-Zeytun,House,91.5,Available,2,12,1967,Not Renovated,185111.67,740.45
+2214,Sale,Owner,Arabkir,House,51.2,Available,3,10,1979,Partially Renovated,105493.64,421.97
+2215,Sale,Owner,Nor Nork,House,167.8,Available,5,1,2012,Partially Renovated,310128.57,1240.51
+2218,Sale,Buyer,Davtashen,House,50.0,Available,1,5,1995,Not Renovated,86562.04,346.25
+2220,Sale,Owner,Kanaker-Zeytun,House,176.6,Available,6,5,1982,Partially Renovated,392959.92,1571.84
+2223,Rent,Agent,Avan,House,101.5,Available,5,3,1970,Not Renovated,230759.8,923.04
+2227,Sale,Owner,Kanaker-Zeytun,House,95.8,Available,5,12,2015,Not Renovated,125186.92,500.75
+2229,Sale,Buyer,Nor Nork,House,42.8,Available,2,8,1967,Not Renovated,51925.76,207.7
+2230,Rent,Owner,Davtashen,House,111.5,Available,6,7,2005,Newly Renovated,281102.54,1124.41
+2232,Rent,Agent,Davtashen,House,36.1,Available,4,1,2001,Not Renovated,88797.2,355.19
+2233,Rent,Buyer,Avan,House,143.4,Available,3,2,2018,Newly Renovated,365189.3,1460.76
+2237,Sale,Owner,Kanaker-Zeytun,House,118.4,Available,4,1,1969,Partially Renovated,206958.76,827.84
+2239,Rent,Buyer,Malatia-Sebastia,House,197.0,Available,2,10,1974,Newly Renovated,319953.8,1279.82
+2241,Sale,Buyer,Kentron,House,121.1,Available,6,6,1997,Newly Renovated,319636.57,1278.55
+2243,Sale,Owner,Shengavit,House,30.0,Available,3,10,1996,Newly Renovated,43494.99,173.98
+2244,Rent,Agent,Erebuni,House,93.5,Available,6,8,2011,Partially Renovated,200110.35,800.44
+2245,Rent,Agent,Kanaker-Zeytun,House,103.3,Available,2,12,1980,Newly Renovated,175084.99,700.34
+2246,Rent,Agent,Kanaker-Zeytun,House,189.1,Available,6,9,2011,Newly Renovated,681260.11,2725.04
+2248,Rent,Agent,Kanaker-Zeytun,House,101.5,Available,1,7,1995,Partially Renovated,159057.01,636.23
+2249,Rent,Buyer,Erebuni,House,61.2,Available,2,8,1980,Not Renovated,122032.61,488.13
+2250,Sale,Owner,Nor Nork,House,30.3,Available,4,9,1968,Not Renovated,45287.57,181.15
+2251,Sale,Agent,Kanaker-Zeytun,House,186.1,Available,2,11,2016,Newly Renovated,492342.95,1969.37
+2252,Rent,Buyer,Avan,House,141.0,Available,2,8,1993,Newly Renovated,362968.82,1451.88
+2253,Rent,Owner,Kanaker-Zeytun,House,58.9,Available,5,5,2012,Newly Renovated,113825.58,455.3
+2260,Rent,Agent,Erebuni,House,112.3,Available,3,2,1972,Newly Renovated,196121.68,784.49
+2261,Rent,Owner,Kanaker-Zeytun,House,192.7,Available,5,4,1983,Not Renovated,368567.41,1474.27
+2267,Sale,Agent,Avan,House,88.3,Available,1,9,2011,Newly Renovated,221509.29,886.04
+2268,Sale,Owner,Shengavit,House,31.9,Available,4,7,1970,Newly Renovated,76662.29,306.65
+2272,Rent,Agent,Erebuni,House,185.0,Available,4,6,1971,Newly Renovated,357835.41,1431.34
+2274,Rent,Owner,Nor Nork,House,152.5,Available,1,8,1996,Newly Renovated,241186.13,964.74
+2276,Rent,Agent,Nor Nork,House,61.4,Available,6,12,1979,Partially Renovated,123493.06,493.97
+2277,Sale,Agent,Kanaker-Zeytun,House,142.8,Available,2,4,1978,Newly Renovated,274315.31,1097.26
+2279,Rent,Owner,Davtashen,House,99.3,Available,1,12,1973,Newly Renovated,213525.26,854.1
+2282,Rent,Owner,Erebuni,House,81.1,Available,1,12,1966,Newly Renovated,172258.94,689.04
+2284,Sale,Owner,Davtashen,House,45.7,Available,5,1,2022,Newly Renovated,97939.32,391.76
+2286,Sale,Agent,Kanaker-Zeytun,House,95.4,Available,2,3,2021,Newly Renovated,260058.05,1040.23
+2287,Sale,Owner,Erebuni,House,145.7,Available,4,11,2001,Newly Renovated,313747.96,1254.99
+2288,Sale,Owner,Erebuni,House,179.1,Available,2,5,1976,Newly Renovated,288079.5,1152.32
+2290,Sale,Owner,Avan,House,79.1,Available,5,7,1993,Partially Renovated,111730.79,446.92
+2292,Sale,Owner,Kentron,House,50.3,Available,4,9,1981,Partially Renovated,65225.74,260.9
+2296,Sale,Owner,Kanaker-Zeytun,House,128.4,Available,1,10,2004,Newly Renovated,291903.96,1167.62
+2297,Rent,Owner,Arabkir,House,174.8,Available,2,10,1989,Not Renovated,289637.12,1158.55
+2299,Sale,Buyer,Kanaker-Zeytun,House,192.3,Available,3,7,1966,Partially Renovated,364968.51,1459.87
+2300,Sale,Owner,Shengavit,House,32.6,Available,5,11,1979,Newly Renovated,82008.57,328.03
+2301,Rent,Owner,Arabkir,House,118.6,Available,2,9,1992,Not Renovated,260031.52,1040.13
+2305,Sale,Agent,Ajapnyak,House,124.1,Available,2,6,1965,Partially Renovated,220106.69,880.43
+2306,Rent,Agent,Arabkir,House,79.4,Available,3,7,2021,Partially Renovated,152402.89,609.61
+2307,Rent,Buyer,Avan,House,137.1,Available,6,10,1994,Partially Renovated,195268.73,781.07
+2311,Sale,Buyer,Avan,House,93.7,Available,4,7,1990,Newly Renovated,215341.43,861.37
+2315,Sale,Buyer,Kentron,House,65.3,Available,3,8,1976,Newly Renovated,77123.74,308.49
+2316,Sale,Buyer,Nor Nork,House,65.5,Available,4,7,2015,Newly Renovated,183142.36,732.57
+2317,Rent,Agent,Kentron,House,157.0,Available,6,11,1965,Not Renovated,336090.5,1344.36
+2318,Sale,Buyer,Arabkir,House,82.1,Available,2,6,1979,Not Renovated,71798.22,287.19
+2323,Sale,Agent,Davtashen,House,75.2,Available,1,6,1992,Not Renovated,105049.41,420.2
+2326,Sale,Agent,Davtashen,House,102.9,Available,6,2,2008,Partially Renovated,208682.23,834.73
+2327,Sale,Owner,Kanaker-Zeytun,House,91.9,Available,1,4,1971,Partially Renovated,202009.01,808.04
+2332,Sale,Agent,Shengavit,House,109.4,Available,4,6,2015,Not Renovated,136065.77,544.26
+2333,Sale,Buyer,Shengavit,House,153.7,Available,5,9,1972,Not Renovated,269777.63,1079.11
+2336,Sale,Owner,Malatia-Sebastia,House,69.0,Available,2,9,2001,Newly Renovated,103406.16,413.62
+2338,Sale,Owner,Ajapnyak,House,160.8,Available,3,4,2008,Partially Renovated,280870.3,1123.48
+2339,Sale,Buyer,Shengavit,House,66.3,Available,5,3,1992,Newly Renovated,139836.72,559.35
+2342,Rent,Agent,Arabkir,House,42.0,Available,1,3,1978,Partially Renovated,73871.16,295.48
+2346,Sale,Agent,Davtashen,House,161.7,Available,1,5,2014,Not Renovated,225215.57,900.86
+2347,Rent,Owner,Shengavit,House,90.5,Available,6,7,2011,Partially Renovated,197235.19,788.94
+2348,Sale,Owner,Nor Nork,House,173.7,Available,5,12,2013,Partially Renovated,423806.73,1695.23
+2351,Rent,Buyer,Malatia-Sebastia,House,56.2,Available,1,11,1996,Newly Renovated,145680.35,582.72
+2353,Sale,Buyer,Erebuni,House,164.2,Available,6,4,1987,Not Renovated,230069.99,920.28
+2354,Rent,Agent,Davtashen,House,85.8,Available,5,1,1978,Partially Renovated,157810.35,631.24
+2355,Rent,Owner,Davtashen,House,145.7,Available,1,7,1996,Not Renovated,178683.64,714.73
+2356,Rent,Agent,Davtashen,House,39.9,Available,3,3,1969,Not Renovated,43138.27,172.55
+2358,Rent,Owner,Erebuni,House,141.8,Available,6,11,2021,Partially Renovated,364764.69,1459.06
+2361,Rent,Owner,Avan,House,142.8,Available,2,3,1995,Not Renovated,297005.03,1188.02
+2362,Rent,Buyer,Nor Nork,House,30.1,Available,2,9,2003,Newly Renovated,66569.77,266.28
+2363,Rent,Buyer,Kanaker-Zeytun,House,159.6,Available,2,12,2017,Newly Renovated,405449.32,1621.8
+2365,Sale,Agent,Davtashen,House,110.1,Available,4,12,1989,Newly Renovated,225289.02,901.16
+2368,Rent,Owner,Arabkir,House,121.4,Available,6,12,1965,Partially Renovated,206110.23,824.44
+2370,Sale,Owner,Shengavit,House,82.8,Available,2,10,2011,Newly Renovated,222606.75,890.43
+2371,Rent,Owner,Avan,House,64.0,Available,2,4,1966,Partially Renovated,127015.35,508.06
+2373,Rent,Agent,Kanaker-Zeytun,House,70.4,Available,6,8,1966,Partially Renovated,109348.97,437.4
+2375,Rent,Agent,Nor Nork,House,159.6,Available,5,3,1979,Partially Renovated,225857.46,903.43
+2376,Rent,Owner,Avan,House,118.1,Available,6,5,1992,Newly Renovated,288829.6,1155.32
+2377,Sale,Owner,Erebuni,House,143.0,Available,2,10,1972,Not Renovated,146067.18,584.27
+2379,Rent,Buyer,Arabkir,House,136.0,Available,5,4,1998,Newly Renovated,274087.78,1096.35
+2381,Sale,Buyer,Avan,House,68.9,Available,2,10,2004,Partially Renovated,117662.64,470.65
+2383,Rent,Agent,Davtashen,House,136.5,Available,1,5,1990,Newly Renovated,439607.28,1758.43
+2390,Rent,Buyer,Kanaker-Zeytun,House,46.2,Available,4,6,1986,Partially Renovated,76373.5,305.49
+2391,Rent,Owner,Davtashen,House,134.5,Available,3,3,1990,Partially Renovated,309203.56,1236.81
+2392,Rent,Agent,Avan,House,183.0,Available,5,12,1979,Not Renovated,189062.82,756.25
+2394,Rent,Agent,Erebuni,House,162.4,Available,6,1,1996,Partially Renovated,295759.69,1183.04
+2395,Sale,Buyer,Erebuni,House,155.5,Available,6,9,2016,Newly Renovated,372401.01,1489.6
+2396,Sale,Owner,Erebuni,House,106.1,Available,5,10,1992,Not Renovated,300369.5,1201.48
+2398,Sale,Owner,Davtashen,House,31.6,Available,6,6,2012,Partially Renovated,82544.75,330.18
+2400,Rent,Owner,Kentron,House,66.6,Available,1,9,1974,Not Renovated,118641.13,474.56
+2402,Sale,Owner,Erebuni,House,153.8,Available,3,11,2000,Partially Renovated,375414.8,1501.66
+2404,Rent,Owner,Kentron,House,174.2,Available,3,9,2004,Newly Renovated,410983.25,1643.93
+2407,Sale,Buyer,Erebuni,House,143.2,Available,3,2,2000,Newly Renovated,323471.44,1293.89
+2412,Sale,Owner,Kentron,House,116.8,Available,2,1,1979,Not Renovated,127671.46,510.69
+2415,Rent,Owner,Nor Nork,House,127.2,Available,4,5,1984,Newly Renovated,190983.43,763.93
+2416,Sale,Agent,Shengavit,House,155.5,Available,2,3,2002,Newly Renovated,296583.94,1186.34
+2418,Rent,Buyer,Avan,House,130.3,Available,4,9,1971,Not Renovated,239264.01,957.06
+2424,Rent,Owner,Kanaker-Zeytun,House,47.2,Available,1,10,2004,Not Renovated,63308.47,253.23
+2425,Sale,Owner,Kanaker-Zeytun,House,78.6,Available,2,8,2019,Newly Renovated,147661.32,590.65
+2426,Rent,Buyer,Erebuni,House,144.2,Available,3,4,1982,Newly Renovated,246339.29,985.36
+2428,Sale,Owner,Davtashen,House,31.8,Available,6,12,1990,Not Renovated,66519.36,266.08
+2430,Rent,Agent,Davtashen,House,79.0,Available,5,11,1967,Not Renovated,204765.28,819.06
+2434,Rent,Agent,Shengavit,House,199.5,Available,4,4,2013,Newly Renovated,558731.02,2234.92
+2439,Rent,Agent,Nor Nork,House,73.2,Available,6,6,2021,Newly Renovated,200332.15,801.33
+2444,Sale,Buyer,Kanaker-Zeytun,House,137.2,Available,1,2,1997,Partially Renovated,245836.49,983.35
+2446,Rent,Buyer,Kentron,House,39.8,Available,4,3,1994,Newly Renovated,93678.75,374.72
+2447,Rent,Agent,Kanaker-Zeytun,House,131.6,Available,6,5,2008,Not Renovated,289427.57,1157.71
+2448,Rent,Buyer,Kentron,House,151.7,Available,1,10,2018,Newly Renovated,415390.54,1661.56
+2449,Rent,Owner,Kentron,House,38.4,Available,5,1,1991,Not Renovated,80876.0,323.5
+2450,Sale,Agent,Arabkir,House,196.7,Available,2,7,1968,Partially Renovated,417074.45,1668.3
+2452,Rent,Agent,Shengavit,House,78.0,Available,4,7,1989,Newly Renovated,129889.98,519.56
+2453,Sale,Owner,Shengavit,House,190.2,Available,1,4,1988,Partially Renovated,442957.23,1771.83
+2454,Rent,Agent,Shengavit,House,180.9,Available,2,1,1971,Partially Renovated,284803.27,1139.21
+2458,Rent,Owner,Ajapnyak,House,191.1,Available,5,9,1967,Newly Renovated,514407.85,2057.63
+2459,Rent,Owner,Malatia-Sebastia,House,99.0,Available,4,3,1985,Partially Renovated,219090.56,876.36
+2461,Sale,Agent,Davtashen,House,86.8,Available,1,12,1992,Newly Renovated,177374.26,709.5
+2463,Sale,Owner,Davtashen,House,196.8,Available,4,1,1970,Not Renovated,353145.7,1412.58
+2464,Rent,Owner,Avan,House,59.3,Available,4,12,2003,Partially Renovated,105234.94,420.94
+2466,Rent,Agent,Kanaker-Zeytun,House,150.0,Available,2,7,1980,Partially Renovated,240328.39,961.31
+2468,Sale,Buyer,Avan,House,188.5,Available,1,3,1989,Not Renovated,366985.59,1467.94
+2469,Sale,Buyer,Erebuni,House,199.9,Available,6,9,2016,Partially Renovated,539143.83,2156.58
+2470,Rent,Owner,Nor Nork,House,187.3,Available,4,4,1977,Newly Renovated,434378.74,1737.51
+2471,Rent,Agent,Nork-Marash,House,26.6,Available,4,3,1973,Newly Renovated,50242.07,200.97
+2473,Sale,Owner,Ajapnyak,House,87.6,Available,6,7,1967,Not Renovated,184105.73,736.42
+2474,Sale,Owner,Ajapnyak,House,71.0,Available,3,11,1968,Not Renovated,89365.93,357.46
+2478,Rent,Buyer,Avan,House,26.5,Available,2,1,1978,Partially Renovated,38359.63,153.44
+2479,Rent,Agent,Kentron,House,34.5,Available,1,10,1987,Newly Renovated,49325.39,197.3
+2480,Rent,Buyer,Kanaker-Zeytun,House,58.1,Available,2,9,1965,Newly Renovated,158167.93,632.67
+2482,Sale,Owner,Kanaker-Zeytun,House,30.5,Available,3,3,1970,Partially Renovated,36437.36,145.75
+2483,Sale,Agent,Erebuni,House,110.2,Available,3,2,2008,Newly Renovated,273879.52,1095.52
+2484,Rent,Owner,Davtashen,House,197.7,Available,2,6,1979,Not Renovated,210871.12,843.48
+2485,Sale,Agent,Erebuni,House,190.4,Available,6,4,2003,Partially Renovated,508991.26,2035.97
+2491,Sale,Owner,Ajapnyak,House,56.1,Available,1,7,1998,Not Renovated,103855.97,415.42
+2493,Sale,Owner,Erebuni,House,184.3,Available,4,11,1996,Not Renovated,297407.36,1189.63
+2494,Rent,Owner,Kentron,House,185.6,Available,5,5,1966,Newly Renovated,405776.23,1623.1
+2495,Rent,Agent,Malatia-Sebastia,House,125.1,Available,2,8,2011,Not Renovated,220968.43,883.87
+2496,Rent,Owner,Kanaker-Zeytun,House,26.8,Available,1,6,2008,Not Renovated,38209.07,152.84
+2497,Rent,Buyer,Davtashen,House,59.8,Available,3,7,1965,Newly Renovated,111186.85,444.75
+2499,Rent,Owner,Kanaker-Zeytun,House,130.4,Available,2,5,1981,Newly Renovated,284159.6,1136.64
+2504,Rent,Owner,Kanaker-Zeytun,House,52.3,Available,3,10,2016,Not Renovated,106055.96,424.22
+2507,Sale,Owner,Avan,House,196.2,Available,2,1,1994,Partially Renovated,411120.9,1644.48
+2508,Sale,Buyer,Kanaker-Zeytun,House,198.8,Available,4,11,1973,Partially Renovated,494421.41,1977.69
+2511,Sale,Agent,Erebuni,House,55.4,Available,3,10,2021,Newly Renovated,114198.63,456.79
+2512,Rent,Buyer,Davtashen,House,148.9,Available,2,8,1977,Newly Renovated,204471.28,817.89
+2513,Sale,Agent,Erebuni,House,174.8,Available,1,9,1969,Partially Renovated,311529.79,1246.12
+2514,Sale,Agent,Nor Nork,House,164.3,Available,5,6,1989,Not Renovated,258956.78,1035.83
+2519,Sale,Owner,Malatia-Sebastia,House,73.7,Available,1,4,1998,Newly Renovated,142236.14,568.94
+2520,Rent,Agent,Kanaker-Zeytun,House,119.9,Available,6,9,1979,Partially Renovated,185095.83,740.38
+2521,Rent,Owner,Kanaker-Zeytun,House,125.4,Available,4,4,1980,Partially Renovated,249314.36,997.26
+2523,Sale,Buyer,Kentron,House,57.7,Available,4,10,2021,Partially Renovated,131754.4,527.02
+2524,Sale,Buyer,Avan,House,57.7,Available,5,10,1996,Not Renovated,108197.19,432.79
+2525,Sale,Owner,Arabkir,House,25.9,Available,4,11,1992,Not Renovated,64572.76,258.29
+2526,Sale,Buyer,Kanaker-Zeytun,House,83.7,Available,1,11,1966,Newly Renovated,104389.08,417.56
+2528,Rent,Agent,Arabkir,House,177.8,Available,1,12,2010,Newly Renovated,243378.85,973.52
+2529,Sale,Agent,Davtashen,House,180.5,Available,5,6,1971,Not Renovated,341959.55,1367.84
+2530,Sale,Agent,Erebuni,House,188.3,Available,3,4,1976,Not Renovated,225670.63,902.68
+2531,Sale,Agent,Avan,House,67.3,Available,5,9,1983,Partially Renovated,167114.28,668.46
+2534,Sale,Agent,Erebuni,House,33.9,Available,5,10,1967,Partially Renovated,46663.89,186.66
+2536,Rent,Agent,Avan,House,57.6,Available,5,6,1991,Partially Renovated,99917.24,399.67
+2540,Sale,Owner,Davtashen,House,69.9,Available,2,5,2019,Newly Renovated,186930.09,747.72
+2541,Sale,Owner,Kentron,House,124.5,Available,4,5,2003,Not Renovated,176239.12,704.96
+2543,Sale,Owner,Avan,House,155.0,Available,4,7,1973,Newly Renovated,348027.66,1392.11
+2545,Rent,Owner,Arabkir,House,122.0,Available,4,4,1996,Partially Renovated,235133.25,940.53
+2546,Sale,Buyer,Nubarashen,House,187.7,Available,5,1,1979,Newly Renovated,530700.75,2122.8
+2547,Rent,Owner,Erebuni,House,112.9,Available,1,8,1990,Partially Renovated,134737.97,538.95
+2550,Sale,Buyer,Erebuni,House,171.3,Available,2,6,1971,Newly Renovated,317840.75,1271.36
+2555,Sale,Owner,Kanaker-Zeytun,House,84.7,Available,6,5,1977,Not Renovated,101196.72,404.79
+2556,Sale,Buyer,Shengavit,House,78.0,Available,5,4,2012,Not Renovated,137620.94,550.48
+2559,Rent,Agent,Kanaker-Zeytun,House,199.8,Available,3,1,1974,Newly Renovated,491892.53,1967.57
+2566,Rent,Buyer,Erebuni,House,37.8,Available,5,1,1976,Newly Renovated,92604.11,370.42
+2572,Rent,Owner,Kentron,House,107.1,Available,6,4,1980,Not Renovated,208308.93,833.24
+2577,Sale,Buyer,Davtashen,House,46.2,Available,3,2,1976,Newly Renovated,94472.08,377.89
+2580,Rent,Owner,Erebuni,House,173.1,Available,1,4,1965,Newly Renovated,251416.97,1005.67
+2582,Rent,Owner,Erebuni,House,81.3,Available,6,9,1971,Newly Renovated,140566.32,562.27
+2586,Rent,Owner,Kanaker-Zeytun,House,167.9,Available,3,3,2016,Partially Renovated,374452.45,1497.81
+2587,Rent,Owner,Avan,House,31.0,Available,1,4,2022,Partially Renovated,57033.7,228.13
+2588,Rent,Buyer,Avan,House,88.3,Available,4,5,2012,Newly Renovated,188083.43,752.33
+2591,Sale,Buyer,Avan,House,29.1,Available,5,10,1979,Partially Renovated,39949.95,159.8
+2593,Rent,Buyer,Nor Nork,House,146.2,Available,4,12,1967,Partially Renovated,186430.14,745.72
+2594,Rent,Buyer,Arabkir,House,177.9,Available,5,8,1975,Newly Renovated,286107.75,1144.43
+2595,Sale,Owner,Avan,House,26.1,Available,1,2,2004,Partially Renovated,55495.56,221.98
+2597,Rent,Owner,Arabkir,House,97.2,Available,5,12,2018,Partially Renovated,161809.51,647.24
+2598,Rent,Agent,Shengavit,House,190.1,Available,1,8,2012,Newly Renovated,428860.27,1715.44
+2599,Rent,Agent,Arabkir,House,183.0,Available,1,5,2001,Not Renovated,219721.82,878.89
+2600,Rent,Owner,Avan,House,167.8,Available,5,8,1970,Partially Renovated,280693.34,1122.77
+2601,Rent,Owner,Kanaker-Zeytun,House,38.3,Available,4,6,2008,Partially Renovated,95757.62,383.03
+2604,Rent,Agent,Kanaker-Zeytun,House,83.5,Available,5,11,2007,Not Renovated,132598.48,530.39
+2605,Sale,Buyer,Avan,House,111.2,Available,1,5,1991,Partially Renovated,223697.2,894.79
+2607,Sale,Owner,Ajapnyak,House,39.2,Available,3,11,2011,Partially Renovated,89223.73,356.89
+2609,Sale,Buyer,Kanaker-Zeytun,House,141.0,Available,1,10,2022,Not Renovated,309707.01,1238.83
+2610,Rent,Buyer,Davtashen,House,183.1,Available,3,2,2004,Newly Renovated,472305.81,1889.22
+2611,Sale,Buyer,Avan,House,137.5,Available,6,2,1975,Not Renovated,191602.49,766.41
+2613,Rent,Buyer,Kanaker-Zeytun,House,199.5,Available,5,12,1978,Partially Renovated,448621.19,1794.48
+2616,Sale,Owner,Erebuni,House,124.1,Available,4,3,1974,Not Renovated,136953.91,547.82
+2617,Sale,Owner,Erebuni,House,54.3,Available,5,10,1984,Newly Renovated,146971.66,587.89
+2620,Sale,Agent,Erebuni,House,166.6,Available,4,3,2010,Partially Renovated,339800.44,1359.2
+2621,Rent,Agent,Kanaker-Zeytun,House,124.5,Available,5,2,2004,Partially Renovated,262465.39,1049.86
+2624,Sale,Owner,Erebuni,House,45.9,Available,5,1,2015,Newly Renovated,122408.96,489.64
+2625,Rent,Buyer,Avan,House,177.2,Available,3,12,2023,Partially Renovated,394701.38,1578.81
+2626,Rent,Agent,Kanaker-Zeytun,House,173.2,Available,5,2,2007,Partially Renovated,565636.49,2262.55
+2627,Sale,Owner,Kanaker-Zeytun,House,63.0,Available,6,5,2003,Partially Renovated,106534.19,426.14
+2630,Rent,Agent,Erebuni,House,31.5,Available,4,11,2008,Newly Renovated,50922.25,203.69
+2632,Rent,Owner,Erebuni,House,162.0,Available,6,11,2018,Partially Renovated,437255.46,1749.02
+2633,Sale,Owner,Nor Nork,House,142.8,Available,6,1,1984,Not Renovated,164534.21,658.14
+2636,Rent,Buyer,Arabkir,House,54.9,Available,3,7,2015,Partially Renovated,66860.7,267.44
+2642,Sale,Agent,Nor Nork,House,150.4,Available,2,12,2001,Partially Renovated,181189.5,724.76
+2644,Rent,Agent,Nor Nork,House,42.5,Available,2,6,1991,Not Renovated,43236.73,172.95
+2646,Sale,Agent,Avan,House,109.8,Available,2,3,2010,Newly Renovated,238813.92,955.26
+2648,Rent,Owner,Avan,House,56.0,Available,3,3,2006,Newly Renovated,152787.28,611.15
+2649,Sale,Agent,Kanaker-Zeytun,House,162.5,Available,5,5,1973,Newly Renovated,402327.97,1609.31
+2656,Sale,Buyer,Arabkir,House,153.4,Available,6,10,1968,Newly Renovated,311659.43,1246.64
+2658,Sale,Buyer,Erebuni,House,52.5,Available,1,3,1974,Partially Renovated,96231.4,384.93
+2661,Rent,Agent,Erebuni,House,173.3,Available,2,11,1992,Not Renovated,181675.67,726.7
+2662,Sale,Agent,Kanaker-Zeytun,House,180.5,Available,5,10,1966,Partially Renovated,430483.11,1721.93
+2664,Rent,Buyer,Erebuni,House,31.0,Available,2,2,1968,Not Renovated,33993.81,135.98
+2665,Sale,Buyer,Erebuni,House,86.1,Available,5,9,1986,Newly Renovated,262331.28,1049.33
+2667,Rent,Owner,Kanaker-Zeytun,House,134.5,Available,4,7,1989,Newly Renovated,221800.28,887.2
+2668,Rent,Owner,Kanaker-Zeytun,House,46.8,Available,5,2,1977,Not Renovated,57131.65,228.53
+2669,Rent,Owner,Davtashen,House,124.6,Available,2,3,1974,Partially Renovated,162424.03,649.7
+2671,Sale,Buyer,Shengavit,House,151.0,Available,1,5,2015,Not Renovated,303218.59,1212.87
+2673,Rent,Agent,Erebuni,House,169.7,Available,6,1,1989,Partially Renovated,236953.95,947.82
+2675,Rent,Buyer,Nor Nork,House,180.2,Available,1,5,1973,Newly Renovated,317313.36,1269.25
+2676,Rent,Owner,Davtashen,House,154.8,Available,3,5,2001,Not Renovated,267671.85,1070.69
+2677,Rent,Owner,Kanaker-Zeytun,House,121.5,Available,6,3,2004,Newly Renovated,172472.26,689.89
+2679,Rent,Owner,Erebuni,House,33.7,Available,5,2,1984,Newly Renovated,74950.68,299.8
+2681,Sale,Owner,Kanaker-Zeytun,House,171.8,Available,1,11,2003,Newly Renovated,402825.56,1611.3
+2684,Rent,Owner,Avan,House,50.6,Available,1,12,1987,Newly Renovated,126925.7,507.7
+2686,Rent,Agent,Malatia-Sebastia,House,46.1,Available,3,9,1998,Partially Renovated,106912.68,427.65
+2687,Sale,Owner,Erebuni,House,84.6,Available,1,1,1998,Partially Renovated,109024.95,436.1
+2688,Sale,Owner,Malatia-Sebastia,House,195.5,Available,1,6,1998,Not Renovated,329442.32,1317.77
+2690,Rent,Owner,Malatia-Sebastia,House,88.2,Available,3,2,1995,Newly Renovated,196426.93,785.71
+2692,Sale,Owner,Nor Nork,House,186.9,Available,2,12,1978,Newly Renovated,269110.37,1076.44
+2696,Rent,Owner,Avan,House,133.4,Available,4,4,1999,Partially Renovated,180377.05,721.51
+2698,Rent,Agent,Erebuni,House,38.2,Available,5,12,1978,Not Renovated,51802.67,207.21
+2699,Sale,Owner,Kanaker-Zeytun,House,42.5,Available,6,4,1983,Not Renovated,49255.92,197.02
+2703,Rent,Agent,Kanaker-Zeytun,House,165.8,Available,1,11,2001,Not Renovated,287763.47,1151.05
+2709,Rent,Owner,Avan,House,68.0,Available,1,4,2004,Partially Renovated,103196.73,412.79
+2710,Sale,Agent,Kanaker-Zeytun,House,62.4,Available,4,10,1973,Partially Renovated,98050.97,392.2
+2711,Rent,Owner,Erebuni,House,197.4,Available,6,10,1985,Newly Renovated,374861.21,1499.44
+2712,Rent,Buyer,Erebuni,House,102.2,Available,3,7,1970,Not Renovated,116044.42,464.18
+2713,Sale,Agent,Avan,House,35.1,Available,6,7,2016,Newly Renovated,58884.01,235.54
+2714,Sale,Owner,Shengavit,House,106.7,Available,2,10,1973,Not Renovated,117696.96,470.79
+2716,Sale,Owner,Nor Nork,House,138.8,Available,6,12,2006,Newly Renovated,321957.29,1287.83
+2719,Rent,Owner,Davtashen,House,124.6,Available,3,11,1998,Not Renovated,154068.56,616.27
+2720,Rent,Owner,Davtashen,House,143.6,Available,4,3,1977,Newly Renovated,422147.37,1688.59
+2724,Sale,Buyer,Nork-Marash,House,119.5,Available,4,1,2001,Partially Renovated,261655.26,1046.62
+2726,Rent,Buyer,Nor Nork,House,143.0,Available,5,4,1985,Not Renovated,232002.77,928.01
+2728,Sale,Owner,Shengavit,House,86.4,Available,5,8,1993,Partially Renovated,204635.22,818.54
+2730,Sale,Buyer,Kanaker-Zeytun,House,73.8,Available,3,5,1977,Not Renovated,102153.51,408.61
+2732,Sale,Agent,Davtashen,House,144.0,Available,6,2,1995,Newly Renovated,246776.78,987.11
+2733,Rent,Owner,Kanaker-Zeytun,House,163.4,Available,5,6,1981,Partially Renovated,251468.91,1005.88
+2734,Sale,Buyer,Erebuni,House,28.7,Available,1,12,1976,Partially Renovated,36199.92,144.8
+2736,Sale,Buyer,Avan,House,166.1,Available,5,1,1965,Newly Renovated,290279.74,1161.12
+2737,Rent,Buyer,Kentron,House,63.4,Available,4,7,1985,Not Renovated,103169.65,412.68
+2740,Sale,Owner,Malatia-Sebastia,House,160.9,Available,2,10,1976,Newly Renovated,309696.22,1238.78
+2741,Sale,Owner,Nor Nork,House,67.2,Available,2,7,1969,Newly Renovated,116105.37,464.42
+2744,Rent,Owner,Kanaker-Zeytun,House,87.9,Available,6,6,1991,Newly Renovated,123816.99,495.27
+2746,Sale,Buyer,Davtashen,House,160.9,Available,4,10,2002,Not Renovated,255332.46,1021.33
+2747,Sale,Buyer,Arabkir,House,105.7,Available,3,3,1982,Partially Renovated,195657.62,782.63
+2749,Rent,Agent,Nor Nork,House,63.5,Available,4,2,1971,Not Renovated,107463.7,429.85
+2752,Sale,Owner,Nor Nork,House,169.6,Available,3,8,1967,Not Renovated,311754.62,1247.02
+2753,Sale,Owner,Erebuni,House,156.6,Available,2,8,1976,Partially Renovated,350279.01,1401.12
+2754,Rent,Owner,Kanaker-Zeytun,House,86.3,Available,5,2,2005,Partially Renovated,186719.36,746.88
+2756,Sale,Agent,Nor Nork,House,95.6,Available,1,6,1988,Partially Renovated,165948.85,663.8
+2758,Rent,Owner,Nor Nork,House,186.3,Available,6,6,1982,Newly Renovated,424035.82,1696.14
+2759,Sale,Buyer,Avan,House,169.8,Available,3,5,2001,Not Renovated,323986.6,1295.95
+2760,Sale,Owner,Erebuni,House,131.5,Available,2,3,1968,Newly Renovated,245033.06,980.13
+2764,Rent,Agent,Avan,House,198.2,Available,2,5,1978,Not Renovated,218864.31,875.46
+2767,Sale,Buyer,Kentron,House,139.2,Available,6,11,1986,Not Renovated,289448.34,1157.79
+2770,Sale,Agent,Malatia-Sebastia,House,194.2,Available,5,12,1967,Not Renovated,263293.25,1053.17
+2771,Sale,Owner,Kanaker-Zeytun,House,103.7,Available,4,2,1972,Newly Renovated,295088.89,1180.36
+2774,Sale,Agent,Arabkir,House,39.1,Available,2,12,1991,Partially Renovated,85665.02,342.66
+2775,Sale,Owner,Nor Nork,House,70.6,Available,5,11,1971,Partially Renovated,124465.52,497.86
+2776,Sale,Owner,Kanaker-Zeytun,House,186.4,Available,2,7,1972,Not Renovated,259148.15,1036.59
+2778,Rent,Buyer,Kanaker-Zeytun,House,171.4,Available,1,7,1987,Partially Renovated,285478.52,1141.91
+2779,Rent,Owner,Nor Nork,House,80.3,Available,1,7,2002,Newly Renovated,212079.89,848.32
+2784,Rent,Agent,Arabkir,House,60.7,Available,6,2,2000,Partially Renovated,72672.4,290.69
+2788,Sale,Agent,Avan,House,166.0,Available,6,8,2019,Newly Renovated,462745.46,1850.98
+2791,Sale,Owner,Kanaker-Zeytun,House,192.2,Available,6,10,2016,Partially Renovated,305746.47,1222.99
+2793,Rent,Agent,Erebuni,House,176.1,Available,1,2,2016,Not Renovated,310377.53,1241.51
+2797,Sale,Owner,Davtashen,House,104.4,Available,4,8,2012,Partially Renovated,227114.86,908.46
+2798,Rent,Buyer,Davtashen,House,145.1,Available,5,2,2006,Not Renovated,271946.07,1087.78
+2799,Rent,Owner,Kanaker-Zeytun,House,159.8,Available,1,12,1967,Newly Renovated,343629.92,1374.52
+2800,Rent,Owner,Arabkir,House,33.2,Available,3,5,1996,Not Renovated,62178.6,248.71
+2806,Rent,Owner,Avan,House,77.7,Available,3,10,1996,Newly Renovated,255128.46,1020.51
+2807,Rent,Agent,Avan,House,121.6,Available,3,3,2017,Partially Renovated,167952.12,671.81
+2810,Sale,Owner,Erebuni,House,160.0,Available,2,4,1986,Partially Renovated,214576.33,858.31
+2812,Sale,Buyer,Nor Nork,House,168.3,Available,6,7,2022,Partially Renovated,280725.89,1122.9
+2813,Sale,Owner,Avan,House,186.3,Available,2,3,1985,Newly Renovated,624643.34,2498.57
+2815,Sale,Agent,Davtashen,House,156.5,Available,1,2,1981,Newly Renovated,240055.55,960.22
+2816,Sale,Buyer,Erebuni,House,96.2,Available,2,5,1977,Not Renovated,98248.75,393.0
+2820,Sale,Owner,Nork-Marash,House,114.1,Available,2,9,1999,Partially Renovated,241159.79,964.64
+2822,Rent,Buyer,Nor Nork,House,188.2,Available,5,5,2019,Newly Renovated,582622.82,2330.49
+2823,Rent,Buyer,Erebuni,House,56.8,Available,6,12,1996,Not Renovated,71071.62,284.29
+2831,Rent,Buyer,Nor Nork,House,69.0,Available,5,12,1991,Partially Renovated,144180.8,576.72
+2832,Rent,Agent,Malatia-Sebastia,House,33.3,Available,3,1,1966,Newly Renovated,87229.64,348.92
+2833,Sale,Buyer,Nubarashen,House,62.8,Available,5,4,2005,Newly Renovated,171217.46,684.87
+2835,Rent,Owner,Kanaker-Zeytun,House,124.9,Available,6,1,1999,Not Renovated,160567.93,642.27
+2836,Sale,Buyer,Davtashen,House,193.6,Available,1,11,2004,Not Renovated,352872.66,1411.49
+2837,Sale,Owner,Kanaker-Zeytun,House,61.5,Available,3,9,2010,Not Renovated,118407.17,473.63
+2838,Sale,Buyer,Kanaker-Zeytun,House,25.7,Available,3,3,1989,Newly Renovated,56770.95,227.08
+2839,Sale,Agent,Avan,House,95.5,Available,3,4,2019,Not Renovated,215489.52,861.96
+2840,Rent,Owner,Nork-Marash,House,110.4,Available,3,9,2011,Partially Renovated,241534.22,966.14
+2841,Rent,Buyer,Kanaker-Zeytun,House,50.9,Available,5,6,2019,Newly Renovated,115919.62,463.68
+2844,Sale,Owner,Malatia-Sebastia,House,192.8,Available,5,12,1988,Newly Renovated,336237.96,1344.95
+2846,Sale,Agent,Kanaker-Zeytun,House,176.7,Available,1,6,1975,Partially Renovated,225973.02,903.89
+2849,Sale,Buyer,Nor Nork,House,81.3,Available,6,2,2010,Not Renovated,153637.45,614.55
+2851,Sale,Agent,Davtashen,House,39.5,Available,2,9,1989,Partially Renovated,90230.03,360.92
+2854,Sale,Buyer,Nubarashen,House,124.5,Available,3,12,2020,Not Renovated,286439.54,1145.76
+2857,Rent,Agent,Davtashen,House,61.9,Available,1,11,2015,Newly Renovated,131287.8,525.15
+2858,Sale,Agent,Kentron,House,91.0,Available,6,2,1991,Not Renovated,148401.93,593.61
+2859,Sale,Agent,Malatia-Sebastia,House,88.2,Available,6,7,2009,Not Renovated,180973.97,723.9
+2860,Rent,Buyer,Erebuni,House,64.0,Available,2,4,2021,Not Renovated,123660.94,494.64
+2861,Rent,Owner,Avan,House,148.7,Available,5,12,1979,Not Renovated,173576.77,694.31
+2867,Sale,Agent,Kentron,House,194.6,Available,6,4,2001,Partially Renovated,451626.78,1806.51
+2869,Sale,Agent,Ajapnyak,House,46.3,Available,3,5,1967,Partially Renovated,102631.79,410.53
+2870,Rent,Owner,Davtashen,House,104.9,Available,4,11,1968,Newly Renovated,168065.52,672.26
+2871,Rent,Buyer,Shengavit,House,181.6,Available,1,2,2006,Partially Renovated,332166.96,1328.67
+2873,Rent,Buyer,Avan,House,139.7,Available,5,10,1973,Newly Renovated,417145.55,1668.58
+2874,Rent,Buyer,Kanaker-Zeytun,House,97.1,Available,2,1,1977,Partially Renovated,187372.81,749.49
+2875,Rent,Agent,Erebuni,House,86.0,Available,1,1,2006,Not Renovated,172746.89,690.99
+2876,Sale,Owner,Avan,House,103.9,Available,3,3,1981,Newly Renovated,192823.57,771.29
+2877,Rent,Agent,Nork-Marash,House,105.7,Available,6,6,2014,Newly Renovated,163497.96,653.99
+2878,Rent,Buyer,Nor Nork,House,90.2,Available,4,12,2005,Partially Renovated,176511.26,706.05
+2880,Sale,Buyer,Shengavit,House,90.8,Available,5,8,1976,Partially Renovated,163285.93,653.14
+2881,Rent,Agent,Avan,House,48.1,Available,1,10,2004,Partially Renovated,94704.84,378.82
+2882,Sale,Agent,Avan,House,111.4,Available,4,6,2012,Partially Renovated,284143.87,1136.58
+2885,Sale,Agent,Erebuni,House,46.4,Available,5,12,1983,Partially Renovated,140847.57,563.39
+2887,Rent,Buyer,Nor Nork,House,147.0,Available,3,3,2023,Partially Renovated,209008.48,836.03
+2888,Rent,Agent,Kanaker-Zeytun,House,70.0,Available,3,11,1992,Newly Renovated,111346.61,445.39
+2895,Sale,Owner,Arabkir,House,37.0,Available,3,4,2021,Newly Renovated,90153.66,360.61
+2900,Sale,Owner,Avan,House,96.4,Available,1,4,1972,Newly Renovated,123280.87,493.12
+2904,Sale,Buyer,Kanaker-Zeytun,House,149.1,Available,5,12,2009,Newly Renovated,382134.11,1528.54
+2906,Sale,Owner,Arabkir,House,133.5,Available,2,10,1999,Newly Renovated,339150.04,1356.6
+2907,Rent,Owner,Avan,House,77.5,Available,6,10,1978,Not Renovated,104067.63,416.27
+2908,Sale,Agent,Kanaker-Zeytun,House,172.0,Available,6,7,1980,Not Renovated,318602.83,1274.41
+2912,Rent,Owner,Arabkir,House,85.0,Available,5,7,1989,Newly Renovated,176015.29,704.06
+2913,Rent,Buyer,Nor Nork,House,174.7,Available,6,7,1971,Not Renovated,201441.18,805.76
+2916,Sale,Buyer,Davtashen,House,86.6,Available,5,12,1992,Not Renovated,205365.91,821.46
+2917,Sale,Owner,Avan,House,138.3,Available,4,5,1975,Not Renovated,283114.34,1132.46
+2923,Sale,Buyer,Nor Nork,House,34.2,Available,2,2,2009,Newly Renovated,78000.52,312.0
+2924,Rent,Buyer,Davtashen,House,76.2,Available,1,5,1992,Partially Renovated,146532.24,586.13
+2925,Sale,Owner,Kanaker-Zeytun,House,119.7,Available,5,2,1974,Partially Renovated,238807.14,955.23
+2927,Rent,Agent,Kanaker-Zeytun,House,77.1,Available,6,2,1998,Partially Renovated,190054.2,760.22
+2929,Rent,Agent,Davtashen,House,112.3,Available,4,4,1980,Not Renovated,196085.87,784.34
+2930,Rent,Agent,Davtashen,House,62.6,Available,5,7,2018,Partially Renovated,130672.51,522.69
+2934,Rent,Buyer,Ajapnyak,House,133.4,Available,2,1,1973,Newly Renovated,255244.85,1020.98
+2937,Sale,Buyer,Erebuni,House,120.5,Available,2,4,1967,Newly Renovated,201261.44,805.05
+2939,Rent,Owner,Arabkir,House,47.8,Available,4,5,1989,Newly Renovated,114782.14,459.13
+2942,Sale,Owner,Shengavit,House,167.3,Available,2,1,2003,Newly Renovated,382280.56,1529.12
+2943,Sale,Agent,Malatia-Sebastia,House,159.0,Available,3,11,1965,Not Renovated,409921.97,1639.69
+2944,Sale,Buyer,Avan,House,179.8,Available,6,11,1993,Newly Renovated,391581.3,1566.33
+2945,Sale,Owner,Kanaker-Zeytun,House,67.1,Available,4,8,2006,Newly Renovated,126647.43,506.59
+2946,Sale,Owner,Avan,House,138.9,Available,5,1,1996,Not Renovated,166973.78,667.9
+2947,Rent,Agent,Arabkir,House,141.7,Available,5,11,1991,Newly Renovated,414285.0,1657.14
+2948,Rent,Owner,Shengavit,House,63.8,Available,4,8,2018,Partially Renovated,182065.74,728.26
+2950,Sale,Buyer,Malatia-Sebastia,House,158.6,Available,6,4,1983,Newly Renovated,413634.8,1654.54
+2952,Sale,Owner,Davtashen,House,40.9,Available,5,10,2017,Partially Renovated,64435.38,257.74
+2953,Sale,Owner,Kanaker-Zeytun,House,32.3,Available,5,1,1980,Partially Renovated,60530.69,242.12
+2954,Rent,Owner,Avan,House,41.1,Available,1,10,1988,Partially Renovated,70157.05,280.63
+2955,Rent,Owner,Davtashen,House,112.8,Available,3,4,1973,Newly Renovated,172043.99,688.18
+2956,Sale,Owner,Arabkir,House,103.2,Available,5,4,1976,Partially Renovated,202334.1,809.34
+2960,Sale,Owner,Arabkir,House,176.8,Available,4,4,2012,Partially Renovated,267008.55,1068.03
+2961,Sale,Owner,Erebuni,House,186.5,Available,1,5,2007,Partially Renovated,436038.91,1744.16
+2962,Rent,Agent,Nor Nork,House,65.7,Available,3,6,1982,Not Renovated,84249.42,337.0
+2966,Sale,Agent,Shengavit,House,125.4,Available,3,4,1991,Newly Renovated,320695.97,1282.78
+2968,Sale,Buyer,Ajapnyak,House,167.4,Available,4,7,2003,Partially Renovated,347850.61,1391.4
+2969,Sale,Owner,Kanaker-Zeytun,House,187.8,Available,6,2,1971,Partially Renovated,485603.76,1942.42
+2970,Sale,Agent,Avan,House,104.7,Available,2,1,1992,Not Renovated,218880.94,875.52
+2971,Rent,Owner,Kanaker-Zeytun,House,30.0,Available,2,6,1971,Not Renovated,38699.06,154.8
+2973,Rent,Owner,Erebuni,House,72.6,Available,1,12,1967,Partially Renovated,94534.55,378.14
+2974,Sale,Buyer,Davtashen,House,193.1,Available,6,6,1999,Not Renovated,365019.76,1460.08
+2975,Sale,Owner,Arabkir,House,182.9,Available,6,3,2022,Not Renovated,281628.63,1126.51
+2976,Rent,Agent,Erebuni,House,46.3,Available,1,5,2002,Partially Renovated,86044.67,344.18
+2980,Rent,Owner,Avan,House,95.4,Available,4,7,2011,Newly Renovated,275820.24,1103.28
+2981,Sale,Agent,Avan,House,167.2,Available,1,2,1995,Newly Renovated,297918.18,1191.67
+2984,Sale,Buyer,Avan,House,91.0,Available,4,2,2021,Newly Renovated,225566.3,902.27
+2985,Sale,Agent,Kanaker-Zeytun,House,152.5,Available,4,7,1995,Not Renovated,297080.45,1188.32
+2986,Sale,Owner,Davtashen,House,190.2,Available,6,6,1981,Partially Renovated,308080.7,1232.32
+2987,Sale,Buyer,Kentron,House,53.2,Available,2,5,1985,Partially Renovated,97038.72,388.15
+2990,Sale,Buyer,Kentron,House,165.9,Available,3,11,1970,Partially Renovated,365408.8,1461.64
+2994,Sale,Owner,Avan,House,62.5,Available,3,1,1998,Newly Renovated,107997.52,431.99
+2997,Sale,Buyer,Avan,House,183.5,Available,6,8,1972,Partially Renovated,378458.39,1513.83
