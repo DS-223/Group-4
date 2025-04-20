@@ -1,51 +1,51 @@
 location_id,region,city,district
-0,Yerevan,Yerevan,Kentron
-1,Yerevan,Yerevan,Davtashen
-2,Yerevan,Yerevan,Nor Nork
-3,Yerevan,Yerevan,Arabkir
+0,Yerevan,Yerevan,Nor Nork
+1,Yerevan,Yerevan,Erebuni
+2,Yerevan,Yerevan,Kanaker-Zeytun
+3,Yerevan,Yerevan,Davtashen
 4,Yerevan,Yerevan,Arabkir
-5,Yerevan,Yerevan,Erebuni
-6,Yerevan,Yerevan,Malatia-Sebastia
-7,Yerevan,Yerevan,Kanaker-Zeytun
-8,Yerevan,Yerevan,Nubarashen
-9,Yerevan,Yerevan,Nubarashen
-10,Yerevan,Yerevan,Nor Nork
-11,Yerevan,Yerevan,Nor Nork
-12,Yerevan,Yerevan,Arabkir
-13,Yerevan,Yerevan,Avan
-14,Yerevan,Yerevan,Shengavit
-15,Yerevan,Yerevan,Avan
-16,Yerevan,Yerevan,Nor Nork
-17,Yerevan,Yerevan,Nubarashen
-18,Yerevan,Yerevan,Malatia-Sebastia
-19,Yerevan,Yerevan,Nork-Marash
-20,Yerevan,Yerevan,Erebuni
-21,Yerevan,Yerevan,Nor Nork
-22,Yerevan,Yerevan,Kentron
-23,Yerevan,Yerevan,Avan
-24,Yerevan,Yerevan,Ajapnyak
-25,Yerevan,Yerevan,Shengavit
-26,Yerevan,Yerevan,Ajapnyak
-27,Yerevan,Yerevan,Kentron
-28,Yerevan,Yerevan,Nubarashen
+5,Yerevan,Yerevan,Shengavit
+6,Yerevan,Yerevan,Erebuni
+7,Yerevan,Yerevan,Kentron
+8,Yerevan,Yerevan,Avan
+9,Yerevan,Yerevan,Malatia-Sebastia
+10,Yerevan,Yerevan,Nubarashen
+11,Yerevan,Yerevan,Kanaker-Zeytun
+12,Yerevan,Yerevan,Avan
+13,Yerevan,Yerevan,Arabkir
+14,Yerevan,Yerevan,Avan
+15,Yerevan,Yerevan,Erebuni
+16,Yerevan,Yerevan,Kanaker-Zeytun
+17,Yerevan,Yerevan,Arabkir
+18,Yerevan,Yerevan,Kanaker-Zeytun
+19,Yerevan,Yerevan,Avan
+20,Yerevan,Yerevan,Nor Nork
+21,Yerevan,Yerevan,Erebuni
+22,Yerevan,Yerevan,Erebuni
+23,Yerevan,Yerevan,Nor Nork
+24,Yerevan,Yerevan,Erebuni
+25,Yerevan,Yerevan,Kanaker-Zeytun
+26,Yerevan,Yerevan,Davtashen
+27,Yerevan,Yerevan,Erebuni
+28,Yerevan,Yerevan,Ajapnyak
 29,Yerevan,Yerevan,Davtashen
-30,Yerevan,Yerevan,Avan
-31,Yerevan,Yerevan,Davtashen
-32,Yerevan,Yerevan,Ajapnyak
-33,Yerevan,Yerevan,Arabkir
-34,Yerevan,Yerevan,Ajapnyak
-35,Yerevan,Yerevan,Davtashen
-36,Yerevan,Yerevan,Kentron
-37,Yerevan,Yerevan,Ajapnyak
-38,Yerevan,Yerevan,Kanaker-Zeytun
-39,Yerevan,Yerevan,Nubarashen
-40,Yerevan,Yerevan,Arabkir
-41,Yerevan,Yerevan,Avan
-42,Yerevan,Yerevan,Nubarashen
-43,Yerevan,Yerevan,Ajapnyak
-44,Yerevan,Yerevan,Shengavit
-45,Yerevan,Yerevan,Nubarashen
+30,Yerevan,Yerevan,Nork-Marash
+31,Yerevan,Yerevan,Avan
+32,Yerevan,Yerevan,Kanaker-Zeytun
+33,Yerevan,Yerevan,Kanaker-Zeytun
+34,Yerevan,Yerevan,Kanaker-Zeytun
+35,Yerevan,Yerevan,Ajapnyak
+36,Yerevan,Yerevan,Arabkir
+37,Yerevan,Yerevan,Davtashen
+38,Yerevan,Yerevan,Avan
+39,Yerevan,Yerevan,Avan
+40,Yerevan,Yerevan,Shengavit
+41,Yerevan,Yerevan,Nor Nork
+42,Yerevan,Yerevan,Kentron
+43,Yerevan,Yerevan,Shengavit
+44,Yerevan,Yerevan,Nor Nork
+45,Yerevan,Yerevan,Davtashen
 46,Yerevan,Yerevan,Nor Nork
-47,Yerevan,Yerevan,Erebuni
-48,Yerevan,Yerevan,Nor Nork
-49,Yerevan,Yerevan,Nor Nork
+47,Yerevan,Yerevan,Malatia-Sebastia
+48,Yerevan,Yerevan,Davtashen
+49,Yerevan,Yerevan,Kentron

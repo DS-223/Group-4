@@ -161,13 +161,13 @@ def create_ml_ready_property_csv():
     properties_df = pd.read_csv("data/properties.csv")
 
     # Merge properties with user data
-    merged = properties_df.merge(users_df[['user_id', 'user_type']], on='user_id', how='left')
+    merged = properties_df.merge(users_df[['user_id', 'user_type']], on='user_id', how='inner')
 
     # Merge with location data
-    merged = merged.merge(locations_df[['location_id', 'district']], on='location_id', how='left')
+    merged = merged.merge(locations_df[['location_id', 'district']], on='location_id', how='inner')
 
     # Merge with property type data
-    merged = merged.merge(types_df[['type_id', 'type_name']], on='type_id', how='left')
+    merged = merged.merge(types_df[['type_id', 'type_name']], on='type_id', how='inner')
 
     # Drop the ID columns since we now have readable names
     merged.drop(columns=['user_id', 'location_id', 'type_id'], inplace=True)
