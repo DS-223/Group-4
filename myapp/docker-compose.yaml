@@ -65,12 +65,13 @@ services:
   backend:
     container_name: backend_service
     build:
-      context: ./backend
+      context: ./api
       dockerfile: Dockerfile
     ports:
       - 8000:8000
     volumes:
-      - ./backend:/backend
+      - ./api:/backend
+      - ./etl:/backend/etl  
     environment:
       - DB_URL=${DATABASE_URL}
       - DB_USER=${DB_USER}
