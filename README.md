@@ -28,6 +28,7 @@ Before getting started, ensure you have the following prerequisites installed:
 1. Clone the repository:
    ```bash
    git clone https://github.com/DS-223/Group-4
+   cd myapp
    ```
 
 2. Build and start the Docker containers:
@@ -59,8 +60,9 @@ Here’s an overview of the project’s file structure:
     │       ├── database.py
     │       └── models.py
     ├── app/
+    │   ├── __init__.py
     │   ├── Dockerfile
-    │   ├── main.py
+    │   ├── app.py
     │   └── reqirements.txt
     ├── etl/
     │   ├── database/
