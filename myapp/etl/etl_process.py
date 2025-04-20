@@ -124,6 +124,7 @@ def load_csv_to_table(table_name: str, csv_path: str) -> None:
     df.to_sql(table_name, con=engine, if_exists="append", index=False)
     logger.info(f"Loading data into table: {table_name}")
 
+
 # -----------------------------------------------------
 # Load CSV Data into database Tables
 # -----------------------------------------------------
@@ -143,3 +144,44 @@ for table in base_names:
         print(f"Failed to ingest table {table}. Moving to the next!")
 
 print("Tables are populated.")
+
+# -----------------------------------------------------
+# Create ML-Ready CSV
+# -----------------------------------------------------
+
+def create_ml_ready_property_csv():
+    """
+    Creates a machine learning-ready CSV by merging properties with user, location,
+    and property type data. Saves the final dataset to `data/property_ml_ready.csv`.
+    """
+    # Load data
+    users_df = pd.read_csv("data/users.csv")
+    locations_df = pd.read_csv("data/locations.csv")
+    types_df = pd.read_csv("data/property_types.csv")
+    properties_df = pd.read_csv("data/properties.csv")
+
+    # Merge properties with user data
+    merged = properties_df.merge(users_df[['user_id', 'user_type']], on='user_id', how='left')
+
+    # Merge with location data
+    merged = merged.merge(locations_df[['location_id', 'district']], on='location_id', how='left')
+
+    # Merge with property type data
+    merged = merged.merge(types_df[['type_id', 'type_name']], on='type_id', how='left')
+
+    # Drop the ID columns since we now have readable names
+    merged.drop(columns=['user_id', 'location_id', 'type_id'], inplace=True)
+
+    cols = ['property_id', 'deal_type', 'user_type', 'district', 'type_name', 
+             'size_sqm', 'status','rooms', 'floor', 'year_built',
+            'renovation_status', 'estimated_saleprice', 'estimated_rentprice']
+    merged = merged[cols]
+
+    # Save to CSV
+    merged.to_csv("data/property_ml_ready.csv", index=False)
+    logger.info(f"ML-ready property data saved to data/property_ml_ready.csv with shape {merged.shape}")
+
+# Generate ML-ready CSV
+create_ml_ready_property_csv()
+
+print("Tables are populated and ML-ready CSV is created.")
