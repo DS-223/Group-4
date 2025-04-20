@@ -61,6 +61,8 @@ services:
       - 8501:8501
     environment:
       - API_URL=http://api:8000
+    depends_on:
+      - backend
 
   backend:
     container_name: backend_service
@@ -77,6 +79,22 @@ services:
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_NAME=${DB_NAME}
+    depends_on:
+      db:
+        condition: service_healthy
+
+  ds:
+    container_name: data_science_service
+    build:
+      context: ./model
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8000
+    volumes:
+      - ./model:/model
+    environment:
+      - DB_URL=${DATABASE_URL}
+      - MODEL_STORAGE_PATH=/model/models
     depends_on:
       db:
         condition: service_healthy
