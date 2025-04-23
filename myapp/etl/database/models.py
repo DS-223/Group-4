@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, Numeric
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, Numeric, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from database import engine
@@ -43,6 +43,8 @@ class Property(Base):
     status = Column(String)
     user_id = Column(Integer, ForeignKey('users.user_id'))
     location_id = Column(Integer, ForeignKey('locations.location_id'))
+    post_date = Column(Date, nullable=False)
+    sell_date = Column(Date, nullable=True)
     size_sqm = Column(Float)
     floor = Column(Integer)
     rooms = Column(Integer)
