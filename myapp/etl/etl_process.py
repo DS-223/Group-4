@@ -69,6 +69,8 @@ properties = []
 for property_id in range(1, NUMBER_OF_PROPERTIES + 1):
     user_id = random.randint(1, NUMBER_OF_USERS)
     location_id = random.randint(1, NUMBER_OF_LOCATIONS)
+    # Generate post_date within the last 6 months
+    post_date = pd.Timestamp.today() - pd.to_timedelta(random.randint(0, 180), unit='d')
 
     prop = generate_property(
         property_id=property_id,
@@ -77,9 +79,20 @@ for property_id in range(1, NUMBER_OF_PROPERTIES + 1):
         property_types=PROPERTY_TYPES,
         deal_types=DEAL_TYPES,
         renovation_statuses=RENOVATION_STATUSES,
-        districts=DISTRICTS_YEREVAN
+        districts=DISTRICTS_YEREVAN,
+        post_date=post_date.strftime('%Y-%m-%d')
     )
+    
+    # 50% chance to assign a sell_date 1–60 days after post_date, else leave as None
+    if random.random() < 0.65:
+        sell_date = post_date + pd.to_timedelta(random.randint(1, 60), unit='d')
+        sell_date = sell_date.strftime('%Y-%m-%d')
+    else:
+        sell_date = None
+
+    prop["sell_date"] = sell_date
     properties.append(prop)
+
 
 properties = pd.DataFrame(properties)
 logger.info("Property Data Sample:")
@@ -91,6 +104,7 @@ logger.info(f"Property data saved to CSV: {properties.shape}")
 # Generate Images Data
 images = []
 image_id = 1
+
 
 for property_record in properties.to_dict(orient="records"):
     property_id = property_record["property_id"]
@@ -173,8 +187,8 @@ def create_ml_ready_property_csv():
     merged.drop(columns=['user_id', 'location_id', 'type_id'], inplace=True)
 
     cols = ['property_id', 'deal_type', 'user_type', 'district', 'type_name', 
-             'size_sqm', 'status','rooms', 'floor', 'year_built',
-            'renovation_status', 'estimated_saleprice', 'estimated_rentprice']
+             'size_sqm','rooms', 'floor', 'year_built', 'post_date',
+            'sell_date','renovation_status', 'estimated_saleprice', 'estimated_rentprice']
     merged = merged[cols]
 
     # Save to CSV

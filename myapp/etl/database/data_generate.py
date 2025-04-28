@@ -1,7 +1,7 @@
 from faker import Faker
 import pandas as pd
 import random
-from datetime import datetime
+from datetime import datetime, timedelta
 from loguru import logger
 
 fake = Faker()
@@ -62,23 +62,38 @@ def estimate_prices(size, rooms, year, renovation, district, deal_type):
 
     return sale_price, rent_price
 
-def generate_property(property_id, user_id, location_id, property_types, deal_types, renovation_statuses, districts):
+def generate_random_date(start_year=2021, end_year=2025):
+    start_date = datetime(start_year, 1, 1)
+    end_date = datetime(end_year, 12, 31)
+    delta = end_date - start_date
+    random_days = random.randint(0, delta.days)
+    return (start_date + timedelta(days=random_days)).date()
+
+
+def generate_property(property_id, user_id, location_id, property_types, post_date, deal_types, renovation_statuses, districts):
     size = round(random.uniform(25, 200), 1)
     deal_type = random.choice(deal_types)
     renovation = random.choice(renovation_statuses)
     rooms = random.randint(1, 6)
-    year = random.randint(1965, 2023)
+    post_date = generate_random_date()
+    year = random.randint(1965, 2024)
     district = random.choice(districts)
     sale_price, rent_price = estimate_prices(size, rooms, year, renovation, district, deal_type)
+
+    sell_date = None
+    if deal_type == "Sale" and random.random() < 0.7:  # 70% chance it was sold
+        sell_date = post_date + timedelta(days=random.randint(15, 400))
+        if sell_date > datetime.now().date():
+            sell_date = None
 
     return {
         "property_id": property_id,
         "title": fake.sentence(nb_words=4),
-        "description": fake.text(max_nb_chars=200),
         "type_id": random.randint(1, len(property_types)),
         "deal_type": deal_type,
-        "status": "Available",
         "user_id": user_id,
+        "post_date": post_date,
+        "sell_date": sell_date,
         "location_id": location_id,
         "size_sqm": size,
         "floor": random.randint(1, 12),
