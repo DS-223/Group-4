@@ -9,9 +9,26 @@ from etl.database.data_generate import (
     generate_image,
 )
 
-app = FastAPI()
+# ───────────────────────────────
+# NEW:  import & mount predictor
+# ───────────────────────────────
+from prediction_router import router as prediction_router
 
-# Dummy data storage
+app = FastAPI(
+    title="Marketing-Analytics API",
+    description=(
+        "Serves dummy CRUD data (users / properties / locations) **plus** "
+        "machine-learning rent & sales price predictions."
+    ),
+    version="1.0.0",
+)
+
+# Mount /predict endpoints
+app.include_router(prediction_router)
+
+# ───────────────────────────────
+# Dummy in-memory storage
+# ───────────────────────────────
 users = {}
 properties = {}
 locations = {}
@@ -20,7 +37,9 @@ deal_types = ["Sale", "Rent"]
 renovation_statuses = ["Newly Renovated", "Not Renovated", "Partially Renovated"]
 districts = ["Kentron", "Ajapnyak", "Nubarashen", "Arabkir"]
 
-# Models for API requests
+# ───────────────────────────────
+# Pydantic request models
+# ───────────────────────────────
 class User(BaseModel):
     user_id: int
     user_type: str
@@ -30,7 +49,9 @@ class Property(BaseModel):
     user_id: int
     location_id: int
 
-# Endpoints
+# ───────────────────────────────
+# Existing CRUD endpoints (unchanged)
+# ───────────────────────────────
 @app.post("/users/")
 def create_user(user: User):
     if user.user_id in users:
@@ -50,9 +71,11 @@ def create_property(property: Property):
         raise HTTPException(status_code=400, detail="Property already exists")
     if property.user_id not in users:
         raise HTTPException(status_code=404, detail="User not found")
+
     location_id = property.location_id
     if location_id not in locations:
         locations[location_id] = generate_location(location_id, districts)
+
     properties[property.property_id] = generate_property(
         property.property_id,
         property.user_id,
@@ -62,7 +85,10 @@ def create_property(property: Property):
         renovation_statuses,
         districts,
     )
-    return {"message": "Property created", "property": properties[property.property_id]}
+    return {
+        "message": "Property created",
+        "property": properties[property.property_id],
+    }
 
 @app.get("/properties/{property_id}")
 def get_property(property_id: int):
