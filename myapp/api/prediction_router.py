@@ -1,45 +1,76 @@
 from pathlib import Path
+from typing import List
+
 import joblib
 import pandas as pd
 from fastapi import APIRouter, HTTPException
-from app.schemas.prediction import PropertyFeatures, PricePrediction   # noqa: F401
 
-router = APIRouter(prefix="/predict", tags=["Prediction"])
+from schemas.prediction import PropertyFeatures, PricePrediction
 
-# ---------- load artefacts once ----------
-ROOT_DIR   = Path(__file__).resolve().parents[2]   # …/GROUP-4
-MODEL_DIR  = ROOT_DIR / "model"
-CSV_PATH   = MODEL_DIR / "property_ml_ready.csv"
+# ────────────────────────────────────────────────────────────────
+# Locate artefacts
+# container path:  /backend/model/…   (mounted by docker-compose)
+# ────────────────────────────────────────────────────────────────
+BASE_DIR   = Path(__file__).resolve().parent          # /backend
+MODEL_DIR  = BASE_DIR / "model"                       # /backend/model
+PKL_DIR    = MODEL_DIR / "models"                     # /backend/model/models
 
-rent_model  = joblib.load(MODEL_DIR / "rent_price_model.pkl")
-sales_model = joblib.load(MODEL_DIR / "sales_price_model.pkl")
+rent_model  = joblib.load(PKL_DIR / "rent_price_model.pkl")
+sales_model = joblib.load(PKL_DIR / "sales_price_model.pkl")
 
-# recreate training column layout so RFs get identical order
-CAT_COLS = ['district', 'type_name', 'status', 'renovation_status']
-TRAIN_DF = pd.get_dummies(pd.read_csv(CSV_PATH).dropna(), columns=CAT_COLS)
-TARGETS  = ['estimated_rentprice', 'models/estimated_saleprice', 'id']
-EXPECTED = [c for c in TRAIN_DF.columns if c not in TARGETS]
+# training CSV is optional (kept for reference / later inspection)
+CSV_PATH = MODEL_DIR / "property_ml_ready.csv"
 
-def _prepare_row(p: PropertyFeatures) -> pd.DataFrame:
-    df = pd.DataFrame([p.dict()])
-    df = pd.get_dummies(df, columns=CAT_COLS)
-    # align to training columns – unseen categories become 0s
-    df = df.reindex(columns=EXPECTED, fill_value=0)
+# ────────────────────────────────────────────────────────────────
+# Canonical feature lists taken directly from the trained models
+# ────────────────────────────────────────────────────────────────
+def _get_features(m) -> List[str]:
+    """Return the feature names exactly as the model saw them at fit time."""
+    if hasattr(m, "feature_names_in_"):          # scikit-learn ≥ 1.0
+        return list(m.feature_names_in_)
+    raise AttributeError(
+        "Model is missing 'feature_names_in_' — it was probably trained with "
+        "an older pandas / sklearn. Retrain or hard-code the column list."
+    )
+
+RENT_FEATURES = _get_features(rent_model)
+SALE_FEATURES = _get_features(sales_model)
+
+# ────────────────────────────────────────────────────────────────
+# Helpers
+# ────────────────────────────────────────────────────────────────
+def _prepare_row(item: PropertyFeatures, feature_list: List[str]) -> pd.DataFrame:
+    """
+    → One-row DataFrame with dummies.
+    → Columns reordered / zero-filled so they match `feature_list`.
+    """
+    df = pd.DataFrame([item.dict()])
+    df = pd.get_dummies(df)                       # explode categoricals
+    df = df.reindex(columns=feature_list, fill_value=0)  # align
     return df
 
-# --------------- endpoints ----------------
+
+# ────────────────────────────────────────────────────────────────
+# FastAPI router
+# ────────────────────────────────────────────────────────────────
+router = APIRouter(prefix="/predict", tags=["Prediction"])
+
+
 @router.post("/rent", response_model=PricePrediction)
 def predict_rent(payload: PropertyFeatures):
     try:
-        price = float(rent_model.predict(_prepare_row(payload))[0])
+        X = _prepare_row(payload, RENT_FEATURES)
+        price = float(rent_model.predict(X)[0])
         return {"predicted_price": price}
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
+
 
 @router.post("/sale", response_model=PricePrediction)
 def predict_sale(payload: PropertyFeatures):
     try:
-        price = float(sales_model.predict(_prepare_row(payload))[0])
+        X = _prepare_row(payload, SALE_FEATURES)
+        price = float(sales_model.predict(X)[0])
         return {"predicted_price": price}
-    except Exception as e:
-        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as exc:
+        raise HTTPException(status_code=400, detail=str(exc))
