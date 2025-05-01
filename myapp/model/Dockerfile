@@ -11,7 +11,9 @@ COPY requirements.txt .
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 
-# Copy the contents of the front directory to /app in the container
+# Copy the contents of the front directory to /model in the container
 COPY . .
 
 EXPOSE 8000
+
+CMD [ "python", "main_model.py" ]

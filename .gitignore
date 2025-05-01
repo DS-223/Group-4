@@ -1,6 +1,7 @@
 # Custom 
 postgres_data/
 pgadmin_data/
+*.csv
 tasks/
 feedback/*.md
 

@@ -93,6 +93,7 @@ services:
       - 8080:8000
     volumes:
       - ./model:/model
+      - ./etl/:/model/etl  # Mounting the ETL directory for model training
     environment:
       - DB_URL=${DATABASE_URL}
       - MODEL_STORAGE_PATH=/model/models
