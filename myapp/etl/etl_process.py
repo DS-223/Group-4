@@ -83,9 +83,14 @@ for property_id in range(1, NUMBER_OF_PROPERTIES + 1):
         post_date=post_date.strftime('%Y-%m-%d')
     )
     
-    # 50% chance to assign a sell_date 1–60 days after post_date, else leave as None
+    
+    # 65% chance to assign a sell_date between 1 day and 6 months (180 days) after post_date
     if random.random() < 0.65:
-        sell_date = post_date + pd.to_timedelta(random.randint(1, 60), unit='d')
+        # Ensure sell_date is after post_date and within 6 months
+        sell_date = post_date + pd.to_timedelta(random.randint(1, 180), unit='d')
+        # Ensure sell_date doesn't exceed current date
+        if sell_date > pd.Timestamp.today():
+            sell_date = pd.Timestamp.today()
         sell_date = sell_date.strftime('%Y-%m-%d')
     else:
         sell_date = None
