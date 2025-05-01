@@ -2,6 +2,9 @@
 postgres_data/
 pgadmin_data/
 *.csv
+tasks/
+feedback/*.md
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

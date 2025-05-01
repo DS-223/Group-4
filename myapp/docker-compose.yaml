@@ -74,6 +74,7 @@ services:
     volumes:
       - ./api:/backend
       - ./etl:/backend/etl  
+      - ./model:/backend/model
     environment:
       - DB_URL=${DATABASE_URL}
       - DB_USER=${DB_USER}

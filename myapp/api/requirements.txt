@@ -1,5 +1,8 @@
 fastapi
 uvicorn
-faker
-loguru
+pydantic
 pandas
+scikit-learn
+joblib          
+faker                
+loguru           
