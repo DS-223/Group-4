@@ -50,20 +50,7 @@ services:
       db:
         condition: service_healthy
   
-  app:
-    container_name: streamlit_app
-    build:
-      context: ./app
-      dockerfile: Dockerfile
-    volumes:
-      - ./app:/app
-    ports:
-      - 8501:8501
-    environment:
-      - API_URL=http://api:8000
-    depends_on:
-      - backend
-
+  
   backend:
     container_name: backend_service
     build:
@@ -99,3 +86,17 @@ services:
     depends_on:
       db:
         condition: service_healthy
+
+  app:
+    container_name: streamlit_app
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+    ports:
+      - 8501:8501
+    environment:
+      - API_URL=http://backend:8000
+    depends_on:
+      - backend

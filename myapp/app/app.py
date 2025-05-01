@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import os
+import streamlit.components.v1 as components
 
 st.set_page_config(layout="wide", page_title="House Price Prediction")
 
@@ -39,7 +40,7 @@ with left:
     st.markdown("### 👤 User Type")
     user_type = st.selectbox("Choose User Type", ["Agent", "Owner", "Buyer"])
 
-    st.markdown("###Enter Property Details")
+    st.markdown("### Enter Property Details")
     size = st.number_input("Size (sqm)", min_value=20.0, max_value=1000.0, value=75.0)
     floor = st.number_input("Floor", min_value=1, max_value=12, value=2)
     rooms = st.number_input("Number of Rooms", min_value=1, max_value=6, value=2)
@@ -49,7 +50,6 @@ with left:
     location = st.selectbox("Location", ["Yerevan"])  # placeholder
     deal_type = st.radio("Prediction For", ["Sell", "Rent"])
 
-    
     if st.button("Evaluate"):
         payload = {
             "size_sqm": size,
@@ -62,19 +62,35 @@ with left:
             "deal_type": deal_type.lower(),
             "user_type": user_type.lower()
         }
-
+        endpoint = "rent" if deal_type == "Rent" else "sale"
         try:
-            response = requests.post(f"{api_url}/predict", json=payload)
+            response = requests.post(f"{api_url}/predict/{endpoint}", json=payload)
             response.raise_for_status()
             result = response.json()
 
             with right:
-                st.markdown("### 📊 The most optimal price based on your preference")
-                st.markdown(f"<h2 style='color:#1f77b4;'>${result['predicted_price']}</h2>", unsafe_allow_html=True)
+                st.markdown("Predictions Summary")
+
+                st.markdown("**Estimated Sell Price**")
+                st.markdown(f"<h2 style='color:#1f77b4;'>${result['predicted_sell_price']:.2f}</h2>", unsafe_allow_html=True)
+
+                st.markdown("**Estimated Rent Price**")
+                st.markdown(f"<h2 style='color:#ff7f0e;'>${result['predicted_rent_price']:.2f}</h2>", unsafe_allow_html=True)
+
+                st.markdown("**Probability of Selling Within 5 Months**")
+                st.markdown(f"<h2 style='color:#2ca02c;'>{result['probability_sold_within_5_months']*100:.1f}%</h2>", unsafe_allow_html=True)
+
                 st.markdown("### 🏠 Similar Houses")
-                cols = st.columns(3)
-                for idx, image_url in enumerate(result["similar_images"]):
-                    cols[idx % 3].image(image_url, use_column_width=True)
+                image_carousel = "<div style='display:flex; overflow-x:auto; gap:10px; padding:10px; scrollbar-width: none;'>"
+                for image_url in result["similar_images"]:
+                    image_carousel += f"""
+                        <div style='flex:0 0 auto;'>
+                            <img src="{image_url}" style='height:200px; border-radius:10px;'>
+                        </div>
+                    """
+                image_carousel += "</div>"
+
+                components.html(image_carousel, height=220, scrolling=True)
 
         except requests.RequestException as e:
             st.error(f"❌ Error fetching prediction: {e}")
