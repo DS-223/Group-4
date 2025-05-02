@@ -63,7 +63,7 @@ services:
       - ./etl:/backend/etl  
       - ./model:/backend/model
     environment:
-      - DB_URL=${DATABASE_URL}
+      - DATABASE_URL=${DATABASE_URL}
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_NAME=${DB_NAME}
