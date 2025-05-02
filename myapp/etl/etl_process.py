@@ -2,7 +2,8 @@
 ETL Script for Generating and Loading Real Estate Data into a database.
 
 This script generates data for users, property types, locations, properties, and images,
-saves the data to CSV files, and loads the CSV data into a database.
+saves the data to CSV files, and loads the CSV data into a database. It also creates a
+machine-learning-ready CSV file with selected and joined fields.
 
 Modules:
     - database.models: database models for the project.
@@ -22,11 +23,13 @@ from database.data_generate import generate_user, generate_location, generate_pr
 import glob
 from os import path
 
+# Create all tables from the models
 Base.metadata.create_all(bind=engine)
 
 # -----------------------------------------------------
 # Constants
 # -----------------------------------------------------
+
 NUMBER_OF_USERS = 50
 NUMBER_OF_LOCATIONS = 50
 NUMBER_OF_PROPERTIES = 3000
@@ -66,10 +69,10 @@ logger.info(f"Location data saved to CSV: {locations.shape}")
 
 # Generate Properties Data
 properties = []
+
 for property_id in range(1, NUMBER_OF_PROPERTIES + 1):
     user_id = random.randint(1, NUMBER_OF_USERS)
     location_id = random.randint(1, NUMBER_OF_LOCATIONS)
-    # Generate post_date within the last 6 months
     post_date = pd.Timestamp.today() - pd.to_timedelta(random.randint(0, 180), unit='d')
 
     prop = generate_property(
@@ -82,13 +85,10 @@ for property_id in range(1, NUMBER_OF_PROPERTIES + 1):
         districts=DISTRICTS_YEREVAN,
         post_date=post_date.strftime('%Y-%m-%d')
     )
-    
-    
-    # 65% chance to assign a sell_date between 1 day and 6 months (180 days) after post_date
+
+    # 65% chance to assign a sell_date
     if random.random() < 0.65:
-        # Ensure sell_date is after post_date and within 6 months
         sell_date = post_date + pd.to_timedelta(random.randint(1, 180), unit='d')
-        # Ensure sell_date doesn't exceed current date
         if sell_date > pd.Timestamp.today():
             sell_date = pd.Timestamp.today()
         sell_date = sell_date.strftime('%Y-%m-%d')
@@ -98,18 +98,15 @@ for property_id in range(1, NUMBER_OF_PROPERTIES + 1):
     prop["sell_date"] = sell_date
     properties.append(prop)
 
-
 properties = pd.DataFrame(properties)
 logger.info("Property Data Sample:")
 logger.info(properties.head(1))
 properties.to_csv("data/properties.csv", index=False)
 logger.info(f"Property data saved to CSV: {properties.shape}")
 
-
 # Generate Images Data
 images = []
 image_id = 1
-
 
 for property_record in properties.to_dict(orient="records"):
     property_id = property_record["property_id"]
@@ -124,36 +121,32 @@ images.to_csv("data/images.csv", index=False)
 logger.info(f"Image data saved to CSV: {images.shape}")
 
 # -----------------------------------------------------
-# Utility Function to Load Data into database
+# Utility Function to Load Data into Database
 # -----------------------------------------------------
 
 def load_csv_to_table(table_name: str, csv_path: str) -> None:
     """
-    Load data from a CSV file into a database table.
+    Load data from a CSV file into a specified database table.
 
-    **Parameters:**
-    
-    - `table_name (str):` The name of the database table.
-    - `csv_path (str):` The path to the CSV file containing data.
+    Args:
+        table_name (str): The name of the table to load data into.
+        csv_path (str): The file path of the CSV to load.
 
-    **Returns:**
-        - `None`
+    Returns:
+        None
     """
     df = pd.read_csv(csv_path)
     df.to_sql(table_name, con=engine, if_exists="append", index=False)
     logger.info(f"Loading data into table: {table_name}")
 
-
 # -----------------------------------------------------
-# Load CSV Data into database Tables
+# Load CSV Data into Database Tables
 # -----------------------------------------------------
 
-# Get all CSV file paths
 folder_path = "data/*.csv"
 files = glob.glob(folder_path)
 base_names = [path.splitext(path.basename(file))[0] for file in files]
 
-# Load data from CSV files into respective tables
 for table in base_names:
     try:
         logger.info(f"Loading data into table: {table}")
@@ -170,33 +163,31 @@ print("Tables are populated.")
 
 def create_ml_ready_property_csv():
     """
-    Creates a machine learning-ready CSV by merging properties with user, location,
-    and property type data. Saves the final dataset to `data/property_ml_ready.csv`.
+    Merge various CSVs to prepare a machine-learning-ready dataset.
+
+    Merges properties with user, location, and property type information,
+    selects relevant columns, and saves the dataset to a new CSV file:
+    `data/property_ml_ready.csv`.
+
+    Returns:
+        None
     """
-    # Load data
     users_df = pd.read_csv("data/users.csv")
     locations_df = pd.read_csv("data/locations.csv")
     types_df = pd.read_csv("data/property_types.csv")
     properties_df = pd.read_csv("data/properties.csv")
 
-    # Merge properties with user data
     merged = properties_df.merge(users_df[['user_id', 'user_type']], on='user_id', how='inner')
-
-    # Merge with location data
     merged = merged.merge(locations_df[['location_id', 'district']], on='location_id', how='inner')
-
-    # Merge with property type data
     merged = merged.merge(types_df[['type_id', 'type_name']], on='type_id', how='inner')
 
-    # Drop the ID columns since we now have readable names
     merged.drop(columns=['user_id', 'location_id', 'type_id'], inplace=True)
 
-    cols = ['property_id', 'deal_type', 'user_type', 'district', 'type_name', 
-             'size_sqm','rooms', 'floor', 'year_built', 'post_date',
-            'sell_date','renovation_status', 'estimated_saleprice', 'estimated_rentprice']
+    cols = ['property_id', 'deal_type', 'user_type', 'district', 'type_name',
+            'size_sqm', 'rooms', 'floor', 'year_built', 'post_date',
+            'sell_date', 'renovation_status', 'estimated_saleprice', 'estimated_rentprice']
     merged = merged[cols]
 
-    # Save to CSV
     merged.to_csv("data/property_ml_ready.csv", index=False)
     logger.info(f"ML-ready property data saved to data/property_ml_ready.csv with shape {merged.shape}")
 
