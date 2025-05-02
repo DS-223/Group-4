@@ -3,6 +3,7 @@ postgres_data/
 pgadmin_data/
 tasks/
 feedback/*.md
+*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
