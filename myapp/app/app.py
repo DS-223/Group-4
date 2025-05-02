@@ -80,7 +80,7 @@ with left:
                 st.markdown("**Probability of Selling Within 5 Months**")
                 st.markdown(f"<h2 style='color:#2ca02c;'>{result['probability_sold_within_5_months']*100:.1f}%</h2>", unsafe_allow_html=True)
 
-                st.markdown("### 🏠 Similar Houses")
+                st.markdown("Similar Houses")
                 image_carousel = "<div style='display:flex; overflow-x:auto; gap:10px; padding:10px; scrollbar-width: none;'>"
                 for image_url in result["similar_images"]:
                     image_carousel += f"""
