@@ -90,7 +90,6 @@ class Property(Base):
 
     property_id = Column(Integer, primary_key=True)
     title = Column(String)
-    description = Column(String)
     type_id = Column(Integer, ForeignKey('property_types.type_id'))
     deal_type = Column(String)
     status = Column(String)
@@ -130,6 +129,14 @@ class Image(Base):
     image_url = Column(String)
 
     property = relationship("Property")
+
+class Prediction(Base):
+    __tablename__ = "predictions"
+
+    property_id = Column(Integer, primary_key=True, index=True)
+    predicted_sell_price = Column(Float)
+    predicted_rent_price = Column(Float)
+    prob_sold_within_5_months = Column(Float)
 
 
 Base.metadata.create_all(engine)
