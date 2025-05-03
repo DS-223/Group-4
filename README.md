@@ -124,4 +124,4 @@ For the purpose of easy management and easy checking, the .env file is pushed to
 
 We will try to create below schema:
 
-![Star Schema](./ERD_House_Price.png)
+![Star Schema](./House_Price_ERD_Final.png)
