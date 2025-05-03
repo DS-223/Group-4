@@ -8,6 +8,15 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import mean_absolute_error, r2_score
 from lifelines import CoxPHFitter
+import sys
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from etl.database.database import SessionLocal, engine, Base
+from etl.database.models import Prediction
+
+
+Base.metadata.create_all(bind=engine)
 
 # 1. Data Preparation with Enhanced Censoring
 def load_and_preprocess_data():
@@ -111,3 +120,24 @@ output_cols = ['predicted_sell_price', 'predicted_rent_price', 'prob_sold_within
 df[output_cols].to_csv(output_dir / 'predictions.csv', index=False)
 
 print("\n✅ Models trained and saved. Predictions written to 'output/predictions.csv'")
+
+
+def save_predictions_to_db(df):
+    session = SessionLocal()
+    try:
+        session.query(Prediction).delete()
+        session.bulk_save_objects([
+            Prediction(
+                property_id=row['property_id'],
+                predicted_sell_price=row['predicted_sell_price'],
+                predicted_rent_price=row['predicted_rent_price'],
+                prob_sold_within_5_months=row['prob_sold_within_5_months']
+            ) for _, row in df.iterrows()
+        ])
+        session.commit()
+    finally:
+        session.close()
+        
+# Save to DB
+save_predictions_to_db(df)
+print("✅ Predictions saved to the database.")

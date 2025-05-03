@@ -50,19 +50,7 @@ services:
       db:
         condition: service_healthy
   
-  app:
-    container_name: streamlit_app
-    build:
-      context: ./app
-      dockerfile: Dockerfile
-    volumes:
-      - ./app:/app
-    ports:
-      - 8501:8501
-    environment:
-      - API_URL=http://api:8000
-    depends_on:
-      - backend
+  
 
   backend:
     container_name: backend_service
@@ -76,7 +64,7 @@ services:
       - ./etl:/backend/etl  
       - ./model:/backend/model
     environment:
-      - DB_URL=${DATABASE_URL}
+      - DATABASE_URL=${DATABASE_URL}
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_NAME=${DB_NAME}
@@ -90,13 +78,31 @@ services:
       context: ./model
       dockerfile: Dockerfile
     ports:
-      - 8080:8000
+      - 8000:8000
     volumes:
       - ./model:/model
-      - ./etl/:/model/etl  # Mounting the ETL directory for model training
+      - ./etl:/model/etl  # Mounting the ETL directory for model training
     environment:
-      - DB_URL=${DATABASE_URL}
+      - DATABASE_URL=${DATABASE_URL}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
       - MODEL_STORAGE_PATH=/model/models
     depends_on:
       db:
         condition: service_healthy
+
+
+  app:
+    container_name: streamlit_app
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+    ports:
+      - 8501:8501
+    environment:
+      - API_URL=http://api:8000
+    depends_on:
+      - backend
