@@ -51,7 +51,6 @@ services:
         condition: service_healthy
   
   
-
   backend:
     container_name: backend_service
     build:
@@ -92,7 +91,6 @@ services:
       db:
         condition: service_healthy
 
-
   app:
     container_name: streamlit_app
     build:
@@ -103,6 +101,6 @@ services:
     ports:
       - 8501:8501
     environment:
-      - API_URL=http://api:8000
+      - API_URL=http://backend:8000
     depends_on:
       - backend

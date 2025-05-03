@@ -10,13 +10,17 @@ from sklearn.metrics import mean_absolute_error, r2_score
 from lifelines import CoxPHFitter
 import sys
 import os
-
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from etl.database.database import SessionLocal, engine, Base
 from etl.database.models import Prediction
 
-
-Base.metadata.create_all(bind=engine)
+# Connect to database
+DATABASE_URL = os.getenv("DATABASE_URL")
+engine = create_engine(DATABASE_URL)
+Session = sessionmaker(bind=engine)
+session = Session()
 
 # 1. Data Preparation with Enhanced Censoring
 def load_and_preprocess_data():
@@ -122,22 +126,15 @@ df[output_cols].to_csv(output_dir / 'predictions.csv', index=False)
 print("\n✅ Models trained and saved. Predictions written to 'output/predictions.csv'")
 
 
-def save_predictions_to_db(df):
-    session = SessionLocal()
-    try:
-        session.query(Prediction).delete()
-        session.bulk_save_objects([
-            Prediction(
-                property_id=row['property_id'],
-                predicted_sell_price=row['predicted_sell_price'],
-                predicted_rent_price=row['predicted_rent_price'],
-                prob_sold_within_5_months=row['prob_sold_within_5_months']
-            ) for _, row in df.iterrows()
-        ])
-        session.commit()
-    finally:
-        session.close()
-        
-# Save to DB
-save_predictions_to_db(df)
-print("✅ Predictions saved to the database.")
+for _, row in df.iterrows():
+    prediction = Prediction(
+        property_id=row['property_id'],
+        predicted_sell_price=row.get('predicted_sell_price'),
+        predicted_rent_price=row.get('predicted_rent_price'),
+        prob_sold_within_5_months=row.get('prob_sold_within_5_months')
+    )
+    session.add(prediction)
+
+session.commit()
+session.close()
+print("✅ Predictions saved to PostgreSQL.")
