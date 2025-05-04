@@ -83,6 +83,9 @@ services:
       - ./etl:/model/etl  # Mounting the ETL directory for model training
     environment:
       - DATABASE_URL=${DATABASE_URL}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
       - MODEL_STORAGE_PATH=/model/models
     depends_on:
       db:

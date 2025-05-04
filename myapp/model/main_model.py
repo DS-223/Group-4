@@ -8,6 +8,20 @@ from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 from sklearn.metrics import mean_absolute_error, r2_score
 from lifelines import CoxPHFitter
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import create_engine
+from database.database import engine
+from database.models import Prediction
+
+
+# Connect to database
+DATABASE_URL = os.getenv("DATABASE_URL")
+engine = create_engine(DATABASE_URL)
+Session = sessionmaker(bind=engine)
+session = Session()
 
 # 1. Data Preparation with Enhanced Censoring
 def load_and_preprocess_data():
@@ -111,3 +125,17 @@ output_cols = ['predicted_sell_price', 'predicted_rent_price', 'prob_sold_within
 df[output_cols].to_csv(output_dir / 'predictions.csv', index=False)
 
 print("\n✅ Models trained and saved. Predictions written to 'output/predictions.csv'")
+
+
+for _, row in df.iterrows():
+    prediction = Prediction(
+        property_id=row['property_id'],
+        predicted_sell_price=row.get('predicted_sell_price'),
+        predicted_rent_price=row.get('predicted_rent_price'),
+        prob_sold_within_5_months=row.get('prob_sold_within_5_months')
+    )
+    session.add(prediction)
+
+session.commit()
+session.close()
+print("✅ Predictions saved to PostgreSQL.")
