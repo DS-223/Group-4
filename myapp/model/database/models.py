@@ -1,9 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, Numeric, Date
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
-from .engine import engine
+from .database import Base, engine
 
-Base = declarative_base()
 
 
 class User(Base):
@@ -103,7 +101,7 @@ class Property(Base):
     year_built = Column(Integer)
     renovation_status = Column(String)
     estimated_saleprice = Column(Numeric(12, 2))
-    esimated_rentprice = Column(Numeric(12, 2))
+    estimated_rentprice = Column(Numeric(12, 2))
 
     type = relationship("PropertyType")
     user = relationship("User")
