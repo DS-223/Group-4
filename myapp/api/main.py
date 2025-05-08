@@ -1,239 +1,129 @@
 # backend/main.py
+from fastapi import FastAPI, HTTPException, Depends
+from sqlalchemy.orm import Session
+from typing import List
 
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
-from typing import Dict
-
-# Dummy data generators (replace with DB calls when ready)
-from etl.database.data_generate import (
+from database.database import get_db
+from database.models import User, Location, PropertyType, Property, Image, Prediction
+from database.schema import UserCreate, LocationCreate, PropertyTypeCreate, PropertyCreate, ImageCreate
+from database.data_generate import (
     generate_user,
-    generate_property,
     generate_location,
     generate_property_type,
+    generate_property,
     generate_image,
 )
-
-# Import ML router
+# Include your prediction router
 from prediction_router import router as prediction_router
 
 app = FastAPI(
     title="Marketing-Analytics API",
-    description="CRUD stubs + ML predictions (DB integration pending)",
-    version="1.0.0",
+    description="CRUD operations + House Price Prediction (Rent/Sale/Survival)",
+    version="1.0.0"
 )
 
-# Mount ML endpoints
+# Attach ML prediction endpoints
 app.include_router(prediction_router)
 
+# ------------------- USER -------------------
+@app.post("/users/")
+def create_user(user: UserCreate, db: Session = Depends(get_db)):
+    if db.query(User).filter(User.user_id == user.user_id).first():
+        raise HTTPException(status_code=400, detail="User already exists")
+    db_user = User(**user.dict())
+    db.add(db_user)
+    db.commit()
+    db.refresh(db_user)
+    return {"message": "User created", "user": db_user}
 
-# In-memory stores for CRUD stubs
-db_users: Dict[int, dict] = {}
-db_locations: Dict[int, dict] = {}
-db_property_types: Dict[int, dict] = {}
-db_properties: Dict[int, dict] = {}
-db_images: Dict[int, dict] = {}
-
-
-class UserCreate(BaseModel):
-    """Schema for creating a new user."""
-    user_id: int
-    user_type: str
-
-
-class LocationCreate(BaseModel):
-    """Schema for creating a new location."""
-    location_id: int
-
-
-class PropertyTypeCreate(BaseModel):
-    """Schema for creating a new property type."""
-    type_id: int
-    type_name: str
-
-
-class PropertyCreate(BaseModel):
-    """Schema for creating a new property."""
-    property_id: int
-    user_id: int
-    location_id: int
-
-
-class ImageCreate(BaseModel):
-    """Schema for creating a new image record."""
-    image_id: int
-    property_id: int
-    image_url: str
-
-
-@app.post("/users/", summary="Create a new user")
-def create_user(user: UserCreate):
-    """
-    Create a new user entry.
-
-    - **user_id**: unique integer identifier for the user
-    - **user_type**: category of the user (e.g. Owner, Agent)
-
-    Returns a message and the generated user record.
-    """
-    if user.user_id in db_users:
-        raise HTTPException(status_code=400, detail="User exists")
-    data = generate_user(user.user_id, [user.user_type])
-    db_users[user.user_id] = data
-    return {"message": "User created", "user": data}
-
-
-@app.get("/users/{user_id}", summary="Retrieve an existing user")
-def get_user(user_id: int):
-    """
-    Fetch a user by their ID.
-
-    - **user_id**: integer ID of the user
-
-    Returns the user record if found, else 404.
-    """
-    if user_id not in db_users:
+@app.get("/users/{user_id}")
+def get_user(user_id: int, db: Session = Depends(get_db)):
+    user = db.query(User).filter(User.user_id == user_id).first()
+    if not user:
         raise HTTPException(status_code=404, detail="User not found")
-    return db_users[user_id]
+    return user
 
 
-@app.post("/locations/", summary="Create a new location")
-def create_location(loc: LocationCreate):
-    """
-    Create a new location entry.
+# ------------------- LOCATION -------------------
+@app.post("/locations/")
+def create_location(loc: LocationCreate, db: Session = Depends(get_db)):
+    if db.query(Location).filter(Location.location_id == loc.location_id).first():
+        raise HTTPException(status_code=400, detail="Location already exists")
+    db_loc = Location(**loc.dict())
+    db.add(db_loc)
+    db.commit()
+    db.refresh(db_loc)
+    return {"message": "Location created", "location": db_loc}
 
-    - **location_id**: unique integer identifier for the location
-
-    Returns a message and the generated location data.
-    """
-    if loc.location_id in db_locations:
-        raise HTTPException(status_code=400, detail="Location exists")
-    data = generate_location(loc.location_id, [])
-    db_locations[loc.location_id] = data
-    return {"message": "Location created", "location": data}
-
-
-@app.get("/locations/{location_id}", summary="Retrieve a location")
-def get_location(location_id: int):
-    """
-    Fetch a location by its ID.
-
-    - **location_id**: integer ID of the location
-
-    Returns the location record if found, else 404.
-    """
-    if location_id not in db_locations:
+@app.get("/locations/{location_id}")
+def get_location(location_id: int, db: Session = Depends(get_db)):
+    loc = db.query(Location).filter(Location.location_id == location_id).first()
+    if not loc:
         raise HTTPException(status_code=404, detail="Location not found")
-    return db_locations[location_id]
+    return loc
 
 
-@app.post("/property_types/", summary="Create a new property type")
-def create_property_type(pt: PropertyTypeCreate):
-    """
-    Create a new property type entry.
+# ------------------- PROPERTY TYPE -------------------
+@app.post("/property_types/")
+def create_property_type(pt: PropertyTypeCreate, db: Session = Depends(get_db)):
+    if db.query(PropertyType).filter(PropertyType.type_id == pt.type_id).first():
+        raise HTTPException(status_code=400, detail="Property type already exists")
+    db_pt = PropertyType(**pt.dict())
+    db.add(db_pt)
+    db.commit()
+    db.refresh(db_pt)
+    return {"message": "Property type created", "property_type": db_pt}
 
-    - **type_id**: unique integer identifier for the type
-    - **type_name**: name of the property type (e.g. Apartment)
-
-    Returns a message and the generated type record.
-    """
-    if pt.type_id in db_property_types:
-        raise HTTPException(status_code=400, detail="Type exists")
-    data = generate_property_type(pt.type_id, [])
-    db_property_types[pt.type_id] = data
-    return {"message": "Property type created", "property_type": data}
-
-
-@app.get("/property_types/{type_id}", summary="Retrieve a property type")
-def get_property_type(type_id: int):
-    """
-    Fetch a property type by its ID.
-
-    - **type_id**: integer ID of the property type
-
-    Returns the type record if found, else 404.
-    """
-    if type_id not in db_property_types:
-        raise HTTPException(status_code=404, detail="Type not found")
-    return db_property_types[type_id]
+@app.get("/property_types/{type_id}")
+def get_property_type(type_id: int, db: Session = Depends(get_db)):
+    pt = db.query(PropertyType).filter(PropertyType.type_id == type_id).first()
+    if not pt:
+        raise HTTPException(status_code=404, detail="Property type not found")
+    return pt
 
 
-@app.post("/properties/", summary="Create a new property")
-def create_property(prop: PropertyCreate):
-    """
-    Create a new property entry.
+# ------------------- PROPERTY -------------------
+@app.post("/properties/")
+def create_property(prop: PropertyCreate, db: Session = Depends(get_db)):
+    if db.query(Property).filter(Property.property_id == prop.property_id).first():
+        raise HTTPException(status_code=400, detail="Property already exists")
+    db_prop = Property(**prop.dict())
+    db.add(db_prop)
+    db.commit()
+    db.refresh(db_prop)
+    return {"message": "Property created", "property": db_prop}
 
-    - **property_id**: unique integer identifier for the property
-    - **user_id**: integer ID of the owner/agent
-    - **location_id**: integer ID of the property location
-
-    Returns a message and the generated property record.
-    """
-    if prop.property_id in db_properties:
-        raise HTTPException(status_code=400, detail="Property exists")
-    data = generate_property(
-        prop.property_id,
-        prop.user_id,
-        prop.location_id,
-        list(db_property_types.values()),
-        list(db_property_types.values()),
-        list(db_locations.values()),
-        list(db_property_types.values()),
-    )
-    db_properties[prop.property_id] = data
-    return {"message": "Property created", "property": data}
-
-
-@app.get("/properties/{property_id}", summary="Retrieve a property")
-def get_property(property_id: int):
-    """
-    Fetch a property by its ID.
-
-    - **property_id**: integer ID of the property
-
-    Returns the property record if found, else 404.
-    """
-    if property_id not in db_properties:
+@app.get("/properties/{property_id}", response_model=PropertyCreate)
+def get_property(property_id: int, db: Session = Depends(get_db)):
+    prop = db.query(Property).filter(Property.property_id == property_id).first()
+    print(prop) 
         raise HTTPException(status_code=404, detail="Property not found")
-    return db_properties[property_id]
+    return prop
 
+f
+@app.get("/prediction/")
+def get_prediction(property_id: int, db: Session = Depends(get_db)):
+    prop = db.query(Prediction).filter(Prediction.property_id == property_id).first()
+    print(prop) 
+    return prop
+# ------------------- IMAGE -------------------
+@app.post("/images/")
+def create_image(img: ImageCreate, db: Session = Depends(get_db)):
+    if db.query(Image).filter(Image.image_id == img.image_id).first():
+        raise HTTPException(status_code=400, detail="Image already exists")
+    db_img = Image(**img.dict())
+    db.add(db_img)
+    db.commit()
+    db.refresh(db_img)
+    return {"message": "Image created", "image": db_img}
 
-@app.post("/images/", summary="Create a new image")
-def create_image(img: ImageCreate):
-    """
-    Create a new image record attached to a property.
-
-    - **image_id**: unique integer identifier for the image
-    - **property_id**: integer ID of the associated property
-    - **image_url**: URL of the image
-
-    Returns a message and the generated image record.
-    """
-    if img.image_id in db_images:
-        raise HTTPException(status_code=400, detail="Image exists")
-    data = generate_image(img.image_id, img.property_id)
-    db_images[img.image_id] = data
-    return {"message": "Image created", "image": data}
-
-
-@app.get("/images/{image_id}", summary="Retrieve an image")
-def get_image(image_id: int):
-    """
-    Fetch an image record by its ID.
-
-    - **image_id**: integer ID of the image
-
-    Returns the image record if found, else 404.
-    """
-    if image_id not in db_images:
+@app.get("/images/{image_id}")
+def get_image(image_id: int, db: Session = Depends(get_db)):
+    img = db.query(Image).filter(Image.image_id == image_id).first()
+    if not img:
         raise HTTPException(status_code=404, detail="Image not found")
-    return db_images[image_id]
+    return img
 
-
-@app.get("/images/", summary="List all images")
-def list_images():
-    """
-    List all image records currently stored.
-
-    Returns a list of image objects.
-    """
-    return list(db_images.values())
+@app.get("/images/", response_model=List[ImageCreate])
+def list_images(db: Session = Depends(get_db)):
+    return db.query(Image).all()

@@ -7,7 +7,7 @@ import joblib
 import pandas as pd
 from fastapi import APIRouter, HTTPException
 
-from schemas.prediction import PropertyFeatures, PricePrediction, CoxPrediction
+from database.schema import PropertyFeatures, PricePrediction, CoxPrediction
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Locate model artifacts (mounted by docker-compose)
