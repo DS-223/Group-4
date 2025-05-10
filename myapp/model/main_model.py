@@ -26,7 +26,7 @@ session = Session()
 # 1. Data Preparation with Enhanced Censoring
 def load_and_preprocess_data():
     script_dir = Path(__file__).parent
-    csv_path = script_dir / 'etl/data/property_ml_ready.csv'
+    csv_path = script_dir / 'data/property_ml_ready.csv'
     df = pd.read_csv(csv_path)
     df['post_date'] = pd.to_datetime(df['post_date'])
     df['sell_date'] = pd.to_datetime(df['sell_date'])

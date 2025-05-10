@@ -97,10 +97,9 @@ def create_property(prop: PropertyCreate, db: Session = Depends(get_db)):
 def get_property(property_id: int, db: Session = Depends(get_db)):
     prop = db.query(Property).filter(Property.property_id == property_id).first()
     print(prop) 
-        raise HTTPException(status_code=404, detail="Property not found")
     return prop
 
-f
+
 @app.get("/prediction/")
 def get_prediction(property_id: int, db: Session = Depends(get_db)):
     prop = db.query(Prediction).filter(Prediction.property_id == property_id).first()
