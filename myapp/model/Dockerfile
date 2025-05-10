@@ -16,4 +16,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD bash -c "python etl_process.py && python main_model.py"
+CMD bash -c "python wait_for_etl.py && python main_model.py"

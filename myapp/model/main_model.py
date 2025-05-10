@@ -121,20 +121,19 @@ surv_funcs = cph.predict_survival_function(cox_input_encoded, times=[150])
 df['prob_sold_within_5_months'] = 1 - surv_funcs.loc[150].values
 
 # --- Save Predictions ---
-output_cols = ['predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']
+output_cols = ['property_id'',predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']
 df[output_cols].to_csv(output_dir / 'predictions.csv', index=False)
 
 print("\n✅ Models trained and saved. Predictions written to 'output/predictions.csv'")
 
 
-for _, row in df.iterrows():
-    prediction = Prediction(
-        property_id=row['property_id'],
-        predicted_sell_price=row.get('predicted_sell_price'),
-        predicted_rent_price=row.get('predicted_rent_price'),
-        prob_sold_within_5_months=row.get('prob_sold_within_5_months')
-    )
-    session.add(prediction)
+# Select only the relevant columns for SQL table
+predictions_df = df[['property_id', 'predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']].copy()
+
+# Save to SQL using pandas
+predictions_df.to_sql('prediction', con=engine, if_exists='append', index=False)
+
+print("✅ Predictions saved to PostgreSQL using pandas.to_sql.")
 
 session.commit()
 session.close()

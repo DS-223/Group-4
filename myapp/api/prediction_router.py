@@ -13,8 +13,7 @@ from database.schema import PropertyFeatures, PricePrediction, CoxPrediction
 # Locate model artifacts (mounted by docker-compose)
 # ────────────────────────────────────────────────────────────────────────────────
 BASE_DIR  = Path(__file__).resolve().parent
-MODEL_DIR = BASE_DIR / "model"
-PKL_DIR   = MODEL_DIR / "models"
+PKL_DIR   = BASE_DIR / "models"
 
 rent_model  = joblib.load(PKL_DIR / "rent_price_model.pkl")
 sales_model = joblib.load(PKL_DIR / "sell_price_model.pkl")

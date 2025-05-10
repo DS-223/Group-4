@@ -1,123 +1,145 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, Numeric, Date, Sequence
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, sessionmaker
-from datetime import date
-from .engine import engine  # Make sure this points to your actual engine
+from sqlalchemy.orm import relationship
+from .engine import engine
 
 Base = declarative_base()
-Session = sessionmaker(bind=engine)
+
 
 class User(Base):
-    __tablename__ = 'users'
-    user_id = Column(Integer, primary_key=True)
-    username = Column(String(50))
-    email = Column(String, nullable=False)
-    phone_number = Column(String(20))
-    user_type = Column(String(20))
-    properties = relationship("Property", back_populates="user")
+    """
+        Represents a user in the real estate platform.
 
-class PropertyType(Base):
-    __tablename__ = 'property_types'
-    type_id = Column(Integer, primary_key=True)
-    type_name = Column(String)
-    properties = relationship("Property", back_populates="property_type")
+        Attributes:
+            user_id (int): Primary key identifying the user.
+            username (str): Name or alias of the user.
+            email (str): Email address of the user (required).
+            phone_number (str): Contact phone number of the user.
+            user_type (float): Type of user (Agent, Owner, Buyer).
+    """
+    __tablename__ = "users"
+
+    user_id = Column(Integer, primary_key=True)
+    username = Column(String)
+    email = Column(String, nullable=False)
+    phone_number = Column(String)
+    user_type = Column(Float)
+
 
 class Location(Base):
-    __tablename__ = 'locations'
+    """
+        Represents a physical location relevant to property listings.
+
+        Attributes:
+            location_id (int): Primary key identifying the location.
+            region (str): Name of the region.
+            city (str): Name of the city (required).
+            district (str): District within the city.
+    """
+    __tablename__ = "locations"
+
     location_id = Column(Integer, primary_key=True)
-    city = Column(String(50))
-    district = Column(String(50))
-    properties = relationship("Property", back_populates="location")
+    region = Column(String)
+    city = Column(String, nullable=False)
+    district = Column(String)
+
+
+class PropertyType(Base):
+    """
+        Represents the type or category of a property.
+
+        Attributes:
+            type_id (int): Primary key identifying the property type.
+            type_name (str): Descriptive name of the property type (Apartment, House).
+    """
+    __tablename__ = "property_types"
+
+    type_id = Column(Integer, primary_key=True)
+    type_name = Column(String)
+
 
 class Property(Base):
-    __tablename__ = 'properties'
+    """
+        Represents a real estate property listing.
+
+        Attributes:
+            property_id (int): Primary key for the property.
+            title (str): Title of the listing.
+            description (str): Description of the property.
+            type_id (int): Foreign key referencing the property type.
+            deal_type (str): Type of deal (Sale, Rent).
+            status (str): Current status of the listing (Available, Sold).
+            user_id (int): Foreign key referencing the user who posted the property.
+            location_id (int): Foreign key referencing the property's location.
+            post_date (date): Date the property was posted (required).
+            sell_date (date): Date the property was sold (nullable).
+            size_sqm (float): Size of the property in square meters.
+            floor (int): Floor number (if applicable).
+            rooms (int): Number of rooms in the property.
+            year_built (int): Year the property was constructed.
+            renovation_status (str): Current renovation status (Newly Renovated, Partially Renovated, Not Renovated).
+            estimated_saleprice (Decimal): Estimated sale price in currency.
+            esimated_rentprice (Decimal): Estimated rental price in currency.
+
+        Relationships:
+            type (PropertyType): Relationship to the PropertyType model.
+            user (User): Relationship to the User who posted the property.
+            location (Location): Relationship to the property's Location.
+    """
+    __tablename__ = "properties"
+
     property_id = Column(Integer, primary_key=True)
-    title = Column(String(100))
+    title = Column(String)
     type_id = Column(Integer, ForeignKey('property_types.type_id'))
+    deal_type = Column(String)
+    status = Column(String)
     user_id = Column(Integer, ForeignKey('users.user_id'))
     location_id = Column(Integer, ForeignKey('locations.location_id'))
-    deal_type = Column(String(10))
-    status = Column(String(20))
-    post_date = Column(Date)
-    sale_date = Column(Date)
+    post_date = Column(Date, nullable=False)
+    sell_date = Column(Date, nullable=True)
     size_sqm = Column(Float)
     floor = Column(Integer)
     rooms = Column(Integer)
     year_built = Column(Integer)
-    renovation_status = Column(String(50))
+    renovation_status = Column(String)
     estimated_saleprice = Column(Numeric(12, 2))
-    estimated_rentprice = Column(Numeric(12, 2))
-    property_type = relationship("PropertyType", back_populates="properties")
-    user = relationship("User", back_populates="properties")
-    location = relationship("Location", back_populates="properties")
-    images = relationship("Image", back_populates="property")
-    predictions = relationship("Prediction", back_populates="property")
+    esimated_rentprice = Column(Numeric(12, 2))
+
+    type = relationship("PropertyType")
+    user = relationship("User")
+    location = relationship("Location")
+
 
 class Image(Base):
-    __tablename__ = 'images'
+    """
+        Represents an image associated with a property listing.
+
+        Attributes:
+            image_id (int): Primary key for the image.
+            property_id (int): Foreign key referencing the related property.
+            image_url (str): URL or path to the image file.
+
+        Relationships:
+            property (Property): Relationship to the related Property.
+    """
+    __tablename__ = "images"
+
     image_id = Column(Integer, primary_key=True)
     property_id = Column(Integer, ForeignKey('properties.property_id'))
-    image_url = Column(String(255))
-    property = relationship("Property", back_populates="images")
+    image_url = Column(String)
+
+    property = relationship("Property")
 
 class Prediction(Base):
     __tablename__ = 'predictions'
-    prediction_id = Column(Integer, Sequence('prediction_id_seq'), primary_key=True)
-    property_id = Column(Integer, ForeignKey('properties.property_id'))
+    prediction_id = Column(Integer, primary_key=True)
+    property_id = Column(Integer, ForeignKey('properties.property_id', ondelete="CASCADE"))
     predicted_sell_price = Column(Numeric(12, 2))
     predicted_rent_price = Column(Numeric(12, 2))
     prob_sold_within_5_months = Column(Float)
-    property = relationship("Property", back_populates="predictions")
 
-def initialize_database():
-    try:
-        Base.metadata.drop_all(engine)
-        Base.metadata.create_all(engine)
-        print("Database initialized successfully")
+    property = relationship("Property", back_populates="prediction")
 
-        session = Session()
 
-        # Seed required data
-        user = User(username='John Doe', email='john@example.com', phone_number='1234567890', user_type='agent')
-        location = Location(city='Yerevan', district='Kentron')
-        ptype = PropertyType(type_name='Apartment')
+Base.metadata.drop_all(engine)
 
-        session.add_all([user, location, ptype])
-        session.commit()
-
-        property = Property(
-            title='Nice Apartment',
-            user_id=user.user_id,
-            location_id=location.location_id,
-            type_id=ptype.type_id,
-            deal_type='sell',
-            status='available',
-            post_date=date.today(),
-            sale_date=None,
-            size_sqm=85.0,
-            floor=3,
-            rooms=3,
-            year_built=2015,
-            renovation_status='new',
-            estimated_saleprice=120000.00,
-            estimated_rentprice=800.00
-        )
-        session.add(property)
-        session.commit()
-
-        prediction = Prediction(
-            property_id=property.property_id,
-            predicted_sell_price=123000.00,
-            predicted_rent_price=850.00,
-            prob_sold_within_5_months=0.85
-        )
-        session.add(prediction)
-        session.commit()
-
-        print("Sample data inserted successfully")
-
-    except Exception as e:
-        print(f"Database initialization failed: {str(e)}")
-        raise
-
-initialize_database()
