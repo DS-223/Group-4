@@ -6,13 +6,7 @@ from typing import List
 from database.database import get_db
 from database.models import User, Location, PropertyType, Property, Image, Prediction
 from database.schema import UserCreate, LocationCreate, PropertyTypeCreate, PropertyCreate, ImageCreate
-from database.data_generate import (
-    generate_user,
-    generate_location,
-    generate_property_type,
-    generate_property,
-    generate_image,
-)
+
 # Include your prediction router
 from prediction_router import router as prediction_router
 from database.engine import engine
@@ -109,6 +103,7 @@ def get_prediction(property_id: int, db: Session = Depends(get_db)):
     prop = db.query(Prediction).filter(Prediction.property_id == property_id).first()
     print(prop) 
     return prop
+
 # ------------------- IMAGE -------------------
 @app.post("/images/")
 def create_image(img: ImageCreate, db: Session = Depends(get_db)):

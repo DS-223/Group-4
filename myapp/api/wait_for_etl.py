@@ -22,7 +22,7 @@ REQUIRED_TABLES = [
     'predictions'
 ]
 
-def wait_for_etl(container_name='etl', timeout=600):
+def wait_for_etl(container_name='ds', timeout=600):
     print("Waiting for ETL container to finish...")
     elapsed = 0
     while elapsed < timeout:

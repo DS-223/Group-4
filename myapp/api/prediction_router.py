@@ -7,7 +7,7 @@ import joblib
 import pandas as pd
 from fastapi import APIRouter, HTTPException
 
-from database.schema import Property
+from database.schema import Property, CoxPrediction, PricePrediction
 from database.engine import engine
 from database.database import Base
 
@@ -55,78 +55,78 @@ def _to_df(item: Property) -> pd.DataFrame:
     return pd.DataFrame([item.dict()])
 
 
-# @router.post("/rent", response_model=PricePrediction, summary="Predict monthly rent")
-# def predict_rent(data: PropertyFeatures):
-#     """
-#     Predict the monthly rent price for a property.
+@router.post("/rent", response_model=PricePrediction, summary="Predict monthly rent")
+def predict_rent(data: Property):
+    """
+    Predict the monthly rent price for a property.
 
-#     - **data**: JSON body matching `PropertyFeatures` schema.
+    - **data**: JSON body matching `PropertyFeatures` schema.
 
-#     Returns:
-#     - **predicted_price**: float, the model’s rent estimate.
-#     """
-#     try:
-#         X = _to_df(data)
-#         price = float(rent_model.predict(X)[0])
-#         return {"predicted_price": price}
-#     except Exception as err:
-#         raise HTTPException(status_code=400, detail=str(err))
-
-
-# @router.post("/sale", response_model=PricePrediction, summary="Predict sale price")
-# def predict_sale(data: PropertyFeatures):
-#     """
-#     Predict the sale price for a property.
-
-#     - **data**: JSON body matching `PropertyFeatures` schema.
-
-#     Returns:
-#     - **predicted_price**: float, the model’s sales estimate.
-#     """
-#     try:
-#         X = _to_df(data)
-#         price = float(sales_model.predict(X)[0])
-#         return {"predicted_price": price}
-#     except Exception as err:
-#         raise HTTPException(status_code=400, detail=str(err))
+    Returns:
+    - **predicted_price**: float, the model’s rent estimate.
+    """
+    try:
+        X = _to_df(data)
+        price = float(rent_model.predict(X)[0])
+        return {"predicted_price": price}
+    except Exception as err:
+        raise HTTPException(status_code=400, detail=str(err))
 
 
-# @router.post("/cox", response_model=CoxPrediction, summary="Predict probability of sale")
-# def predict_cox(data: PropertyFeatures):
-#     """
-#     Estimate the probability a property will sell within 150 days.
+@router.post("/sale", response_model=PricePrediction, summary="Predict sale price")
+def predict_sale(data: Property):
+    """
+    Predict the sale price for a property.
 
-#     Steps:
-#     1. Use sale and rent pipelines to predict prices.
-#     2. Build a DataFrame including the original features plus those predictions.
-#     3. One-hot encode and align to Cox model’s training columns.
-#     4. Compute survival function at t=150 and return 1 - S(150).
+    - **data**: JSON body matching `PropertyFeatures` schema.
 
-#     - **data**: JSON body matching `PropertyFeatures` schema.
+    Returns:
+    - **predicted_price**: float, the model’s sales estimate.
+    """
+    try:
+        X = _to_df(data)
+        price = float(sales_model.predict(X)[0])
+        return {"predicted_price": price}
+    except Exception as err:
+        raise HTTPException(status_code=400, detail=str(err))
 
-#     Returns:
-#     - **prob_sold_within_5_months**: float in [0,1].
-#     """
-#     try:
-#         # 1) Price predictions
-#         Xsale = _to_df(data)
-#         sell_price = float(sales_model.predict(Xsale)[0])
-#         Xrent = _to_df(data)
-#         rent_price = float(rent_model.predict(Xrent)[0])
 
-#         # 2) Cox DataFrame
-#         df_cox = pd.DataFrame([data.dict()])
-#         df_cox["predicted_sell_price"] = sell_price
-#         df_cox["predicted_rent_price"] = rent_price
+@router.post("/cox", response_model=CoxPrediction, summary="Predict probability of sale")
+def predict_cox(data:Property ):
+    """
+    Estimate the probability a property will sell within 150 days.
 
-#         # 3) Encoding & alignment
-#         df_cox = pd.get_dummies(df_cox)
-#         df_cox = df_cox.reindex(columns=COX_FEATURES, fill_value=0)
+    Steps:
+    1. Use sale and rent pipelines to predict prices.
+    2. Build a DataFrame including the original features plus those predictions.
+    3. One-hot encode and align to Cox model’s training columns.
+    4. Compute survival function at t=150 and return 1 - S(150).
 
-#         # 4) Survival probability
-#         surv = cox_model.predict_survival_function(df_cox, times=[150])
-#         prob = float(1.0 - surv.loc[150].values[0])
+    - **data**: JSON body matching `PropertyFeatures` schema.
 
-#         return {"prob_sold_within_5_months": prob}
-#     except Exception as err:
-#         raise HTTPException(status_code=400, detail=str(err))
+    Returns:
+    - **prob_sold_within_5_months**: float in [0,1].
+    """
+    try:
+        # 1) Price predictions
+        Xsale = _to_df(data)
+        sell_price = float(sales_model.predict(Xsale)[0])
+        Xrent = _to_df(data)
+        rent_price = float(rent_model.predict(Xrent)[0])
+
+        # 2) Cox DataFrame
+        df_cox = pd.DataFrame([data.dict()])
+        df_cox["predicted_sell_price"] = sell_price
+        df_cox["predicted_rent_price"] = rent_price
+
+        # 3) Encoding & alignment
+        df_cox = pd.get_dummies(df_cox)
+        df_cox = df_cox.reindex(columns=COX_FEATURES, fill_value=0)
+
+        # 4) Survival probability
+        surv = cox_model.predict_survival_function(df_cox, times=[150])
+        prob = float(1.0 - surv.loc[150].values[0])
+
+        return {"prob_sold_within_5_months": prob}
+    except Exception as err:
+        raise HTTPException(status_code=400, detail=str(err))

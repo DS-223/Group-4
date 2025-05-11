@@ -104,27 +104,27 @@ class Image(ImageBase):
     class Config:
         from_attributes= True
 
-# Prediction schemas
-# class PredictionBase(BaseModel):
-#     property_id: int
+#Prediction schemas
+class PredictionBase(BaseModel):
+    property_id: int
 
-# class PredictionCreate(PredictionBase):
-#     predicted_sell_price: float
-#     predicted_rent_price: float
-#     prob_sold_within_5_months: float
+class PredictionCreate(PredictionBase):
+    predicted_sell_price: float
+    predicted_rent_price: float
+    prob_sold_within_5_months: float
 
-# class Prediction(PredictionBase):
-#     predicted_sell_price: float
-#     predicted_rent_price: float
-#     prob_sold_within_5_months: float
+class Prediction(PredictionBase):
+    predicted_sell_price: float
+    predicted_rent_price: float
+    prob_sold_within_5_months: float
 
-#     class Config:
-#         from_attributes= True
+    class Config:
+        from_attributes= True
 
 
-# ML prediction output schemas
-# class PricePrediction(BaseModel):
-#     predicted_price: float
+#ML prediction output schemas
+class PricePrediction(BaseModel):
+    predicted_price: float
 
-# class CoxPrediction(BaseModel):
-#     prob_sold_within_5_months: float
+class CoxPrediction(BaseModel):
+    prob_sold_within_5_months: float
