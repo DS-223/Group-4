@@ -1,7 +1,6 @@
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, Numeric, Date
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, Numeric, Date, Sequence
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
-from .engine import engine
 
 Base = declarative_base()
 
@@ -140,5 +139,3 @@ class Prediction(Base):
 
     property = relationship("Property")
 
-
-Base.metadata.drop_all(engine)

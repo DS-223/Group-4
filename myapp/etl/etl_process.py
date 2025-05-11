@@ -194,4 +194,5 @@ def create_ml_ready_property_csv():
 # Generate ML-ready CSV
 create_ml_ready_property_csv()
 
+
 print("Tables are populated and ML-ready CSV is created.")

@@ -14,12 +14,11 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from database.database import engine
-from database.models import Prediction
 from pathlib import Path
 from sqlalchemy import func
 from database.engine import engine
 from database.database import Base
-
+from sqlalchemy.types import Integer, Float
 
 # Create all tables
 Base.metadata.create_all(bind=engine)
@@ -43,7 +42,7 @@ print(df.head())
 #print(df_user.head())
 
 if df.empty:
-    raise RuntimeError("❌ Failed to load data from database. Exiting model training.")
+    raise RuntimeError("Failed to load data from database. Exiting model training.")
 
 
 df['post_date'] = pd.to_datetime(df['post_date'])
@@ -151,18 +150,22 @@ predictions_df[output_cols].to_csv(output_dir / 'predictions.csv', index=False)
 print("\n✅ Models trained and saved. Predictions written to 'output/predictions.csv'")
 
 
-# Insert predictions into DB with manual prediction_id
-for _, row in predictions_df.iterrows():
-    pred = Prediction(
-        prediction_id=row['prediction_id'],
-        property_id=row['property_id'],
-        predicted_sell_price=row['predicted_sell_price'],
-        predicted_rent_price=row['predicted_rent_price'],
-        prob_sold_within_5_months=row['prob_sold_within_5_months']
-    )
-    session.add(pred)
-session.commit()
-session.close()
+# Define SQL types explicitly (optional but recommended)
+sql_dtypes = {
+    "prediction_id": Integer(),
+    "property_id": Integer(),
+    "predicted_sell_price": Float(),
+    "predicted_rent_price": Float(),
+    "prob_sold_within_5_months": Float()
+}
 
-print("✅ Predictions saved to PostgreSQL with sequential prediction_id.")
+# Insert using pandas.to_sql
+predictions_df[output_cols].to_sql(
+    name='predictions',
+    con=engine,
+    if_exists='replace',  # or 'append' to avoid dropping table
+    index=False,
+    dtype=sql_dtypes
+)
+print("Predictions saved to PostgreSQL using pandas.to_sql.")
 print("Predictions saved to PostgreSQL.")
