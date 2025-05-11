@@ -15,6 +15,10 @@ from database.data_generate import (
 )
 # Include your prediction router
 from prediction_router import router as prediction_router
+from database.engine import engine
+from database.database import Base
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="Marketing-Analytics API",

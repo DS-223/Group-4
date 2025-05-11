@@ -132,14 +132,13 @@ class Image(Base):
 
 class Prediction(Base):
     __tablename__ = 'predictions'
-    prediction_id = Column(Integer, primary_key=True)
+    prediction_id = Column(Integer, primary_key=True, autoincrement=True)
     property_id = Column(Integer, ForeignKey('properties.property_id', ondelete="CASCADE"))
     predicted_sell_price = Column(Numeric(12, 2))
     predicted_rent_price = Column(Numeric(12, 2))
     prob_sold_within_5_months = Column(Float)
 
-    property = relationship("Property", back_populates="prediction")
+    property = relationship("Property")
 
 
 Base.metadata.drop_all(engine)
-

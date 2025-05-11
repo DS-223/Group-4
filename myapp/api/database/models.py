@@ -138,7 +138,7 @@ class Prediction(Base):
     predicted_rent_price = Column(Numeric(12, 2))
     prob_sold_within_5_months = Column(Float)
 
-    property = relationship("Property", back_populates="prediction")
+    property = relationship("Property")
 
 
 Base.metadata.drop_all(engine)

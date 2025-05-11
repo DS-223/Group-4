@@ -105,38 +105,26 @@ class Image(ImageBase):
         from_attributes= True
 
 # Prediction schemas
-class PredictionBase(BaseModel):
-    property_id: int
+# class PredictionBase(BaseModel):
+#     property_id: int
 
-class PredictionCreate(PredictionBase):
-    predicted_sell_price: float
-    predicted_rent_price: float
-    prob_sold_within_5_months: float
+# class PredictionCreate(PredictionBase):
+#     predicted_sell_price: float
+#     predicted_rent_price: float
+#     prob_sold_within_5_months: float
 
-class Prediction(PredictionBase):
-    predicted_sell_price: float
-    predicted_rent_price: float
-    prob_sold_within_5_months: float
+# class Prediction(PredictionBase):
+#     predicted_sell_price: float
+#     predicted_rent_price: float
+#     prob_sold_within_5_months: float
 
-    class Config:
-        from_attributes= True
+#     class Config:
+#         from_attributes= True
 
-
-# Features schema for ML model input
-class PropertyFeatures(BaseModel):
-    size_sqm: Optional[float] = None
-    floor: Optional[int] = None
-    rooms: Optional[int] = None
-    year_built: Optional[int] = None
-    renovation_status: Optional[str] = None
-    region: Optional[str] = None
-    city: Optional[str] = None
-    district: Optional[str] = None
-    type_name: Optional[str] = None  # Used instead of type_id for ML features
 
 # ML prediction output schemas
-class PricePrediction(BaseModel):
-    predicted_price: float
+# class PricePrediction(BaseModel):
+#     predicted_price: float
 
-class CoxPrediction(BaseModel):
-    prob_sold_within_5_months: float
+# class CoxPrediction(BaseModel):
+#     prob_sold_within_5_months: float

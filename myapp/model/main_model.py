@@ -15,7 +15,10 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from database.database import engine
 from database.models import Prediction
-
+from pathlib import Path
+from sqlalchemy import func
+from database.engine import engine
+from database.database import Base
 
 # Connect to database
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -23,19 +26,28 @@ engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# 1. Data Preparation with Enhanced Censoring
-def load_and_preprocess_data():
-    script_dir = Path(__file__).parent
-    csv_path = script_dir / 'data/property_ml_ready.csv'
-    df = pd.read_csv(csv_path)
-    df['post_date'] = pd.to_datetime(df['post_date'])
-    df['sell_date'] = pd.to_datetime(df['sell_date'])
-    today = pd.to_datetime("today")
-    df['duration'] = (df['sell_date'].fillna(today) - df['post_date']).dt.days
-    df['event'] = df['sell_date'].notna().astype(int)
-    return df
+# Create all tables
+Base.metadata.create_all(bind=engine)
 
-df = load_and_preprocess_data()
+# Replace old load logic
+df = pd.read_sql("SELECT * FROM property_ml_ready", engine)
+print(df.head())
+
+df_property = pd.read_sql("SELECT * FROM properties", engine)
+print(df_property.head())
+df_user = pd.read_sql("SELECT * FROM users", engine)
+print(df_user.head())
+
+if df.empty:
+    raise RuntimeError("❌ Failed to load data from database. Exiting model training.")
+
+
+df['post_date'] = pd.to_datetime(df['post_date'])
+df['sell_date'] = pd.to_datetime(df['sell_date'])
+today = pd.to_datetime("today")
+df['duration'] = (df['sell_date'].fillna(today) - df['post_date']).dt.days
+df['event'] = df['sell_date'].notna().astype(int)
+
 
 # 2. Feature Engineering
 def prepare_features(df):
@@ -121,7 +133,7 @@ surv_funcs = cph.predict_survival_function(cox_input_encoded, times=[150])
 df['prob_sold_within_5_months'] = 1 - surv_funcs.loc[150].values
 
 # --- Save Predictions ---
-output_cols = ['property_id'',predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']
+output_cols = ['property_id','predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']
 df[output_cols].to_csv(output_dir / 'predictions.csv', index=False)
 
 print("\n✅ Models trained and saved. Predictions written to 'output/predictions.csv'")
@@ -130,11 +142,21 @@ print("\n✅ Models trained and saved. Predictions written to 'output/prediction
 # Select only the relevant columns for SQL table
 predictions_df = df[['property_id', 'predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']].copy()
 
-# Save to SQL using pandas
-predictions_df.to_sql('prediction', con=engine, if_exists='append', index=False)
 
-print("✅ Predictions saved to PostgreSQL using pandas.to_sql.")
+Base.metadata.create_all(bind=engine)
+
+for _, row in predictions_df.iterrows():
+    pred = Prediction(
+        property_id=row['property_id'],
+        predicted_sell_price=row['predicted_sell_price'],
+        predicted_rent_price=row['predicted_rent_price'],
+        prob_sold_within_5_months=row['prob_sold_within_5_months']
+    )
+    session.add(pred)
+session.commit()
+
+print("Predictions saved to PostgreSQL using pandas.to_sql.")
 
 session.commit()
 session.close()
-print("✅ Predictions saved to PostgreSQL.")
+print("Predictions saved to PostgreSQL.")
