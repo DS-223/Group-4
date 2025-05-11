@@ -20,23 +20,27 @@ from sqlalchemy import func
 from database.engine import engine
 from database.database import Base
 
+
+# Create all tables
+Base.metadata.create_all(bind=engine)
+
+
 # Connect to database
 DATABASE_URL = os.getenv("DATABASE_URL")
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# Create all tables
-Base.metadata.create_all(bind=engine)
 
 # Replace old load logic
 df = pd.read_sql("SELECT * FROM property_ml_ready", engine)
 print(df.head())
 
-df_property = pd.read_sql("SELECT * FROM properties", engine)
-print(df_property.head())
-df_user = pd.read_sql("SELECT * FROM users", engine)
-print(df_user.head())
+#df_property = pd.read_sql("SELECT * FROM properties", engine)
+#print(df_property.head())
+
+#df_user = pd.read_sql("SELECT * FROM users", engine)
+#print(df_user.head())
 
 if df.empty:
     raise RuntimeError("❌ Failed to load data from database. Exiting model training.")
@@ -132,21 +136,25 @@ joblib.dump(cph, models_dir / 'cox_model.pkl')
 surv_funcs = cph.predict_survival_function(cox_input_encoded, times=[150])
 df['prob_sold_within_5_months'] = 1 - surv_funcs.loc[150].values
 
-# --- Save Predictions ---
-output_cols = ['property_id','predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']
-df[output_cols].to_csv(output_dir / 'predictions.csv', index=False)
-
-print("\n✅ Models trained and saved. Predictions written to 'output/predictions.csv'")
-
 
 # Select only the relevant columns for SQL table
 predictions_df = df[['property_id', 'predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']].copy()
 
+# Add prediction_id column manually
+predictions_df = predictions_df.reset_index(drop=True)
+predictions_df['prediction_id'] = predictions_df.index + 1
 
-Base.metadata.create_all(bind=engine)
+# --- Save Predictions ---
+output_cols = ['property_id', 'prediction_id','predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']
+predictions_df[output_cols].to_csv(output_dir / 'predictions.csv', index=False)
 
+print("\n✅ Models trained and saved. Predictions written to 'output/predictions.csv'")
+
+
+# Insert predictions into DB with manual prediction_id
 for _, row in predictions_df.iterrows():
     pred = Prediction(
+        prediction_id=row['prediction_id'],
         property_id=row['property_id'],
         predicted_sell_price=row['predicted_sell_price'],
         predicted_rent_price=row['predicted_rent_price'],
@@ -154,9 +162,7 @@ for _, row in predictions_df.iterrows():
     )
     session.add(pred)
 session.commit()
-
-print("Predictions saved to PostgreSQL using pandas.to_sql.")
-
-session.commit()
 session.close()
+
+print("✅ Predictions saved to PostgreSQL with sequential prediction_id.")
 print("Predictions saved to PostgreSQL.")
