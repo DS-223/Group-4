@@ -1,3 +1,25 @@
+"""
+model_training.py
+
+This script performs machine learning training and prediction for real estate property data.
+It connects to a PostgreSQL database, loads preprocessed property features, and trains three models:
+
+1. Random Forest Regressor for predicting property **sale prices**.
+2. Random Forest Regressor for predicting property **rental prices**.
+3. Cox Proportional Hazards survival model to estimate the **probability of selling within 5 months**.
+
+The script:
+- Saves trained models to disk (`models/` directory) as .pkl files.
+- Generates a CSV file (`output/predictions.csv`) with all predictions.
+- Inserts prediction results into the PostgreSQL table `predictions`.
+
+Requirements:
+- PostgreSQL connection URL in the `DATABASE_URL` environment variable.
+- SQLAlchemy models including `property_ml_ready` table.
+- Python packages: pandas, sklearn, lifelines, joblib, sqlalchemy.
+
+"""
+
 import pandas as pd
 import joblib
 from pathlib import Path
@@ -15,10 +37,10 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from database.database import engine
 from pathlib import Path
-from sqlalchemy import func
 from database.engine import engine
 from database.database import Base
 from sqlalchemy.types import Integer, Float
+from loguru import logger
 
 # Create all tables
 Base.metadata.create_all(bind=engine)
@@ -31,20 +53,15 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 
-# Replace old load logic
+# Load data
 df = pd.read_sql("SELECT * FROM property_ml_ready", engine)
 print(df.head())
 
-#df_property = pd.read_sql("SELECT * FROM properties", engine)
-#print(df_property.head())
-
-#df_user = pd.read_sql("SELECT * FROM users", engine)
-#print(df_user.head())
 
 if df.empty:
     raise RuntimeError("Failed to load data from database. Exiting model training.")
 
-
+# Process date fields
 df['post_date'] = pd.to_datetime(df['post_date'])
 df['sell_date'] = pd.to_datetime(df['sell_date'])
 today = pd.to_datetime("today")
@@ -52,7 +69,7 @@ df['duration'] = (df['sell_date'].fillna(today) - df['post_date']).dt.days
 df['event'] = df['sell_date'].notna().astype(int)
 
 
-# 2. Feature Engineering
+# Feature Engineering
 def prepare_features(df):
     cat_cols = ['type_name', 'district', 'renovation_status', 'deal_type', 'user_type']
     df_encoded = pd.get_dummies(df, columns=cat_cols, drop_first=True)
@@ -138,6 +155,13 @@ df['prob_sold_within_5_months'] = 1 - surv_funcs.loc[150].values
 
 # Select only the relevant columns for SQL table
 predictions_df = df[['property_id', 'predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']].copy()
+
+# Round prices to nearest whole integer
+predictions_df['predicted_sell_price'] = predictions_df['predicted_sell_price'].round(0).astype(int)
+predictions_df['predicted_rent_price'] = predictions_df['predicted_rent_price'].round(0).astype(int)
+
+# Format probability to 2 decimal places
+predictions_df['prob_sold_within_5_months'] = predictions_df['prob_sold_within_5_months'].round(2)
 
 # Add prediction_id column manually
 predictions_df = predictions_df.reset_index(drop=True)

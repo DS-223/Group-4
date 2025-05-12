@@ -5,7 +5,7 @@ services:
     image: postgres
     restart: always
     ports:
-      - 5432:5432
+      - 5433:5433
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
@@ -69,13 +69,14 @@ services:
       - DB_PASSWORD=${DB_PASSWORD}
       - DB_NAME=${DB_NAME}
       - MODEL_STORAGE_PATH=/model/models
+    depends_on:
+      db:
+        condition: service_healthy
     healthcheck:
         interval: 80s
         timeout: 10s
         retries: 5
-    depends_on:
-      db:
-        condition: service_healthy
+        test: "exit 0"
 
   
   backend:
@@ -100,16 +101,16 @@ services:
      test: "exit 0"
 
 
-  # app:
-  #  container_name: streamlit_app
-  #  build:
-  #    context: ./app
-  #    dockerfile: Dockerfile
-  #  volumes:
-  #    - ./app:/app
-  #  ports:
-  #    - 8501:8501
-  #  environment:
-  #    - API_URL=http://backend:8000
-  #  depends_on:
-  #    - backend
+  app:
+   container_name: streamlit_app
+   build:
+     context: ./app
+     dockerfile: Dockerfile
+   volumes:
+     - ./app:/app
+   ports:
+     - 8501:8501
+   environment:
+     - API_URL=http://backend:8000
+   depends_on:
+     - backend

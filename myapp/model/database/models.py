@@ -1,5 +1,7 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, Numeric, Date
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, Numeric, Date
 from sqlalchemy.orm import relationship
+from .database import Base, engine
 from .database import Base, engine
 
 
@@ -21,6 +23,7 @@ class User(Base):
     username = Column(String)
     email = Column(String, nullable=False)
     phone_number = Column(String)
+    user_type = Column(Float)
     user_type = Column(Float)
 
 
@@ -102,6 +105,8 @@ class Property(Base):
     renovation_status = Column(String)
     estimated_saleprice = Column(Numeric(12, 2))
     estimated_rentprice = Column(Numeric(12, 2))
+    estimated_saleprice = Column(Numeric(12, 2))
+    estimated_rentprice = Column(Numeric(12, 2))
 
     type = relationship("PropertyType")
     user = relationship("User")
@@ -134,7 +139,13 @@ class Prediction(Base):
     property_id = Column(Integer, primary_key=True, index=True)
     predicted_sell_price = Column(Float)
     predicted_rent_price = Column(Float)
+    __tablename__ = "predictions"
+
+    property_id = Column(Integer, primary_key=True, index=True)
+    predicted_sell_price = Column(Float)
+    predicted_rent_price = Column(Float)
     prob_sold_within_5_months = Column(Float)
 
 
+# Base.metadata.create_all(engine)
 # Base.metadata.create_all(engine)
