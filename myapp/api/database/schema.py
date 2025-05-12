@@ -40,6 +40,13 @@ class LocationCreate(BaseModel):
 
 # PropertyType schemas
 
+class PricePrediction(BaseModel):
+    predicted_price: float
+
+    class Config:
+        from_attributes = True
+
+
 class PropertyTypeBase(BaseModel):
     type_id: int
     type_name: str
@@ -123,3 +130,18 @@ class PredictionCreate(BaseModel):
 
 class CoxPredictionBase(BaseModel):
     prob_sold_within_5_months: float
+
+class RentCoxPrediction(BaseModel):
+    predicted_rent_price: float
+    prob_sold_within_5_months: float
+
+    class Config:
+        from_attributes = True
+
+
+class SaleCoxPrediction(BaseModel):
+    predicted_sale_price: float
+    prob_sold_within_5_months: float
+
+    class Config:
+        from_attributes = True

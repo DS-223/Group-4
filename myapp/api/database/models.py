@@ -141,4 +141,4 @@ class Prediction(Base):
     property = relationship("Property")
 
 
-Base.metadata.drop_all(engine)
+# Base.metadata.drop_all(engine)

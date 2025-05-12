@@ -10,7 +10,7 @@ from database.schema import UserBase, PropertyBase, PropertyTypeBase, LocationBa
 # Include your prediction router
 from prediction_router import router as prediction_router
 from database.engine import engine
-from database.database import Base
+from database.models import Base
 
 Base.metadata.create_all(bind=engine)
 
