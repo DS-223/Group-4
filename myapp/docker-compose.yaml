@@ -78,26 +78,26 @@ services:
         condition: service_healthy
 
   
-  backend:
-   container_name: backend_service
-   build:
-     context: ./api
-     dockerfile: Dockerfile
-   ports:
-     - 8000:8000
-   volumes:
-     - ./api:/backend
-     - /var/run/docker.sock:/var/run/docker.sock
-   environment:
-     - DATABASE_URL=${DATABASE_URL}
-     - DB_USER=${DB_USER}
-     - DB_PASSWORD=${DB_PASSWORD}
-     - DB_NAME=${DB_NAME}
-   depends_on:
-     db:
-       condition: service_healthy
-   healthcheck:
-     test: "exit 0"
+  # backend:
+  #  container_name: backend_service
+  #  build:
+  #    context: ./api
+  #    dockerfile: Dockerfile
+  #  ports:
+  #    - 8000:8000
+  #  volumes:
+  #    - ./api:/backend
+  #    - /var/run/docker.sock:/var/run/docker.sock
+  #  environment:
+  #    - DATABASE_URL=${DATABASE_URL}
+  #    - DB_USER=${DB_USER}
+  #    - DB_PASSWORD=${DB_PASSWORD}
+  #    - DB_NAME=${DB_NAME}
+  #  depends_on:
+  #    db:
+  #      condition: service_healthy
+  #  healthcheck:
+  #    test: "exit 0"
 
 
   # app:
