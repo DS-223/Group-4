@@ -5,9 +5,9 @@ from typing import List
 
 from database.database import get_db
 from database.models import User, Location, PropertyType, Property, Image, Prediction
-from database.schema import UserBase, PropertyBase, PropertyTypeBase, LocationBase, ImageBase, UserCreate, LocationCreate, PropertyTypeCreate, PropertyCreate, ImageCreate
+from database.schema import UserBase, PropertyBase, PropertyTypeBase, LocationBase, ImageBase
+from database.schema import UserCreate, LocationCreate, PropertyTypeCreate, PropertyCreate, ImageCreate
 
-# Include your prediction router
 from prediction_router import router as prediction_router
 from database.engine import engine
 from database.database import Base
@@ -28,7 +28,12 @@ app.include_router(prediction_router)
 def create_user(user: UserCreate, db: Session = Depends(get_db)):
     if db.query(User).filter(User.user_id == user.user_id).first():
         raise HTTPException(status_code=400, detail="User already exists")
-    db_user = User(**user.dict())
+    db_user = User(
+        user_id=user.user_id,
+        user_name=user.user_name,
+        email=user.email,
+        phone=user.phone
+    )
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
@@ -41,13 +46,17 @@ def get_user(user_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="User not found")
     return user
 
-
 # ------------------- LOCATION -------------------
 @app.post("/locations/")
 def create_location(loc: LocationCreate, db: Session = Depends(get_db)):
     if db.query(Location).filter(Location.location_id == loc.location_id).first():
         raise HTTPException(status_code=400, detail="Location already exists")
-    db_loc = Location(**loc.dict())
+    db_loc = Location(
+        location_id=loc.location_id,
+        city=loc.city,
+        district=loc.district,
+        country=loc.country
+    )
     db.add(db_loc)
     db.commit()
     db.refresh(db_loc)
@@ -60,13 +69,16 @@ def get_location(location_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Location not found")
     return loc
 
-
 # ------------------- PROPERTY TYPE -------------------
 @app.post("/property_types/")
 def create_property_type(pt: PropertyTypeCreate, db: Session = Depends(get_db)):
     if db.query(PropertyType).filter(PropertyType.type_id == pt.type_id).first():
         raise HTTPException(status_code=400, detail="Property type already exists")
-    db_pt = PropertyType(**pt.dict())
+    db_pt = PropertyType(
+        type_id=pt.type_id,
+        name=pt.name,
+        description=pt.description
+    )
     db.add(db_pt)
     db.commit()
     db.refresh(db_pt)
@@ -79,13 +91,23 @@ def get_property_type(type_id: int, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Property type not found")
     return pt
 
-
 # ------------------- PROPERTY -------------------
 @app.post("/properties/")
 def create_property(prop: PropertyCreate, db: Session = Depends(get_db)):
     if db.query(Property).filter(Property.property_id == prop.property_id).first():
         raise HTTPException(status_code=400, detail="Property already exists")
-    db_prop = Property(**prop.dict())
+    db_prop = Property(
+        property_id=prop.property_id,
+        user_id=prop.user_id,
+        type_id=prop.type_id,
+        location_id=prop.location_id,
+        price=prop.price,
+        area=prop.area,
+        bedrooms=prop.bedrooms,
+        bathrooms=prop.bathrooms,
+        furnished=prop.furnished,
+        is_for_sale=prop.is_for_sale
+    )
     db.add(db_prop)
     db.commit()
     db.refresh(db_prop)
@@ -94,14 +116,15 @@ def create_property(prop: PropertyCreate, db: Session = Depends(get_db)):
 @app.get("/properties/{property_id}", response_model=PropertyBase)
 def get_property(property_id: int, db: Session = Depends(get_db)):
     prop = db.query(Property).filter(Property.property_id == property_id).first()
-    print(prop) 
+    if not prop:
+        raise HTTPException(status_code=404, detail="Property not found")
     return prop
-
 
 @app.get("/prediction/")
 def get_prediction(property_id: int, db: Session = Depends(get_db)):
     prop = db.query(Prediction).filter(Prediction.property_id == property_id).first()
-    print(prop) 
+    if not prop:
+        raise HTTPException(status_code=404, detail="Prediction not found")
     return prop
 
 # ------------------- IMAGE -------------------
@@ -109,7 +132,12 @@ def get_prediction(property_id: int, db: Session = Depends(get_db)):
 def create_image(img: ImageCreate, db: Session = Depends(get_db)):
     if db.query(Image).filter(Image.image_id == img.image_id).first():
         raise HTTPException(status_code=400, detail="Image already exists")
-    db_img = Image(**img.dict())
+    db_img = Image(
+        image_id=img.image_id,
+        property_id=img.property_id,
+        image_url=img.image_url,
+        description=img.description
+    )
     db.add(db_img)
     db.commit()
     db.refresh(db_img)

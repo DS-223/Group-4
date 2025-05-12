@@ -102,7 +102,7 @@ class Property(Base):
     year_built = Column(Integer)
     renovation_status = Column(String)
     estimated_saleprice = Column(Integer)
-    esimated_rentprice = Column(Integer)
+    estimated_rentprice = Column(Integer)
 
     type = relationship("PropertyType")
     user = relationship("User")
