@@ -5,7 +5,7 @@ from typing import List
 
 from database.database import get_db
 from database.models import User, Location, PropertyType, Property, Image, Prediction
-from database.schema import UserCreate, LocationCreate, PropertyTypeCreate, PropertyCreate, ImageCreate
+from database.schema import UserBase, PropertyBase, PropertyTypeBase, LocationBase, ImageBase, UserCreate, LocationCreate, PropertyTypeCreate, PropertyCreate, ImageCreate
 
 # Include your prediction router
 from prediction_router import router as prediction_router
@@ -34,7 +34,7 @@ def create_user(user: UserCreate, db: Session = Depends(get_db)):
     db.refresh(db_user)
     return {"message": "User created", "user": db_user}
 
-@app.get("/users/{user_id}")
+@app.get("/users/{user_id}", response_model=UserBase)
 def get_user(user_id: int, db: Session = Depends(get_db)):
     user = db.query(User).filter(User.user_id == user_id).first()
     if not user:
@@ -53,7 +53,7 @@ def create_location(loc: LocationCreate, db: Session = Depends(get_db)):
     db.refresh(db_loc)
     return {"message": "Location created", "location": db_loc}
 
-@app.get("/locations/{location_id}")
+@app.get("/locations/{location_id}", response_model=LocationBase)
 def get_location(location_id: int, db: Session = Depends(get_db)):
     loc = db.query(Location).filter(Location.location_id == location_id).first()
     if not loc:
@@ -72,7 +72,7 @@ def create_property_type(pt: PropertyTypeCreate, db: Session = Depends(get_db)):
     db.refresh(db_pt)
     return {"message": "Property type created", "property_type": db_pt}
 
-@app.get("/property_types/{type_id}")
+@app.get("/property_types/{type_id}", response_model=PropertyTypeBase)
 def get_property_type(type_id: int, db: Session = Depends(get_db)):
     pt = db.query(PropertyType).filter(PropertyType.type_id == type_id).first()
     if not pt:
@@ -91,7 +91,7 @@ def create_property(prop: PropertyCreate, db: Session = Depends(get_db)):
     db.refresh(db_prop)
     return {"message": "Property created", "property": db_prop}
 
-@app.get("/properties/{property_id}", response_model=PropertyCreate)
+@app.get("/properties/{property_id}", response_model=PropertyBase)
 def get_property(property_id: int, db: Session = Depends(get_db)):
     prop = db.query(Property).filter(Property.property_id == property_id).first()
     print(prop) 
@@ -115,7 +115,7 @@ def create_image(img: ImageCreate, db: Session = Depends(get_db)):
     db.refresh(db_img)
     return {"message": "Image created", "image": db_img}
 
-@app.get("/images/{image_id}")
+@app.get("/images/{image_id}", response_model=ImageBase)
 def get_image(image_id: int, db: Session = Depends(get_db)):
     img = db.query(Image).filter(Image.image_id == image_id).first()
     if not img:

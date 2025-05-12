@@ -7,11 +7,8 @@ import joblib
 import pandas as pd
 from fastapi import APIRouter, HTTPException
 
-from database.schema import Property, CoxPrediction, PricePrediction
-from database.engine import engine
-from database.database import Base
+from database.schema import PropertyBase, CoxPredictionBase, PredictionBase
 
-Base.metadata.create_all(bind=engine)
 # ────────────────────────────────────────────────────────────────────────────────
 # Locate model artifacts (mounted by docker-compose)
 # ────────────────────────────────────────────────────────────────────────────────
@@ -21,7 +18,6 @@ PKL_DIR   = BASE_DIR / "models"
 rent_model  = joblib.load(PKL_DIR / "rent_price_model.pkl")
 sales_model = joblib.load(PKL_DIR / "sell_price_model.pkl")
 cox_model   = joblib.load(PKL_DIR / "cox_model.pkl")
-
 
 # ────────────────────────────────────────────────────────────────────────────────
 # Extract feature names used at training
@@ -45,7 +41,7 @@ COX_FEATURES  = list(cox_model.params_.index)
 router = APIRouter(prefix="/predict", tags=["Prediction"])
 
 
-def _to_df(item: Property) -> pd.DataFrame:
+def _to_df(item: PropertyBase) -> pd.DataFrame:
     """
     Convert the flat Pydantic model into a one-row DataFrame.
 
@@ -55,8 +51,8 @@ def _to_df(item: Property) -> pd.DataFrame:
     return pd.DataFrame([item.dict()])
 
 
-@router.post("/rent", response_model=PricePrediction, summary="Predict monthly rent")
-def predict_rent(data: Property):
+@router.post("/rent", response_model=PredictionBase, summary="Predict monthly rent")
+def predict_rent(data: PropertyBase):
     """
     Predict the monthly rent price for a property.
 
@@ -73,8 +69,8 @@ def predict_rent(data: Property):
         raise HTTPException(status_code=400, detail=str(err))
 
 
-@router.post("/sale", response_model=PricePrediction, summary="Predict sale price")
-def predict_sale(data: Property):
+@router.post("/sale", response_model=PredictionBase, summary="Predict sale price")
+def predict_sale(data: PropertyBase):
     """
     Predict the sale price for a property.
 
@@ -91,8 +87,8 @@ def predict_sale(data: Property):
         raise HTTPException(status_code=400, detail=str(err))
 
 
-@router.post("/cox", response_model=CoxPrediction, summary="Predict probability of sale")
-def predict_cox(data:Property ):
+@router.post("/cox", response_model=CoxPredictionBase, summary="Predict probability of sale")
+def predict_cox(data: PropertyBase):
     """
     Estimate the probability a property will sell within 150 days.
 
