@@ -5,7 +5,7 @@ services:
     image: postgres
     restart: always
     ports:
-      - 5432:5432
+      - 5433:5433
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
@@ -49,27 +49,9 @@ services:
     depends_on:
       db:
         condition: service_healthy
-  
-  
-  backend:
-    container_name: backend_service
-    build:
-      context: ./api
-      dockerfile: Dockerfile
-    ports:
-      - 8000:8000
-    volumes:
-      - ./api:/backend
-      - ./etl:/backend/etl  
-      - ./model:/backend/model
-    environment:
-      - DATABASE_URL=${DATABASE_URL}
-      - DB_USER=${DB_USER}
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_NAME=${DB_NAME}
-    depends_on:
-      db:
-        condition: service_healthy
+    healthcheck:  
+      test: "exit 0"
+
 
   ds:
     container_name: data_science_service
@@ -80,7 +62,7 @@ services:
       - 8080:8000
     volumes:
       - ./model:/model
-      - ./etl:/model/etl  # Mounting the ETL directory for model training
+      - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - DATABASE_URL=${DATABASE_URL}
       - DB_USER=${DB_USER}
@@ -90,17 +72,45 @@ services:
     depends_on:
       db:
         condition: service_healthy
+    healthcheck:
+        interval: 80s
+        timeout: 10s
+        retries: 5
+        test: "exit 0"
+
+  
+  backend:
+   container_name: backend_service
+   build:
+     context: ./api
+     dockerfile: Dockerfile
+   ports:
+     - 8000:8000
+   volumes:
+     - ./api:/backend
+     - /var/run/docker.sock:/var/run/docker.sock
+   environment:
+     - DATABASE_URL=${DATABASE_URL}
+     - DB_USER=${DB_USER}
+     - DB_PASSWORD=${DB_PASSWORD}
+     - DB_NAME=${DB_NAME}
+   depends_on:
+     db:
+       condition: service_healthy
+   healthcheck:
+     test: "exit 0"
+
 
   app:
-    container_name: streamlit_app
-    build:
-      context: ./app
-      dockerfile: Dockerfile
-    volumes:
-      - ./app:/app
-    ports:
-      - 8501:8501
-    environment:
-      - API_URL=http://backend:8000
-    depends_on:
-      - backend
+   container_name: streamlit_app
+   build:
+     context: ./app
+     dockerfile: Dockerfile
+   volumes:
+     - ./app:/app
+   ports:
+     - 8501:8501
+   environment:
+     - API_URL=http://backend:8000
+   depends_on:
+     - backend

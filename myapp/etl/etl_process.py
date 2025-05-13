@@ -194,4 +194,32 @@ def create_ml_ready_property_csv():
 # Generate ML-ready CSV
 create_ml_ready_property_csv()
 
+
 print("Tables are populated and ML-ready CSV is created.")
+
+
+# -----------------------------------------------------
+# Create Empty Predictions CSV
+# -----------------------------------------------------
+
+def create_empty_predictions_csv():
+    """
+    Create an empty CSV file for predictions with the specified columns.
+
+    Columns:
+        - property_id
+        - prediction_id
+        - predicted_sell_price
+        - predicted_rent_price
+        - prob_sold_within_5_months
+
+    Returns:
+        None
+    """
+    columns = ['property_id', 'prediction_id', 'predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']
+    empty_df = pd.DataFrame(columns=columns)
+    empty_df.to_csv("data/predictions.csv", index=False)
+    logger.info("Empty predictions.csv file created with correct columns.")
+
+# Create the predictions CSV
+create_empty_predictions_csv()

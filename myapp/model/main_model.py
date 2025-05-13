@@ -1,3 +1,25 @@
+"""
+model_training.py
+
+This script performs machine learning training and prediction for real estate property data.
+It connects to a PostgreSQL database, loads preprocessed property features, and trains three models:
+
+1. Random Forest Regressor for predicting property **sale prices**.
+2. Random Forest Regressor for predicting property **rental prices**.
+3. Cox Proportional Hazards survival model to estimate the **probability of selling within 5 months**.
+
+The script:
+- Saves trained models to disk (`models/` directory) as .pkl files.
+- Generates a CSV file (`output/predictions.csv`) with all predictions.
+- Inserts prediction results into the PostgreSQL table `predictions`.
+
+Requirements:
+- PostgreSQL connection URL in the `DATABASE_URL` environment variable.
+- SQLAlchemy models including `property_ml_ready` table.
+- Python packages: pandas, sklearn, lifelines, joblib, sqlalchemy.
+
+"""
+
 import pandas as pd
 import joblib
 from pathlib import Path
@@ -14,7 +36,14 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from database.database import engine
-from database.models import Prediction
+from pathlib import Path
+from database.engine import engine
+from database.database import Base
+from sqlalchemy.types import Integer, Float
+from loguru import logger
+
+# Create all tables
+Base.metadata.create_all(bind=engine)
 
 
 # Connect to database
@@ -23,21 +52,24 @@ engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-# 1. Data Preparation with Enhanced Censoring
-def load_and_preprocess_data():
-    script_dir = Path(__file__).parent
-    csv_path = script_dir / 'etl/data/property_ml_ready.csv'
-    df = pd.read_csv(csv_path)
-    df['post_date'] = pd.to_datetime(df['post_date'])
-    df['sell_date'] = pd.to_datetime(df['sell_date'])
-    today = pd.to_datetime("today")
-    df['duration'] = (df['sell_date'].fillna(today) - df['post_date']).dt.days
-    df['event'] = df['sell_date'].notna().astype(int)
-    return df
 
-df = load_and_preprocess_data()
+# Load data
+df = pd.read_sql("SELECT * FROM property_ml_ready", engine)
+print(df.head())
 
-# 2. Feature Engineering
+
+if df.empty:
+    raise RuntimeError("Failed to load data from database. Exiting model training.")
+
+# Process date fields
+df['post_date'] = pd.to_datetime(df['post_date'])
+df['sell_date'] = pd.to_datetime(df['sell_date'])
+today = pd.to_datetime("today")
+df['duration'] = (df['sell_date'].fillna(today) - df['post_date']).dt.days
+df['event'] = df['sell_date'].notna().astype(int)
+
+
+# Feature Engineering
 def prepare_features(df):
     cat_cols = ['type_name', 'district', 'renovation_status', 'deal_type', 'user_type']
     df_encoded = pd.get_dummies(df, columns=cat_cols, drop_first=True)
@@ -120,22 +152,44 @@ joblib.dump(cph, models_dir / 'cox_model.pkl')
 surv_funcs = cph.predict_survival_function(cox_input_encoded, times=[150])
 df['prob_sold_within_5_months'] = 1 - surv_funcs.loc[150].values
 
+
+# Select only the relevant columns for SQL table
+predictions_df = df[['property_id', 'predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']].copy()
+
+# Round prices to nearest whole integer
+predictions_df['predicted_sell_price'] = predictions_df['predicted_sell_price'].round(0).astype(int)
+predictions_df['predicted_rent_price'] = predictions_df['predicted_rent_price'].round(0).astype(int)
+
+# Format probability to 2 decimal places
+predictions_df['prob_sold_within_5_months'] = predictions_df['prob_sold_within_5_months'].round(2)
+
+# Add prediction_id column manually
+predictions_df = predictions_df.reset_index(drop=True)
+predictions_df['prediction_id'] = predictions_df.index + 1
+
 # --- Save Predictions ---
-output_cols = ['predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']
-df[output_cols].to_csv(output_dir / 'predictions.csv', index=False)
+output_cols = ['property_id', 'prediction_id','predicted_sell_price', 'predicted_rent_price', 'prob_sold_within_5_months']
+predictions_df[output_cols].to_csv(output_dir / 'predictions.csv', index=False)
 
 print("\n✅ Models trained and saved. Predictions written to 'output/predictions.csv'")
 
 
-for _, row in df.iterrows():
-    prediction = Prediction(
-        property_id=row['property_id'],
-        predicted_sell_price=row.get('predicted_sell_price'),
-        predicted_rent_price=row.get('predicted_rent_price'),
-        prob_sold_within_5_months=row.get('prob_sold_within_5_months')
-    )
-    session.add(prediction)
+# Define SQL types explicitly (optional but recommended)
+sql_dtypes = {
+    "prediction_id": Integer(),
+    "property_id": Integer(),
+    "predicted_sell_price": Float(),
+    "predicted_rent_price": Float(),
+    "prob_sold_within_5_months": Float()
+}
 
-session.commit()
-session.close()
-print("✅ Predictions saved to PostgreSQL.")
+# Insert using pandas.to_sql
+predictions_df[output_cols].to_sql(
+    name='predictions',
+    con=engine,
+    if_exists='replace',  # or 'append' to avoid dropping table
+    index=False,
+    dtype=sql_dtypes
+)
+print("Predictions saved to PostgreSQL using pandas.to_sql.")
+print("Predictions saved to PostgreSQL.")

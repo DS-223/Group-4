@@ -1,9 +1,9 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey, Numeric, Date
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, Numeric, Date
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
-from .database import Base, engine
-from .database import Base, engine
+from .engine import engine
 
+Base = declarative_base()
 
 
 class User(Base):
@@ -23,8 +23,7 @@ class User(Base):
     username = Column(String)
     email = Column(String, nullable=False)
     phone_number = Column(String)
-    user_type = Column(Float)
-    user_type = Column(Float)
+    user_type = Column(String)
 
 
 class Location(Base):
@@ -103,10 +102,8 @@ class Property(Base):
     rooms = Column(Integer)
     year_built = Column(Integer)
     renovation_status = Column(String)
-    estimated_saleprice = Column(Numeric(12, 2))
-    estimated_rentprice = Column(Numeric(12, 2))
-    estimated_saleprice = Column(Numeric(12, 2))
-    estimated_rentprice = Column(Numeric(12, 2))
+    estimated_saleprice = Column(Integer)
+    estimated_rentprice = Column(Integer)
 
     type = relationship("PropertyType")
     user = relationship("User")
@@ -134,18 +131,14 @@ class Image(Base):
     property = relationship("Property")
 
 class Prediction(Base):
-    __tablename__ = "predictions"
-
-    property_id = Column(Integer, primary_key=True, index=True)
-    predicted_sell_price = Column(Float)
-    predicted_rent_price = Column(Float)
-    __tablename__ = "predictions"
-
-    property_id = Column(Integer, primary_key=True, index=True)
-    predicted_sell_price = Column(Float)
-    predicted_rent_price = Column(Float)
+    __tablename__ = 'predictions'
+    prediction_id = Column(Integer, primary_key=True)
+    property_id = Column(Integer, ForeignKey('properties.property_id', ondelete="CASCADE"))
+    predicted_sell_price = Column(Integer)
+    predicted_rent_price = Column(Integer)
     prob_sold_within_5_months = Column(Float)
 
+    property = relationship("Property")
 
-# Base.metadata.create_all(engine)
-# Base.metadata.create_all(engine)
+
+# Base.metadata.drop_all(engine)

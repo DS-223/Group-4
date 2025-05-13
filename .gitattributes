@@ -1,0 +1,2 @@
+myapp/model/models/*.pkl filter=lfs diff=lfs merge=lfs -text
+myapp/api/models/*.pkl filter=lfs diff=lfs merge=lfs -text
