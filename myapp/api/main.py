@@ -73,7 +73,3 @@ def get_image(image_id: int, db: Session = Depends(get_db)):
     if not img:
         raise HTTPException(status_code=404, detail="Image not found")
     return img
-
-@app.get("/images/", response_model=List[ImageCreate])
-def list_images(db: Session = Depends(get_db)):
-    return db.query(Image).all()
