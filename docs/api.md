@@ -1,11 +1,11 @@
 
-# 🛰️ API Documentation
+# API Documentation
 
 This backend is powered by FastAPI and exposes multiple endpoints for property-related data and machine learning predictions.
 
 ---
 
-## 🔮 Prediction Endpoint
+## Prediction Endpoint
 
 ### `POST /predict`
 
@@ -31,7 +31,7 @@ Returns predicted rent and sale prices for a given property.
 
 ---
 
-## 👥 User Endpoints
+## User Endpoints
 
 ### `POST /users/`
 Creates a new user.
@@ -49,7 +49,7 @@ Fetch a user by their ID.
 
 ---
 
-## 📍 Location Endpoints
+## Location Endpoints
 
 ### `POST /locations/`
 Create a new location.
@@ -66,7 +66,7 @@ Retrieve a location by its ID.
 
 ---
 
-## 🏢 Property Type Endpoints
+## Property Type Endpoints
 
 ### `POST /property_types/`
 Create a new property type.
@@ -84,7 +84,7 @@ Retrieve a property type by ID.
 
 ---
 
-## 🏠 Property Endpoints
+## Property Endpoints
 
 ### `POST /properties/`
 Create a new property.
@@ -103,7 +103,7 @@ Retrieve a property by ID.
 
 ---
 
-## 🖼️ Image Endpoints
+## Image Endpoints
 
 ### `POST /images/`
 Create a new image entry for a property.
@@ -125,7 +125,7 @@ List all image records.
 
 ---
 
-## 🧪 Testing Tips
+## Testing Tips
 
 You can test all endpoints at:
 

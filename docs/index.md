@@ -1,171 +1,49 @@
-
-# 🏡 Predicting Real Estate Prices for Buying or Renting
-
-**Marketing Analytics Project**  
-The real estate market is volatile in Armenia, and both buyers and renters face challenges in determining the appropriate price for properties. Consumers often rely on intuition or outdated information, leading to suboptimal financial decisions. A platform that accurately predicts house prices can assist both buyers/renters and real estate investors in making informed decisions.
+# Real Estate Price Prediction Platform
 
 ---
 
-## 👥 Project Members
+## 1. Overview
 
-| Name                  | Role                 |
-|-----------------------|----------------------|
-| **David Aslanyan**    | Project Manager      |
-| **Marina Melkonyan**  | Data Scientist       |
-| **Mikayel Mikayelyan**| Backend Engineer     |
-| **Lilit Ivanyan**     | DB Developer         |
-| **Marina Melkonyan**  | Frontend Developer   |
+This project, developed by Group 4 for the Spring 2025 Marketing Analytics course at the American University of Armenia, provides a predictive analytics platform for Armenia’s real estate market. It helps users estimate rental and sale prices for properties based on key features like location, area, and type.
+
+The system integrates a Streamlit UI, FastAPI backend, trained ML models, and a PostgreSQL database — all containerized with Docker.
 
 ---
 
-## 📄 [Project Description](https://docs.google.com/document/d/11OJNRnnq2lZdgOXWndGn-yDkSRa1fx1uDCb__ijpR5E/edit?tab=t.0)  
-## 🌐 [UI Prototype (Figma)](https://www.figma.com/design/uahdQREnaz8OS5VTAKfniV/House-price-Prediction?node-id=0-1&p=f&t=aJBnhiUe9R1Lv2zr-0)
+## 2. Problem
+
+The Armenian real estate market is volatile and lacks pricing transparency. Buyers and renters often rely on intuition or outdated listings, which leads to poor financial decisions. There's no fast or reliable way to know what a fair price is for a specific property.
 
 ---
 
-## ⚙️ Installation
+## 3. Solution
 
-### Prerequisites
+Our solution is a full-stack analytics tool that allows users to:
 
-Ensure Docker and Docker Compose are installed on your system.
+- Enter property details via a simple UI
+- View predicted sale and rent prices instantly
+- Explore price insights via visual feedback
 
-- [Install Docker](https://docs.docker.com/get-docker/)
-- [Install Docker Compose](https://docs.docker.com/compose/install/)
+**Under the hood:**
 
-### Steps
-
-```bash
-git clone https://github.com/DS-223/Group-4
-cd myapp
-docker-compose up --build
-```
+- FastAPI handles the API logic and ML requests
+- PostgreSQL stores structured property data
+- A machine learning model trained on 3,000+ entries produces accurate estimates
+- All components are fully Dockerized and documented
 
 ---
 
-## 🗂 Project Structure
+## 4. Expected Outcomes
 
-```bash
-.
-├── README.md
-├── feedback.md
-├── mkdocs.yml
-├── ERD_House_Price_Final.png
-├── mkdocs_requirement.txt
-└── myapp/
-    ├── api/
-    │   ├── Dockerfile
-    │   ├── main.py
-    │   ├── requirements.txt
-    │   └── etl/
-    │       ├── database.py
-    │       └── models.py
-    ├── app/
-    │   ├── __init__.py
-    │   ├── Dockerfile
-    │   ├── app.py
-    │   └── requirements.txt
-    ├── etl/
-    │   ├── database/
-    │   │   ├── __init__.py
-    │   │   ├── data_generate.py
-    │   │   ├── database.py
-    │   │   └── models.py
-    │   ├── data/
-    │   │   ├── images.csv
-    │   │   ├── users.csv
-    │   │   ├── property_ml_ready.csv
-    │   │   ├── property_types.csv
-    │   │   ├── locations.csv
-    │   │   └── properties.csv
-    │   ├── .env
-    │   ├── Dockerfile
-    │   ├── __init__.py
-    │   ├── etl_process.py
-    │   └── requirements.txt
-    ├── model/
-    │   ├── models/
-    │   │   ├── rent_price_model.pkl
-    │   │   └── sales_price_model.pkl
-    │   ├── property_predictions.csv
-    │   ├── property_ml_ready.csv
-    │   ├── example.ipynb
-    │   ├── requirements.txt
-    │   └── Dockerfile
-    │   └── main_model.py 
-    ├── .env
-    └── docker-compose.yaml
-```
+- **More Accurate Pricing Decisions** for both renters and buyers
+- **Reduced Guesswork** thanks to data-driven predictions
+- **Better Insights** into property value based on real features
+- **Documentation & Extensibility** for future enhancements
 
 ---
 
-## 🧪 How to Use
+## 5. Summary
 
-1. Open the app at [http://localhost:8501](http://localhost:8501)
-2. Enter property details like location, rooms, area, etc.
-3. The system will return a predicted price and buying vs renting suggestion.
+This platform represents a complete pipeline from ETL to ML-powered predictions. It enables smarter decision-making in a space where intuition has traditionally ruled. With future improvements like real-time data scraping and map visualizations, this project lays the groundwork for a robust real estate recommendation engine.
 
 ---
-
-## 🗃️ Database (pgAdmin)
-
-- Access: [http://localhost:5050](http://localhost:5050)
-    - Username: `admin@admin.com`
-    - Password: `admin`
-- When running for the first time, create a server with:
-    - Hostname: `postgres`
-    - Username: `postgres`
-    - Password: `password`
-
----
-
-## 🔐 Environment Variables
-
-For easier deployment, the `.env` file is included in the repo:
-
-```env
-POSTGRES_DB=house_price
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=password
-```
-
----
-
-## 🔁 ETL
-
-The ETL pipeline extracts real estate datasets, cleans and transforms them, and loads them into the PostgreSQL database. This includes property data, user info, locations, and types — all standardized for model training and API use.
-
----
-
-## 🧬 Schema Design
-
-![Star Schema](./ERD_House_Price_Final.png)
-
-The schema follows a star-like structure with `properties` at the center, and related tables like `users`, `locations`, and `types`.
-
----
-
-## 🔍 API & Documentation Access
-
-- [Swagger UI](http://localhost:8000/docs)
-- [MkDocs](http://localhost:8000/mkdocs) *(local deployment path)*
-
-### 📸 Screenshots
-
-#### Swagger UI
-![Swagger Screenshot](./assets/swagger_screenshot.png)
-
-#### Streamlit UI
-![UI Screenshot](./assets/ui_screenshot.png)
-
----
-
-## 👨‍💻 Authors
-
-See [👥 Project Members](#-project-members)
-
----
-
-## 🔗 Useful Links
-
-- [Project Description (Google Doc)](https://docs.google.com/document/d/11OJNRnnq2lZdgOXWndGn-yDkSRa1fx1uDCb__ijpR5E/edit?tab=t.0)
-- [UI Prototype (Figma)](https://www.figma.com/design/uahdQREnaz8OS5VTAKfniV/House-price-Prediction?node-id=0-1&p=f&t=aJBnhiUe9R1Lv2zr-0)

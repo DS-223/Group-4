@@ -1,12 +1,12 @@
 
-# 🏡 Predicting Real Estate Prices for Buying or Renting
+# Predicting Real Estate Prices for Buying or Renting
 
 **Marketing Analytics Project**  
 The real estate market is volatile in Armenia, and both buyers and renters face challenges in determining the appropriate price for properties. Consumers often rely on intuition or outdated information, leading to suboptimal financial decisions. A platform that accurately predicts house prices can assist both buyers/renters and real estate investors in making informed decisions.
 
 ---
 
-## 👥 Project Members
+## Project Members
 
 | Name                  | Role                 |
 |-----------------------|----------------------|
@@ -18,12 +18,12 @@ The real estate market is volatile in Armenia, and both buyers and renters face 
 
 ---
 
-## 📄 [Project Description](https://docs.google.com/document/d/11OJNRnnq2lZdgOXWndGn-yDkSRa1fx1uDCb__ijpR5E/edit?tab=t.0)  
-## 🌐 [UI Prototype (Figma)](https://www.figma.com/design/uahdQREnaz8OS5VTAKfniV/House-price-Prediction?node-id=0-1&p=f&t=aJBnhiUe9R1Lv2zr-0)
+## [Project Description](https://docs.google.com/document/d/11OJNRnnq2lZdgOXWndGn-yDkSRa1fx1uDCb__ijpR5E/edit?tab=t.0)  
+## [UI Prototype (Figma)](https://www.figma.com/design/uahdQREnaz8OS5VTAKfniV/House-price-Prediction?node-id=0-1&p=f&t=aJBnhiUe9R1Lv2zr-0)
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ### Prerequisites
 
@@ -42,14 +42,14 @@ docker-compose up --build
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```bash
 .
 ├── README.md
 ├── feedback.md
 ├── mkdocs.yml
-├── ERD_House_Price_Final.png
+├── HousePrice_ERD.png
 ├── mkdocs_requirement.txt
 └── myapp/
     ├── api/
@@ -98,7 +98,7 @@ docker-compose up --build
 
 ---
 
-## 🧪 How to Use
+## How to Use
 
 1. Open the app at [http://localhost:8501](http://localhost:8501)
 2. Enter property details like location, rooms, area, etc.
@@ -106,7 +106,7 @@ docker-compose up --build
 
 ---
 
-## 🗃️ Database (pgAdmin)
+## Database (pgAdmin)
 
 - Access: [http://localhost:5050](http://localhost:5050)
     - Username: `admin@admin.com`
@@ -118,7 +118,7 @@ docker-compose up --build
 
 ---
 
-## 🔐 Environment Variables
+## Environment Variables
 
 For easier deployment, the `.env` file is included in the repo:
 
@@ -130,42 +130,39 @@ POSTGRES_PASSWORD=password
 
 ---
 
-## 🔁 ETL
+## ETL
 
 The ETL pipeline extracts real estate datasets, cleans and transforms them, and loads them into the PostgreSQL database. This includes property data, user info, locations, and types — all standardized for model training and API use.
 
 ---
 
-## 🧬 Schema Design
+## Schema Design
 
-![Star Schema](./ERD_House_Price_Final.png)
+![Star Schema](./HousePrice_ERD.png)
 
 The schema follows a star-like structure with `properties` at the center, and related tables like `users`, `locations`, and `types`.
 
 ---
 
-## 🔍 API & Documentation Access
+## API & Documentation Access
 
 - [Swagger UI](http://localhost:8000/docs)
 - [MkDocs](http://localhost:8000/mkdocs) *(local deployment path)*
 
-### 📸 Screenshots
-
-#### Swagger UI
-![Swagger Screenshot](./assets/swagger_screenshot.png)
+### Screenshots
 
 #### Streamlit UI
-![UI Screenshot](./assets/ui_screenshot.png)
+![UI Screenshot](./assets/UI_Screenshot.png)
 
 ---
 
-## 👨‍💻 Authors
+## Authors
 
 See [👥 Project Members](#-project-members)
 
 ---
 
-## 🔗 Useful Links
+## Useful Links
 
 - [Project Description (Google Doc)](https://docs.google.com/document/d/11OJNRnnq2lZdgOXWndGn-yDkSRa1fx1uDCb__ijpR5E/edit?tab=t.0)
 - [UI Prototype (Figma)](https://www.figma.com/design/uahdQREnaz8OS5VTAKfniV/House-price-Prediction?node-id=0-1&p=f&t=aJBnhiUe9R1Lv2zr-0)
