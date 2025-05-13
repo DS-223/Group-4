@@ -140,70 +140,125 @@ st.markdown("""
 left, right = st.columns(2)
 
 with left:
-    st.markdown("### User Type", unsafe_allow_html=True)
-    user_type = st.selectbox("Choose User Type", ["Agent", "Owner", "Buyer"], label_visibility="collapsed")
+    # Removed user_type as it's not directly used by the backend model prediction logic
+    # If you needed it, you'd map it to a user_id below
+    # st.markdown("### User Type", unsafe_allow_html=True)
+    # user_type_selection = st.selectbox("Choose User Type", ["Agent", "Owner", "Buyer"], label_visibility="collapsed")
 
     st.markdown("### Enter Property Details", unsafe_allow_html=True)
-    size = st.number_input("Size (sqm)", min_value=20.0, max_value=1000.0, value=75.0)
-    floor = st.number_input("Floor", min_value=1, max_value=12, value=2)
-    rooms = st.number_input("Number of Rooms", min_value=1, max_value=6, value=2)
-    year_built = st.number_input("Year Built", min_value=1860, max_value=2023, value=2000)
-    
-    renovation_status = st.selectbox("Renovation Status", 
-                                  ["Newly Renovated", "Partially Renovated", "Not Renovated"])
-    
-    property_type = st.selectbox("Property Type", ["Apartment", "House"])
-    location = st.selectbox("Location", ["Yerevan"])
-    
-    # Fixed "Prediction For" header - now will appear in blue
+    size = st.number_input("Size (sqm)", min_value=20.0, max_value=1000.0, value=75.0, key="size_input")
+    floor = st.number_input("Floor", min_value=1, max_value=100, value=2, key="floor_input") # Increased max floor
+    rooms = st.number_input("Number of Rooms", min_value=1, max_value=10, value=2, key="rooms_input") # Increased max rooms
+    year_built = st.number_input("Year Built", min_value=1860, max_value=2024, value=2000, key="year_input") # Adjusted max year
+
+    renovation_status = st.selectbox("Renovation Status",
+                                  ["Newly Renovated", "Partially Renovated", "Not Renovated"], key="renovation_select")
+
+    property_type = st.selectbox("Property Type", ["Apartment", "House"], key="type_select")
+    # Assuming Location ID 1 is always Yerevan for now.
+    # If you have multiple locations, you'd map the selection to an ID.
+    location_name = st.selectbox("Location", ["Yerevan"], key="location_select")
+    location_id_map = {"Yerevan": 1} # Example mapping
+    location_id = location_id_map.get(location_name, 1) # Default to 1 if not found
+
+
     st.markdown("### Prediction For", unsafe_allow_html=True)
-    deal_type = st.radio("", ["Sell", "Rent"], horizontal=True, label_visibility="collapsed")
+    deal_type = st.radio("Deal Type", ["Sell", "Rent"], horizontal=True, label_visibility="collapsed", key="deal_radio")
 
     if st.button("Evaluate Property"):
+        # Build the payload matching the PropertyBase schema
         payload = {
+            # --- ADDED REQUIRED FIELDS with dummy values ---
+            "property_id": 0,  # Dummy Property ID
+            "user_id": 0,      # Dummy User ID (or map user_type_selection if needed)
+
+            # --- Fields from your form ---
             "size_sqm": size,
             "floor": floor,
             "rooms": rooms,
             "year_built": year_built,
             "renovation_status": renovation_status,
             "type_id": 1 if property_type == "Apartment" else 2,
-            "location_id": 1,
+            "location_id": location_id, # Use the mapped ID
             "deal_type": deal_type.lower(),
-            "user_type": user_type.lower()
-        }
-        endpoint = "sale" if deal_type == "Sell" else "rent"
-        try:
-            response = requests.post(f"{api_url}/predict/{endpoint}", json=payload)
-            response.raise_for_status()
-            price_result = response.json()
 
-            prob_response = requests.post(f"{api_url}/predict/cox", json=payload)
-            prob_response.raise_for_status()
-            prob_result = prob_response.json()
+            # --- Include Optional fields as None or default if needed by backend logic ---
+            # These are Optional in Pydantic, so omitting them is usually fine unless
+            # your internal backend logic specifically requires them.
+            "title": None,
+            "status": None,
+            "post_date": None, # Or date.today().isoformat() if needed
+            "sell_date": None,
+            "estimated_saleprice": None,
+            "estimated_rentprice": None
+        }
+
+        # Pick correct endpoint name
+        endpoint = "sale-cox" if deal_type == "Sell" else "rent-cox"
+        full_url = f"{api_url}/predict/{endpoint}"
+        st.write(f"Sending request to: {full_url}") # Debugging line
+        st.write(f"Payload: {payload}")             # Debugging line
+
+        try:
+            resp = requests.post(full_url, json=payload)
+            resp.raise_for_status() # Raises HTTPError for bad responses (4xx or 5xx)
+            result = resp.json()
 
             with right:
                 st.markdown("### 📈 Predictions Summary", unsafe_allow_html=True)
-                
-                st.markdown("""
-                <div class="prediction-card">
-                    <h4 style="color:#0074D9; margin-top:0;">Estimated Sell Price</h4>
-                    <h2 style="color:#1f77b4; margin-bottom:0;">${:,.2f}</h2>
-                </div>
-                """.format(price_result['predicted_sell_price']), unsafe_allow_html=True)
-                
-                st.markdown("""
-                <div class="prediction-card">
-                    <h4 style="color:#0074D9; margin-top:0;">Estimated Rent Price</h4>
-                    <h2 style="color:#1f77b4; margin-bottom:0;">${:,.2f}</h2>
-                </div>
-                """.format(price_result['predicted_rent_price']), unsafe_allow_html=True)
-                
-                st.markdown("""
-                <div class="prediction-card">
-                    <h4 style="color:#0074D9; margin-top:0;">Probability of Selling Within 5 Months</h4>
-                    <h2 style="color:#1f77b4; margin-bottom:0;">{:.1f}%</h2>
-                </div>
-                """.format(price_result['probability_sold_within_5_months']*100), unsafe_allow_html=True)
 
+                if deal_type == "Sell":
+                    if "predicted_sale_price" in result:
+                        price = result["predicted_sale_price"]
+                        st.markdown(f"""
+                            <div class="prediction-card">
+                              <h4 style="color:#0074D9; margin-top:0;">Estimated Sale Price</h4>
+                              <h2 style="color:#1f77b4; margin-bottom:0;">${price:,.2f}</h2>
+                            </div>
+                        """, unsafe_allow_html=True)
+                    else:
+                        st.error("Prediction response missing 'predicted_sale_price'.")
+                        st.json(result)
+
+
+                else:  # Rent
+                    if "predicted_rent_price" in result:
+                        price = result["predicted_rent_price"]
+                        st.markdown(f"""
+                            <div class="prediction-card">
+                              <h4 style="color:#0074D9; margin-top:0;">Estimated Rent Price</h4>
+                              <h2 style="color:#1f77b4; margin-bottom:0;">${price:,.2f}</h2>
+                            </div>
+                        """, unsafe_allow_html=True)
+                    else:
+                         st.error("Prediction response missing 'predicted_rent_price'.")
+                         st.json(result)
+
+                if "prob_sold_within_5_months" in result:
+                    prob = result["prob_sold_within_5_months"] * 100
+                    st.markdown(f"""
+                        <div class="prediction-card">
+                          <h4 style="color:#0074D9; margin-top:0;">Probability of Selling Within 5 Months</h4>
+                          <h2 style="color:#1f77b4; margin-bottom:0;">{prob:.1f}%</h2>
+                        </div>
+                    """, unsafe_allow_html=True)
+                else:
+                    st.error("Prediction response missing 'prob_sold_within_5_months'.")
+                    st.json(result)
+
+
+        except requests.exceptions.ConnectionError as e:
+             st.error(f"Connection Error: Could not connect to the API at {api_url}. Is the backend running?")
+             st.error(f"Details: {e}")
+        except requests.exceptions.HTTPError as e:
+            st.error(f"HTTP Error: {e.response.status_code} {e.response.reason} for URL: {e.request.url}")
+            try:
+                # Try to show detailed error from FastAPI if available
+                error_detail = e.response.json()
+                st.error(f"API Error Detail: {error_detail}")
+            except requests.exceptions.JSONDecodeError:
+                st.error(f"API Response Content: {e.response.text}") # Show raw text if not JSON
         except requests.RequestException as e:
             st.error(f"Error fetching prediction: {e}")
+        except Exception as e: # Catch other potential errors
+            st.error(f"An unexpected error occurred: {e}")
