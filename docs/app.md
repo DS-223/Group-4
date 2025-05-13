@@ -13,7 +13,7 @@ Our frontend is built with Streamlit, providing a clean, interactive user experi
 
 ## Sample View
 
-![UI Screenshot](./assets/UI_Screenshot.png)
+![UI Screenshot](.docs/assets/UI_Screenshot.png)
 
 ## Navigation Flow
 
