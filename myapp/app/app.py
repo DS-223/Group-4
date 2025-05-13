@@ -10,14 +10,13 @@ api_url = os.getenv("API_URL", "http://localhost:8000")
 # Enhanced CSS with visual effects
 st.markdown("""
     <style>
-        /* Main background with subtle texture */
         .stApp {
             background-color: #f8f9fa;
             background-image: radial-gradient(#e9ecef 1px, transparent 1px);
             background-size: 20px 20px;
         }
-        
-        /* Form container styling */
+
+        /* Form container */
         .st-emotion-cache-1jicfl2 {
             background-color: white;
             border-radius: 15px;
@@ -25,8 +24,8 @@ st.markdown("""
             padding: 2rem;
             margin-bottom: 2rem;
         }
-        
-        /* Title bar with gradient */
+
+        /* Title bar */
         .title-container {
             background: linear-gradient(135deg, #1f77b4 0%, #025a96 100%);
             padding: 1.5em;
@@ -35,42 +34,106 @@ st.markdown("""
             margin-bottom: 2rem;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
-        /* Input fields with hover effects */
+
+        /* Updated input styles */
         .stTextInput>div>div>input,
         .stNumberInput>div>div>input,
-        .stSelectbox>div>div>div {
-            background-color: white;
-            color: black;
+        .stSelectbox>div>div>div,
+        .stRadio div[role="radiogroup"] > div {
+            background-color: white !important;
+            color: #0074D9 !important;
             border: 1px solid #ced4da;
             border-radius: 8px;
-            transition: all 0.3s ease;
             padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
         }
+
+        .stNumberInput input {
+            background-color: white !important;
+            color: #0074D9 !important;
+        }
+
+        .stNumberInput>div>div>input {
+            background-color: white !important;
+            color: #0074D9 !important;
+        }
+
+        .stNumberInput>div>div {
+            background-color: white !important;
+            border-color: #ced4da !important;
+        }
+        /* number input hover state */
+        .stNumberInput:hover>div>div>input {
+            background-color: blue !important;
+            color: blue !important;
+        }
+
         
+        /* number input focus state */
+        .stNumberInput>div>div>input:focus {
+            background-color: white !important;
+            color: #0074D9 !important;
+        }
+
+        /* Dropdown menu styling */
+        .stSelectbox [data-baseweb="select"] div {
+            background-color: white !important;
+            color: #0074D9 !important;
+        }
+
+        /* Dropdown options */
+        [data-baseweb="popover"] div {
+            background-color: white !important;
+            color: #0074D9 !important;
+        }
+
+        /* Fix number input arrows */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+            color: #0074D9 !important;
+        }
+
+        /* Hover states */
         .stTextInput>div>div>input:hover,
         .stNumberInput>div>div>input:hover,
-        .stSelectbox>div>div>div:hover {
+        .stSelectbox>div>div>div:hover,
+        .stRadio div[role="radiogroup"] > div:hover {
             border-color: #1f77b4;
             box-shadow: 0 0 0 3px rgba(31, 119, 180, 0.1);
         }
-        
+
+        /* Focus states */
         .stTextInput>div>div>input:focus,
         .stNumberInput>div>div>input:focus,
-        .stSelectbox>div>div>div:focus {
+        .stSelectbox>div>div>div:focus,
+        .stRadio div[role="radiogroup"] > div:focus {
             border-color: #1f77b4;
             box-shadow: 0 0 0 3px rgba(31, 119, 180, 0.2);
         }
-        
-        /* Labels with better spacing */
+
+        /* Radio buttons */
+        .stRadio div[role="radiogroup"] label div {
+            color: #0074D9 !important;
+        }
+
+        [data-baseweb="radio"] div:first-child {
+            border-color: #1f77b4 !important;
+        }
+
+        /* Labels */
         label {
             color: #0074D9 !important;
             font-weight: 600;
             margin-bottom: 0.5rem !important;
             display: block;
         }
-        
-        /* Enhanced button with hover effect */
+
+        /* Button styling */
         .stButton>button {
             background-color: #1f77b4;
             color: white;
@@ -86,38 +149,22 @@ st.markdown("""
             margin: 1.5rem auto 0;
             display: block;
         }
-        
+
         .stButton>button:hover {
-            background-color: #025a96;
+            background-color: lightblue;
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
-        
-         /* Radio button text - guaranteed black */
-        .stRadio div[role="radiogroup"] label div {
-            color: black !important;
-        }
-        
-        /* Selected radio button indicator */
-        [data-baseweb="radio"] div:first-child {
-            border-color: #1f77b4 !important;
-        }
-        
-        
-        /* Section headers - FIX FOR WHITE TEXT ISSUE */
-        h3 {
+
+        /* Section headers */
+        h3, div[data-testid="stMarkdownContainer"] h3 {
             color: #1f77b4 !important;
             border-bottom: 2px solid #e9ecef;
             padding-bottom: 0.5rem;
             margin-top: 1.5rem !important;
         }
-        
-        /* Specific fix for Prediction For header */
-        div[data-testid="stMarkdownContainer"] h3 {
-            color: #1f77b4 !important;
-        }
-        
-        /* Prediction results styling */
+
+        /* Prediction card */
         .prediction-card {
             background: white;
             border-radius: 10px;
@@ -140,68 +187,54 @@ st.markdown("""
 left, right = st.columns(2)
 
 with left:
-    # Removed user_type as it's not directly used by the backend model prediction logic
-    # If you needed it, you'd map it to a user_id below
-    # st.markdown("### User Type", unsafe_allow_html=True)
-    # user_type_selection = st.selectbox("Choose User Type", ["Agent", "Owner", "Buyer"], label_visibility="collapsed")
+    st.markdown("### User Type", unsafe_allow_html=True)
+    user_type_selection = st.selectbox("Choose User Type", ["Agent", "Owner", "Buyer"], label_visibility="collapsed")
 
     st.markdown("### Enter Property Details", unsafe_allow_html=True)
     size = st.number_input("Size (sqm)", min_value=20.0, max_value=1000.0, value=75.0, key="size_input")
-    floor = st.number_input("Floor", min_value=1, max_value=100, value=2, key="floor_input") # Increased max floor
-    rooms = st.number_input("Number of Rooms", min_value=1, max_value=10, value=2, key="rooms_input") # Increased max rooms
-    year_built = st.number_input("Year Built", min_value=1860, max_value=2024, value=2000, key="year_input") # Adjusted max year
+    floor = st.number_input("Floor", min_value=1, max_value=100, value=2, key="floor_input")
+    rooms = st.number_input("Number of Rooms", min_value=1, max_value=10, value=2, key="rooms_input")
+    year_built = st.number_input("Year Built", min_value=1860, max_value=2024, value=2000, key="year_input")
 
     renovation_status = st.selectbox("Renovation Status",
                                   ["Newly Renovated", "Partially Renovated", "Not Renovated"], key="renovation_select")
 
     property_type = st.selectbox("Property Type", ["Apartment", "House"], key="type_select")
-    # Assuming Location ID 1 is always Yerevan for now.
-    # If you have multiple locations, you'd map the selection to an ID.
-    location_name = st.selectbox("Location", ["Yerevan"], key="location_select")
-    location_id_map = {"Yerevan": 1} # Example mapping
-    location_id = location_id_map.get(location_name, 1) # Default to 1 if not found
-
+    
+    distinct_name = st.selectbox("Location", ["Kentron", "Arabkir", "Avan", "Davtashen", "Erebuni", "Malatia-Sebastia",
+    "Nor Nork", "Nork-Marash", "Shengavit", "Kanaker-Zeytun", "Ajapnyak", "Nubarashen"], key="location_select")
+    location_id_map = {"Kentron": 1}
+    location_id = location_id_map.get(distinct_name, 1)
 
     st.markdown("### Prediction For", unsafe_allow_html=True)
     deal_type = st.radio("Deal Type", ["Sell", "Rent"], horizontal=True, label_visibility="collapsed", key="deal_radio")
 
     if st.button("Evaluate Property"):
-        # Build the payload matching the PropertyBase schema
         payload = {
-            # --- ADDED REQUIRED FIELDS with dummy values ---
-            "property_id": 0,  # Dummy Property ID
-            "user_id": 0,      # Dummy User ID (or map user_type_selection if needed)
-
-            # --- Fields from your form ---
+            "property_id": 0,
+            "user_id": 0,
             "size_sqm": size,
             "floor": floor,
             "rooms": rooms,
             "year_built": year_built,
             "renovation_status": renovation_status,
             "type_id": 1 if property_type == "Apartment" else 2,
-            "location_id": location_id, # Use the mapped ID
+            "location_id": location_id,
             "deal_type": deal_type.lower(),
-
-            # --- Include Optional fields as None or default if needed by backend logic ---
-            # These are Optional in Pydantic, so omitting them is usually fine unless
-            # your internal backend logic specifically requires them.
             "title": None,
             "status": None,
-            "post_date": None, # Or date.today().isoformat() if needed
+            "post_date": None,
             "sell_date": None,
             "estimated_saleprice": None,
             "estimated_rentprice": None
         }
 
-        # Pick correct endpoint name
         endpoint = "sale-cox" if deal_type == "Sell" else "rent-cox"
         full_url = f"{api_url}/predict/{endpoint}"
-        st.write(f"Sending request to: {full_url}") # Debugging line
-        st.write(f"Payload: {payload}")             # Debugging line
 
         try:
             resp = requests.post(full_url, json=payload)
-            resp.raise_for_status() # Raises HTTPError for bad responses (4xx or 5xx)
+            resp.raise_for_status()
             result = resp.json()
 
             with right:
@@ -218,8 +251,6 @@ with left:
                         """, unsafe_allow_html=True)
                     else:
                         st.error("Prediction response missing 'predicted_sale_price'.")
-                        st.json(result)
-
 
                 else:  # Rent
                     if "predicted_rent_price" in result:
@@ -232,7 +263,6 @@ with left:
                         """, unsafe_allow_html=True)
                     else:
                          st.error("Prediction response missing 'predicted_rent_price'.")
-                         st.json(result)
 
                 if "prob_sold_within_5_months" in result:
                     prob = result["prob_sold_within_5_months"] * 100
@@ -244,21 +274,15 @@ with left:
                     """, unsafe_allow_html=True)
                 else:
                     st.error("Prediction response missing 'prob_sold_within_5_months'.")
-                    st.json(result)
-
 
         except requests.exceptions.ConnectionError as e:
              st.error(f"Connection Error: Could not connect to the API at {api_url}. Is the backend running?")
-             st.error(f"Details: {e}")
         except requests.exceptions.HTTPError as e:
-            st.error(f"HTTP Error: {e.response.status_code} {e.response.reason} for URL: {e.request.url}")
+            st.error(f"HTTP Error: {e.response.status_code} {e.response.reason}")
             try:
-                # Try to show detailed error from FastAPI if available
                 error_detail = e.response.json()
                 st.error(f"API Error Detail: {error_detail}")
-            except requests.exceptions.JSONDecodeError:
-                st.error(f"API Response Content: {e.response.text}") # Show raw text if not JSON
-        except requests.RequestException as e:
-            st.error(f"Error fetching prediction: {e}")
-        except Exception as e: # Catch other potential errors
+            except:
+                st.error(f"API Response Content: {e.response.text}")
+        except Exception as e:
             st.error(f"An unexpected error occurred: {e}")
