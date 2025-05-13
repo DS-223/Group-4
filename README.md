@@ -152,7 +152,7 @@ The schema follows a star-like structure with `properties` at the center, and re
 ### Screenshots
 
 #### Streamlit UI
-![UI Screenshot](./assets/UI_Screenshot.png)
+![UI Screenshot](./docs//assets/UI_Screenshot.png)
 
 ---
 
