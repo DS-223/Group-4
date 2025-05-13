@@ -55,10 +55,17 @@ docker-compose up --build
     ├── api/
     │   ├── Dockerfile
     │   ├── main.py
+    │   ├── prediction_router.py
     │   ├── requirements.txt
-    │   └── etl/
-    │       ├── database.py
-    │       └── models.py
+    │   ├── models/
+    │   │   ├── rent_price_model.pkl
+    │   │   └── sell_price_model.pkl
+    │   │   └── cox_model.pkl
+    │   ├── database/
+    │   │   ├── __init__.py
+    │   │   ├── data_generate.py
+    │   │   ├── database.py
+    │   │   └── models.py
     ├── app/
     │   ├── __init__.py
     │   ├── Dockerfile
@@ -83,12 +90,16 @@ docker-compose up --build
     │   ├── etl_process.py
     │   └── requirements.txt
     ├── model/
+    │   ├── database/
+    │   │   ├── __init__.py
+    │   │   ├── data_generate.py
+    │   │   ├── database.py
+    │   │   └── models.py
     │   ├── models/
     │   │   ├── rent_price_model.pkl
-    │   │   └── sales_price_model.pkl
-    │   ├── property_predictions.csv
-    │   ├── property_ml_ready.csv
-    │   ├── example.ipynb
+    │   │   └── sell_price_model.pkl
+    │   │   └── cox_model.pkl
+    │   ├── wait_for_etl.py
     │   ├── requirements.txt
     │   └── Dockerfile
     │   └── main_model.py 
@@ -152,15 +163,10 @@ The schema follows a star-like structure with `properties` at the center, and re
 ### Screenshots
 
 #### Streamlit UI
-![UI Screenshot](./docs//assets/UI_Screenshot.png)
+![UI Screenshot](./docs//assets/UI_Prediction.png)
 
 ---
 
-## Authors
-
-See [👥 Project Members](#-project-members)
-
----
 
 ## Useful Links
 
